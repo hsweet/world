@@ -1,0 +1,134 @@
+\version "2.18.0"
+\paper{
+  tagline = ##f
+  %print-all-headers = ##t
+  #(set-paper-size "letter")
+}
+
+\header{
+  title= "Hora"
+  subtitle="Merlin"
+  composer= ""
+  instrument ="Clalrinet"
+  arranger= "H. Sweet Jan 2010"
+}
+ending = { g8. g'16 d bes g4. }
+melody =  \transpose c d \relative c' {
+  \clef treble
+  \key d \minor
+  \time 3/8
+  \set Score.markFormatter = #format-mark-box-alphabet
+  %\partial 16*3 a16 d f   %lead in notes
+
+  \repeat volta 2{
+  \mark \default
+    d4 g8
+    bes4 d8
+    cis8 d d
+    d4.
+
+    f8. e16 d cis
+    cis8. bes16 bes a
+    cis8 d d
+    d4.
+    d,4 g8
+    bes4 d8
+    cis4. cis8. cis16 d e
+    f8. e16 d cis
+    cis8. bes16 a bes
+    \ending
+
+  }
+
+
+  \repeat volta 2{
+  \mark \default
+    d'8  g e
+    f8. f16 e d
+    cis8 f e
+    d8. cis16 cis bes
+    cis8 d cis
+    cis8. bes16 bes g
+    d'4.~ g4.
+    d8  g e
+    f8. f16 e d
+    cis8 f e
+    d8. cis16 cis bes
+    cis8 d cis
+    bes8. a16 g bes
+    \ending
+
+  }
+
+  \repeat volta 2{
+  \mark \default
+    cis8  d cis16 bes
+    cis8 d4
+    g,8. g16 a bes
+    cis8. bes16 a g
+    cis8 d cis16 bes
+    cis8 d4
+    d8. d16 e f
+    g8. f16 e d
+    cis8 d cis16 bes
+    cis8 d4
+    g,8. g16 a bes
+    c4.
+    bes8. a16 g bes
+    a8. g16 fis a
+    \ending
+
+  }
+}
+
+harmonies = \chordmode {
+  g4.:m
+  s4.*3
+  d4.:m
+  a4.
+  g4.:m
+  s4.*3
+  a4. a4.
+  d4.:m
+  a4.
+  g4.:m r4.
+  %part 2
+  g4.:m
+  d4.:m
+  a4.
+  s4.*3
+  g4.:m
+  g4.:m
+  g4.:m
+  d4.:m
+  a4.
+  s4.*2
+  g4.:m
+  s4.*2
+  %part3
+  a4. s4.
+  g4.:m
+  a4.
+  s4.*2
+  g4.:m
+  s4.
+  a4. s4.
+  g4.:m
+  c4.:m
+  g4.:m
+  d4.
+  g4.:m
+}
+
+\score {
+  <<
+    \new ChordNames {
+      \set chordChanges = ##t
+      \harmonies
+    }
+    \new Staff \melody
+  >>
+
+  \layout{indent = 1.0\cm}
+  \midi { }
+}
