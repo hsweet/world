@@ -113,7 +113,7 @@ harmonies = \chordmode {
       \harmonies
     }
     \new Staff   \melody
-    \new Staff \transpose c c'\melody
+   % \new Staff \transpose c c'\melody
   >>
   \header{
     title= "Gasn Nign"

@@ -1,0 +1,3 @@
+\version "2.7.37"
+#(define date-string "12 March 2006")
+lilypondVersionMarkup = \markup { "GNU LilyPond-2.7.37" }

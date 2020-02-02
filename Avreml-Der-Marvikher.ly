@@ -1,3 +1,4 @@
+
 \version "2.18.0"
 \include "english.ly"
 \paper{
@@ -142,19 +143,20 @@ melody = \relative c' {
 }
 %################################# Chords #######################
 harmonies = \chordmode {
-  a2*2:m
-  e2*3
+  a2*5:m
+  %e2*3
   a2:m
-  e2*2
-  a2*2:m
-  e2*2
-  a2*2:m
-  e2*3
+  e2*11
+  %a2*2:m
+ % e2*9
+  %a2*2:m
+
   a2*2:m
   e2
   d2*2:m
   e2
   %chorus
+
   e2
   a2*2:m
   e2*3

@@ -1,6 +1,6 @@
 \version "2.18.0"
 %moved \header into \score for includes to work
-
+\include "english.ly"
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -14,60 +14,61 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 %\markup{ Got something to say? }
 
 %#################################### Melody ########################
-melody = \transpose g a\relative c''{
+melody = \relative c''{
   \clef treble
 
-  \key g \minor
+  \key a \minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
-  \partial 16*2 g16 g  %lead in notes
+  \partial 16*2 a16 a16 | %lead in notes
 
   \repeat volta 2{
   \mark \default
 
     % earlier stuff
-    g8  bes a g
-    c8  bes4 a8
-    g8  bes a g
-    c8  bes4 a8
+    a8  c b a|
+    d8  c4 b8
+    a8 c b a|
+    d8  c4 b8
 
-    c8 c c c
-    c4 c
+    d8 d d d
+    d4 d|
   }
 
   \alternative {
     {
-      bes16 a g8 c g
-      bes4. a8
+      c16 b a8 d a
+      c4. b8
     }
     {
-      bes16 a g8 a bes
-      g4. r8
+      c16 b a8 b c
+      a4. r8|
     }
   }
   \break
   %C
-  c8. |
-  c8. g16  ees' d c8 %\tuplet 3/2 {ees' d c}
-  r8 ees8 d c
-  g ees' d c  %first note could be a c
+  d8. g,16 e'16 d c8
+  d8. g,16 e'16 d c8
+  r8 f8 e d
+  a f' e d  | %first note could be a c
   %f
-  bes8. f16 d' c bes8
-  bes8. f16 d' c bes8
 
-  f'8 f r g
-  d8 c bes a
+  c8. g16 e' d c8
+  c8. g16 e' d c8
+
+  g'8 g r a
+  e8 d c b
 
   %refrain repeat
-  g8  bes a g
-  c8  bes4 a8
-  g8  bes a g
-  c8  bes4 a8
+  a8  c b a
+  d8  c4 b8
+  a8  c b a
+  d8  c4 b8|
 
-  c8 c c c
-  c4 c
-  bes16 a g8 a bes
-  g4. r8|
+  d8 d d d
+  d4 d
+  c16 b a8 b c
+  a4. r8|
 
 
 
@@ -99,7 +100,7 @@ melody = \transpose g a\relative c''{
 
 \addlyrics{
   \skip2
-  Main glick hob ich ge -- vu  -- nen
+  Mayn glick hob ich ge -- vu  -- nen
   ven ich hob dich ge -- fun -- en
   du shaist vi toi -- zent zun -- en
   \skip1 \skip1 \skip1 \skip1 \skip1 \skip1
@@ -108,46 +109,47 @@ melody = \transpose g a\relative c''{
 
 }
 %################################# Chords #######################
-harmonies = \transpose g a \chordmode {
+harmonies = \chordmode {
   s8
-  g2:m
-  c8:m
-  g8*7:m
+  a2:m
+  d8:m
+  a8*7:m
   %r8*5
-  c8:m
-  g8*3:m
+  d8:m
+  a8*3:m
   %r8
-  c2*2:m
+  d2*2:m
   %r2
-  g4:m
-  c4:m
-  g2:m
-  c4:m
-  d4:7
-  g2:m
+  a4:m
+  d4:m
+  a2:m
+  d4:m
+  e4:7
+  a2:m
   %B part
-  c2*3:m
+  d2*3:m
   %r2*2
-  f2:7
-  bes2*2
+  g2:7
+  c2*2
   %r2
-  f2:7
-  d2:7
-  g2:m
-  c8:m
-  g8*7:m
+  g2:7
+  e2:7
+  a2:m
+  d8:m
+  a8*7:m
   %r2
-  c8:m
-  g8*3:m
-  c2*2:m
+  d8:m
+  a8*3:m
+  d2*2:m
   %r2
-  g4:m
-  c4:m
-  g2:m
+  a4:m
+  d4:m
+  a2:m
 
 }
 
 \score {
+  \transpose a d
   <<
     \new ChordNames {
       \set chordChanges = ##t
