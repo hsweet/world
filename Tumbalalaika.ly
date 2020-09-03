@@ -19,22 +19,50 @@ global = {
 }
 
 %#################################### Melody ########################
-%melody =  \transpose c d \relative c' {  %transpose for clarinet
+
 melody = \relative c'' {
   \global
   %\partial 16*3 a16 d f   %lead in notes
 
-  \repeat volta 2{
-    \mark \default
-    g2 g4
+   % Introduction
+   g4 g g
+   g2.
+   g4 (f) ef
+   d2.
+
+   f4 f f
+   f2 f8 f
+   f4 g af
+
+   g4 (c,2)
+
+   c4 ef g
+   c2.
+   ef4 d c
+   g2 g4
+
+   bf4 af f
+   d2 d4
+   f4 ef d
+   c2 c4 _"==>Chorus"
+
+
+ % \repeat volta 2{
+    \mark Verse
+    g'2 g4
     g2 g4
     g4 f ef
     d2.
 
     f2 f4
     f2 f4
-    f4 ef d
-    c2.
+    %f4 <<ef g>> <<d gs>>
+    f4
+    <<{ef4 d
+      c2.}
+      {g'4 gs
+    g4 (c,2)}>>
+
 
     c4 ef g
     c2 c4
@@ -44,11 +72,11 @@ melody = \relative c'' {
     d2 d4
     f4 ef d
     c2 c4
-  }
+ % }
+ \break
 
-
-  \repeat volta 2{
-    \mark \default
+  %\repeat volta 2{
+   \mark Chorus
 
     g'4. g8 g4
     g4. g8 g4
@@ -68,15 +96,22 @@ melody = \relative c'' {
     d2 d4
     f4 ef d
     c2.
-  }
+ % }
 
 
 }
 %################################# Lyrics #####################
 \addlyrics{ \set stanza = #"1. "
+           % \repeat unfold  40{\skip 2}
+            Ven ven ven, ven
+            Zingt a yid
+            Ven ven ven, ven er iz hin -- ger -- ikh git
+            Hing -- er -- ikh git, vil er dokh es -- n,
+            Zingt er a lid, er zol zikh far -- ges -- n
 
-            Sh -- teyt a bok -- her, un er trakht.
-            Trakht un trakht a gant -- se _  nakht.
+
+            Shteyt a bok -- her, u -- n er trakht.
+            Trakht un trakht a ga -- nt -- se  nakht.
             Ve -- men tzu ne -- men un nit fars -- he -- men.
             Ve -- men tzu ne -- men un nit fars -- he -- men.
             Tum -- ba -- la, Tum -- ba -- la, Tum -- ba -- la -- lai -- ka
@@ -87,28 +122,45 @@ melody = \relative c'' {
 
 }
 
-\addlyrics { \set stanza = #"2. "
+\addlyrics {
+             \repeat unfold  36{\skip 2}
+             \set stanza = #"2. "
              Mey -- dl, mey -- dl, kh'vil bay dir fregn,
              Vos ken vak -- sn, vak -- sn on regn?
              Vos _ ken bre -- nen un nit oyf -- he -- rn?
-             Vos  _ ken ben -- ken, vey -- nen on tre -- rn?
+             Vo -- s   ken ben -- ken, vey -- nen on tre -- rn?
 }
 
-\addlyrics { \set stanza = #"3. "
+\addlyrics {
+             \repeat unfold  36{\skip 2}
+             \set stanza = #"3. "
              Naris -- her bok -- her, vos darf -- stu fregn?
-             A shteyn ken vaksn, vak -- sn on regn.
+             Shteyn ken vak -- sn, vak -- sn on regn.
              Li -- be ken bre -- nen un nit oyf -- he -- rn.
              A harts ken ben -- ken, vey -- nen on tre -- rn.
 }
-\addlyrics { \set stanza = #"4. "
-             A koymen iz hekher f --  un  a hoyz.
-             A kats iz flin -- ker fun a moyz.
+\addlyrics {
+             \repeat unfold  36{\skip 2}
+             \set stanza = #"4. "
+             Koymen iz hekh -- er fu -- n  a hoyz.
+             A kats iz flink -- er fun a moyz.
              Di toy -- re iz ti -- fer fun a kval.
              Der toyt iz bi -- ter, bi -- ter -- er vi gal.
 
 }
 %################################# Chords #######################
 harmonies = \chordmode {
+  c4*9:m
+  g4*3
+  g4*9:7
+  c4*12:m
+  c4*3:7
+  f4*3:m
+  g4*3
+  g4*3:7
+  c4*3:m
+
+
   c4*9:m
   g4*3
   g4*9:7
@@ -210,9 +262,9 @@ harmonies = \chordmode {
               \column {
                 " "
                 "Tumbala, Tumbala, Tumbalalaika"
-                "Tumbala, Tumbala, Tumbalalaika"
-                "Tumbalalaika, strum balalaika"
-                "Tumbalalaika, may we be happy"
+                %"Tumbala, Tumbala, Tumbalalaika"
+                "Tumbalalaika, play  balalaika"
+                "Play balalaika, may we be happy"
               }
       }
     }
@@ -224,6 +276,14 @@ harmonies = \chordmode {
 
 
 %{
+Ven zingt a yid,
+Ven er iz hingerikh git (hungry)
+Hingerikh git, vil er dokh esn,
+Zingt er a lid, er zol zikh fargesn
+
+When a jew sings, and he is hungry,
+And wants to eat, he sings a song to forget his hunger.
+
 Shteyt a bokher, un er trakht
 (also shteyt un trakht)
 Trakht un trakht a gantse nakht

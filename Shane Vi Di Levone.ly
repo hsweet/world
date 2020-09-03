@@ -47,8 +47,8 @@ melody = \relative c''{
   }
   \break
   %C
-  d8. g,16 e'16 d c8
-  d8. g,16 e'16 d c8
+  d8. a16 f'16 e d8
+  d8. a16 f'16 e d8
   r8 f8 e d
   a f' e d  | %first note could be a c
   %f

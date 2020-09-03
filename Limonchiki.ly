@@ -94,6 +94,7 @@ melody = \relative c'{
   Jes -- li jest -- 'u Be -- ni matj
   z -- na -- chit, jest kou -- da pos -- latg
 }
+%{
 \addlyrics{
    \set stanza = #"4. "
   Ja u tjo -- ti no -- che -- val,
@@ -102,6 +103,7 @@ melody = \relative c'{
   o -- na ska -- za -- la pos -- le
  % in -- gi -- lizce çevirisi ise şöyle
 }
+%}
 
 %################################# Chords #######################
 harmonies = \chordmode {
@@ -158,6 +160,7 @@ harmonies = \chordmode {
 % more verses:
 \markup{}
 \markup {
+  \fontsize #2
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {
@@ -171,7 +174,7 @@ harmonies = \chordmode {
 	}
       }
       \hspace #0.2 % vertical distance between verses
-      \line { "English."
+      \line { "."
 	\column {
 	     "I'm so smart and I have a good pair of hands"
           "I can empty your pockets out"

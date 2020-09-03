@@ -9,8 +9,8 @@
   title= "Hora"
   subtitle="Merlin"
   composer= ""
-  instrument ="Clalrinet"
-  arranger= "H. Sweet Jan 2010"
+  instrument =""
+  arranger= ""
 }
 ending = { g8. g'16 d bes g4. }
 melody =  \transpose c d \relative c' {
@@ -33,7 +33,8 @@ melody =  \transpose c d \relative c' {
     d4.
     d,4 g8
     bes4 d8
-    cis4. cis8. cis16 d e
+    cis4.~
+    cis8. cis16 d e
     f8. e16 d cis
     cis8. bes16 a bes
     \ending
@@ -55,7 +56,7 @@ melody =  \transpose c d \relative c' {
     cis8 f e
     d8. cis16 cis bes
     cis8 d cis
-    bes8. a16 g bes
+    bes8. a16 a bes
     \ending
 
   }
@@ -91,7 +92,7 @@ harmonies = \chordmode {
   a4. a4.
   d4.:m
   a4.
-  g4.:m r4.
+  g4.:m s4.
   %part 2
   g4.:m
   d4.:m
