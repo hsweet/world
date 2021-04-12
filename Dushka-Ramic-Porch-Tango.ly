@@ -22,6 +22,7 @@ global = {
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
 first =  { r8 e16 e e8 e f e f [e]| }
 second = { r8 d16 d d8 d e d e [d]  }
+third =  { r8 a16 a a8 a b a b [a]  }
 
 melody = \relative c' {
   \global
@@ -38,21 +39,24 @@ melody = \relative c' {
   \first
   r8 e16 e e8 e a a a [g]
   g4 f2.|
-  \time 3/4
-  r8 a16 a b8 a b [a]|
-  r16 b8 a16 f4 d|
-  r8 a'16 a b8 a b [a]
-  r16 c8 a16 e4 c|
+
+  \third
+  %\time 3/4
+  r8 b4 a8 f4 d|
   \time 4/4
+  \transpose c c'\third
+  %\time 3/4
+  r8 c'4 a8 e4 c|
+  %\time 4/4
   \first
   gs8 f e d c4 d
   e1
-  r8 e16 e e8 e a a  a ^rit[g]|
+  r8 e16 e e8 e a^rit a  a [g]|
   g4 f2.|
   %\time 3/4
   r8 a16 a  a8 a b a b [c]
   r8 a16 a a8 a d c b [a]|
-  \time 4/4
+  %\time 4/4
   gs8 [f] e [d] c [d] b [c]
   a1 \fermata
 
@@ -64,11 +68,11 @@ harmonies = \chordmode {
   a1*3:m
   e1*4:7
   a1*4:m
-  d4*10:m
-  a4*6:m
+  d4*12:m
+  a4*8:m
   e1*2:7
   a1*2:m
-  d4*8:m
+  \parenthesize d4*8:m
   a4*4:m
   e1:7
   a1:m
@@ -82,7 +86,9 @@ harmonies = \chordmode {
       \set chordChanges = ##f
       \harmonies
     }
-    \new Staff   \melody
+    \new Staff  \melody
+    %\new Staff \transpose c c'\melody
+
   >>
   \header{
     title= "Porch Tango"
