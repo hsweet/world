@@ -20,20 +20,22 @@ global = {
 
 %#################################### Melody ########################
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+cadence = { f16 e e f f ef ef d }
+
+melody = \relative c' {
   \global
-  %\partial 4 g4    %lead in notes
+  \partial 8 a8    %lead in notes
 
   \repeat volta 2{
     \mark \default
     d8 a'16 g f8 f
-    f16 g e f d4
+    f16 g e f d8. d16
     d16 a f' d a' f d' a
-    d8 c16 bf a4|
+    d8 c16 bf a8. a16|
 
     a16 g c bf a8 g16 f |
-    g16 af g af g4|
-    f16 f e e f f ef ef
+    g16 af g af g8. f16|
+    \cadence
     d2
   }
 
@@ -47,19 +49,19 @@ melody = \relative c'' {
 
     r16 c, d e f g a bf
     c16 d ef d c bf a g
-    f16 f e e f f ef ef
+    \cadence
     d2
   }
   %\break
   \repeat volta 2{
     \mark \default
-    f4. f8
+    f4. e16 f
     g8 ef d4
-    f4. f8
-    g8 ef d4
-    ef'16 d c bf a g f e
-    f16 c' a c g4
-    f16 f e e f f ef ef
+    f4.  e16 f
+    g8 ef d8. d'16
+    ef16 d c bf a g f e
+    f16 c' a c g8. f16
+    \cadence
     d2
   }
 
@@ -70,6 +72,7 @@ melody = \relative c'' {
 %################################# Chords #######################
 harmonies = \chordmode {
   % Judy's chords
+  s8
   d2*4:m
   f2
   g2:m
