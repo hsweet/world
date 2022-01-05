@@ -101,7 +101,7 @@ melody = \relative c'' {
 
 }
 %################################# Lyrics #####################
-\addlyrics{ \set stanza = #"1. "
+\addlyrics{
            % \repeat unfold  40{\skip 2}
             Ven ven ven, ven
             Zingt a yid
@@ -109,7 +109,7 @@ melody = \relative c'' {
             Hing -- er -- ikh git, vil er dokh es -- n,
             Zingt er a lid, er zol zikh far -- ges -- n
 
-
+            \set stanza = #"1. "
             Shteyt a bok -- her, u -- n er trakht.
             Trakht un trakht a ga -- nt -- se  nakht.
             Ve -- men tzu ne -- men un nit fars -- he -- men.

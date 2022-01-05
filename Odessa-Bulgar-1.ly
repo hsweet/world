@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.20.0"
 \include "english.ly"
 \paper{
   tagline = #ff
@@ -13,57 +13,72 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key g \minor
+  \key c \major
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  \partial 8*3 a8 [d f]    %lead in notes
 
   \repeat volta 2{
    \mark \default
-   g16(af) b8 b b
-   b16 (d)c8 c c
-   b8 c d16(ef) c(ef)
-   d4 g
+   a4 gs
+   a b
+   c4 b
+   a8 [gs] f4|
 
-   g,16(af) b8 b b
-   b16 (d)c8 c c
-   c16(f,) g af b(c) b af
-   af16(g) g4.
+   gs16 [b] a4 a8|
+   a8 [gs] f [gs]
+   a8 b a gs f e f gs
+   a4 gs
+
+   a b
+   c4 b
+   a8 gs f4
+   e8 f a16 gs f8
+   gs4 a
+   d,4. a'8
+   a16 gs f8 f4
+   e8 f a16 gs f8
+   gs4 a
+  }
+  \alternative {
+    {d,2~ d8 a [d f] }
+    {d2~d2}
   }
 
- % \break
   \repeat volta 2{
    \mark \default
-   f'16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g8 [b d g]
-
-   f16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g4 r8 g
-    \break
+   r8 d' d d
+   d8 d d d
+   d8 c b d
+   c8 b a c
+   b8 a gs b
+   a8 gs f4e8 f a16 gs f8
+  gs4 a
+  d,4. a'8
+  a16 gs f8 f4
+  %gs8 a f16 e d8
+  e8 f a16 gs f8
+  gs4 a
+  d,2~d2
   }
 
+   \repeat volta 2{
+     \mark \default
+     a8 d4 a'8
+     a16 gs f8 f4
+     e8 d e f
+     gs8 a  f16 e d8
 
-  \repeat volta 2{
-  \mark \default
-  b16(d) c8 c c
-  c16 (b) af g f4
-  e16(f) g af  b(c) d ef %not marked?
-  f16(ef) d c b(af) g f
-
-  b16(d) c8 c c
-  f16(ef) d c b4
-  d16(c) c(b) b(af) af(g)
-   g4 r8 g
+     a8 d4 a'8
+     a16 gs f8 f4
+     e8 d e f
+    d4. r8
 
   }
 }
@@ -71,24 +86,29 @@ melody = \relative c'' {
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2
-  c2:m
-  g2*4
-  f2:m
-  g2
-  %b
-  g2*6
-  \parenthesize f2:m
-  g2
-  %c
-  c2:m
-  f2*3:m
-  c4*3:m
-  g4
-  \parenthesize f2:m
-  g2
-
-
+s8*3
+d2*12:m
+a2*2:7
+d2*2:m
+a2*2:7
+d2*2:m
+d2*2:m
+%b
+d2*2:m
+e2:7
+a2:m
+e2:7
+d2:m
+a2*2:7
+d2*2:m
+a2*2:7
+d2*2:m
+%c
+d2*2:m
+a2:7
+d2*3:m
+a2:7
+d2:m
 }
 
 \score {
@@ -102,9 +122,9 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Chusidl"
-    subtitle="p.84"
-    composer= "Chuidl : )"
+    title= "Odessa Bulgar #1"
+    subtitle=""
+    composer= ""
     instrument =""
     arranger= ""
   }

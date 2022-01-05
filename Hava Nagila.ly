@@ -1,5 +1,5 @@
 \version "2.18.0"
-
+\include "english.ly"
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -21,21 +21,21 @@ melody = \transpose e d \relative c' {
 
   \repeat volta 2{
   \mark \default
-    e4  e4. gis8 f e
-    gis4 gis4. b8 a gis
+    e4  e4. gs8 f e
+    gs4 gs4. b8 a gs
     a4 a4. c8 b a|
   }
   \alternative {
-    { gis4 f16 e f8 gis4 r}
-    { gis4 f16 e f8 e4 r}
+    { gs4 f16 e f8 gs4 r}
+    { gs4 f16 e f8 e4 r}
   }
 
   \repeat volta 2{
   \mark \default
-    gis8  gis4 f8 e e e4|
+    gs8  gs4 f8 e e e4|
     f8 f4 e8 d d d4|
     d4 f8. f16 d8 d a'4|
-    gis4 f16[(e)f8] e4 r4|
+    gs4 f16[(e)f8] e4 r4|
   }
 
   \repeat volta 2{
@@ -49,7 +49,7 @@ melody = \transpose e d \relative c' {
     b16 b b8 d8. c16 b8 d c b|
 
     b16 b b8 e4 b16 b b8 e8. e,16|
-    e8 e c'16(b a gis) a2|
+    e8 e c'16(b a gs) a2|
   }
 }
 %################################# Lyrics #####################

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.20.0"
 \include "english.ly"
 \paper{
   tagline = #ff
@@ -13,81 +13,110 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key g \minor
-  \time 2/4
+  \key d \minor
+  \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  %\partial 4 g4    %lead in notes
 
   \repeat volta 2{
    \mark \default
-   g16(af) b8 b b
-   b16 (d)c8 c c
-   b8 c d16(ef) c(ef)
-   d4 g
+   d4. a'8 a4 a
+   bf8 a bf d a4. a8
+   g4. g8 f4 g
+   \times 2/3{a8 bf c} \times 2/3{bf a g} f e d4
 
-   g,16(af) b8 b b
-   b16 (d)c8 c c
-   c16(f,) g af b(c) b af
-   af16(g) g4.
-  }
+   d4. a'8 a4 a
+   bf8 a bf d a4. a8
+   g4. g8 f4 g
+   \times 2/3{a8 bf c} \times 2/3{bf a g} f e d a
 
- % \break
-  \repeat volta 2{
-   \mark \default
-   f'16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g8 [b d g]
+   d4. e8 f4 g
+   a8 bf a g f e d4
+   e8 f f e g16 f e d cs8 d |
+   e8 f g16 f e d cs8 bf a4
 
-   f16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g4 r8 g
-    \break
+   d4. e8 f4 g
+   a8 bf a g f e d4
+   e8 f f e e d d cs
+   d1
   }
 
 
   \repeat volta 2{
-  \mark \default
-  b16(d) c8 c c
-  c16 (b) af g f4
-  e16(f) g af  b(c) d ef %not marked?
-  f16(ef) d c b(af) g f
+   \mark \default
+   a'8 bf a g f e f g
+   a8 bf a g f e d4
+   e8 f f e g16 f e d cs8 d
 
-  b16(d) c8 c c
-  f16(ef) d c b4
-  d16(c) c(b) b(af) af(g)
-   g4 r8 g
+   e8 f g16 f e d cs8 bf a4|
+   a'8 bf a g f e f g|
+   a8 bf a g f e d4|
+   e8 f f e e d d cs
+  }
+   \alternative {
+     {d1 }
+     {d2. d4 }
+   }
 
+  \repeat volta 2{
+  d'4. c8 c bf bf a
+  a1
+  a8 c, f a \times 2/3{c bf a} g4~
+  g8 d' d c c bf bf a
+
+  a2. c,4
+  f8 g a4 a a|
+  a8 g a bf a g f4
+  r16 c d e  f g a bf c8 bf bf a
+
+  a8 g a bf a g f4
+  fs8 g4. fs8 ef ef d
+  d4 ef'16( d c bf a bf a g fs g fs e)
+  fs8 g4. fs8 ef ef d
+  d1
   }
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2
-  c2:m
-  g2*4
-  f2:m
-  g2
+  d1:m
+  g2:m
+  d2:m
+  g2:m a2:7
+  d1*2:m
+  g2:m d2:m
+  g2:m a2:7
+  d1*3:m
+  a1*2:7
+  d1*2:m
+  a1:7
+  d1:m
   %b
-  g2*6
-  \parenthesize f2:m
-  g2
-  %c
-  c2:m
-  f2*3:m
-  c4*3:m
-  g4
-  \parenthesize f2:m
-  g2
+  d1*2:m
+  a1*2:7
+  d1*2:m
+  a1:7
+  d1:m
+  d1:m
+  %
+  d1*2:m
+  f2 d4:7 g4*5:m
+  d2:m c2:7
+  f1
+  c2:7 f2*3
 
+  c2:7 f2
+  c1:m
+  d1
+  c1:m
+  d1
 
 }
 
@@ -102,9 +131,9 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Chusidl"
-    subtitle="p.84"
-    composer= "Chuidl : )"
+    title= "Terk In America"
+    subtitle=""
+    composer= ""
     instrument =""
     arranger= ""
   }

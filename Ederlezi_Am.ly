@@ -27,22 +27,22 @@ primos = \relative c'' {
   \repeat volta 2{
     \mark \default
     r4 a8 bf c (bf)a (g)
-    g8 a~a4     g16 f g8 f4
-    r4 a8 bf bf4 bf8 g|
-    a4. bf8 g16 f g8 f4|
+    g8 a~a4    g4 f %g16 f g8 f4
+     r4 f8 g g4 g8 e|
+    f4. g8 e4 d %e16 d e8 d4|
 
-    r4 a8 bf bf4 bf8 g|
-    a4. bf8 g16 f g8 f4|
-    r4 a8 g bf bf g4|
-    f8 f~f2 r4|
+    r4 f8 g g4 g8 e
+    f4. g8 e4 d %e16 d e8 d4|
+    r4 f8 e g g e4|
+    d8 d~d2 r4|
   }
   %\alternative { { }{ } }
 
   \repeat volta 2{
     \mark \default
 
-        c'2.bf16 c bf a
-        bf2. r4
+       a'2. g16 a g f|
+        g2. r4|
 
     f4 a8 a g f e e|
     f4 e8 f a a g4|
@@ -52,14 +52,14 @@ primos = \relative c'' {
     {
       d'2 \fermata c8 bf a g
       r4 c8 bf a4 g
-      r4 f8 e a a e4|
+      r4 f8 e g4 e|
       d8 d (d2) r4|
     }
     {
       d'1 |
       r4 c8 bf a4 g|
       r4 c8 bf a4 g
-      r4 g8 f a a e4|
+      r4 f8 e8 g4 e|
       d8 d (d2) _\markup{\italic fine} r4| \bar"||"
     }
   }
@@ -67,18 +67,18 @@ primos = \relative c'' {
   a'8 g g fs fs e e d
   cs8 d e r r2
   cs8 d e4 r2
-  a'8 g g fs fs e e d
+  a8 g g fs fs e e d
   cs1 _\markup {\italic {D.C. al Fine}}
 
 }
 \addlyrics{
   %https://musescore.com/user/35722119/scores/6322876
   Sa o Ro -- ma ba -- bo,
-  \repeat unfold 4{\skip2}
+  \repeat unfold 2{\skip2}
   e bak -- ren ch --i --n --  en
-  \repeat unfold 4{\skip2}
+  \repeat unfold 2{\skip2}
   A me ch -- o --  -- r -- r -- o,
-  \repeat unfold 4{\skip2}
+  \repeat unfold 2{\skip2}
   d -- u -- ral ve --  _ sa -- va
   \repeat unfold 1 {}
 
@@ -89,20 +89,20 @@ primos = \relative c'' {
   % first end
   E.. Er -- de -- le -- zi
   Er -- de -- le -- zi
-  Sa -- o Ro -- ma  o da -- je.
+  Sa -- o Ro -- ma  da -- je.
  % 2nd end
   E.. Er -- de -- le -- zi
   Er -- de -- le -- zi
-  Sa -- o Ro -- ma  o da -- je.
+  Sa -- o Ro -- ma da -- je.
 
 }
 \addlyrics{
 Sa me a -- ma -- la _
-\repeat unfold 4{\skip2}
+\repeat unfold 2{\skip2}
 o -- ro khe -- le -- _ na
-\repeat unfold 5{\skip2}
+\repeat unfold 3{\skip2}
 o -- ro khe -- le -- _ na,
-\repeat unfold 5{\skip2}
+\repeat unfold 3{\skip2}
 di -- ve ke -- re -- _  na
 }
 secund = \relative c' {
@@ -112,14 +112,14 @@ secund = \relative c' {
   \repeat volta 2{
     \mark \default
     r4 f8 g a g f e
-    e8 f~f4 e16 d e8 d4|
-    r4 f8 g g4 g8 e|
-    f4. g8 e16 d e8 d4|
+    e8 f~f4 e4 d%e16 d e8 d4|
+        r4 a8 bf bf4 bf8 g|
+    a4. bf8 g4 f%g16 f g8 f4|
 
-    r4 f8 g g4 g8 e
-    f4. g8 e16 d e8 d4|
-    r4 f8 e g g g4|
-    d8 d~d2 r4|
+    r4 a8 bf bf4 bf8 g|
+    a4. bf8 g4 f %g16 f g8 f4|
+    r4 a8 g bf bf g4|
+    f8 f~f2 r4|
   }
   %\alternative { { }{ } }
 
@@ -128,8 +128,8 @@ secund = \relative c' {
  <<
 
       {
-        a'2. g16 a g f|
-        g2. r4|
+       c''2. bf16 c bf a
+        bf2. r4
       }
       \\
       {
@@ -148,7 +148,7 @@ secund = \relative c' {
     {
       bf'2 a8 g f d
       r4 a'8 g f4 d
-      r4 d8 d cs cs cs4
+      r4 d8 d cs4 cs
       d8 d (d4) r2
     }
     {
@@ -160,10 +160,10 @@ secund = \relative c' {
     }
   }
   cs8 d e4 r2
-  a'8 g g fs fs e e d
+  a,8 g g fs fs e e d
   cs8 d e r r2
-  r2 a,,8 a a4
-  a'8 g g fs fs e e d
+  r2 a8 a a4
+  a8 g g fs fs e e d
   cs1
 }
 

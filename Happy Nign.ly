@@ -107,6 +107,7 @@ melody = \relative c' {
 
 secund = \relative c' {
   \global
+
   \repeat volta 2{
     d4 f
     a4 d
@@ -226,7 +227,7 @@ harmonies = \chordmode {
       \harmonies
     }
     \new Staff \melody
-    \new Staff \secund
+    %\new Staff \secund
   >>
   \header{
     title= "Happy Nign"

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.20.0"
 \include "english.ly"
 \paper{
   tagline = #ff
@@ -13,87 +13,85 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key g \minor
+  \key a \minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  \partial 8 a8    %lead in notes
 
-  \repeat volta 2{
-   \mark \default
-   g16(af) b8 b b
-   b16 (d)c8 c c
-   b8 c d16(ef) c(ef)
-   d4 g
+   e'8 d e(c)
+   a4. c8
+   e8 d16 d e8 c
+   a4.e'8
 
-   g,16(af) b8 b b
-   b16 (d)c8 c c
-   c16(f,) g af b(c) b af
-   af16(g) g4.
-  }
+   g8 g g4
+   a4 g16 (f) e d
+   e2 ~
+   e4. c16 (e)
 
- % \break
-  \repeat volta 2{
-   \mark \default
-   f'16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g8 [b d g]
+   g8 g g e
+   c4. e16 f
+   g16(f)
+   e16 d e8(a)
 
-   f16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g4 r8 g
-    \break
-  }
-
-
-  \repeat volta 2{
-  \mark \default
-  b16(d) c8 c c
-  c16 (b) af g f4
-  e16(f) g af  b(c) d ef %not marked?
-  f16(ef) d c b(af) g f
-
-  b16(d) c8 c c
-  f16(ef) d c b4
-  d16(c) c(b) b(af) af(g)
-   g4 r8 g
-
-  }
+   a4. g,8
+   c8 e g(e)
+   f8 d c b
+   a4. r8
 }
 %################################# Lyrics #####################
-%\addlyrics{ \set stanza = #"1. " }
+\addlyrics{ \set stanza = #"1. "
+ Oy, dor -- tn, dor -- tn
+ i -- be -- rn _ va -- se -- rl,
+ Oy, dor -- tn, dor -- tn,
+ i -- be -- rn brik!
+
+ Far tri -- bn hos -- tu mikh in di
+ vay -- te -- ne len der,
+ Un ben -- ken benk
+ ihk nohk dir tsu -- rik!
+}
+
+\addlyrics{ \set stanza = #"2. "
+Oy, vi -- fl ovn -- tn
+tsu -- sa -- men _ ge -- ze -- sn,
+Oy, vi -- fl ovn -- tn shpet in der nakht!
+Un vi -- fl tre -- re -- lekh
+mir _  hobn beyde far -- go -- sn
+Ey -- der mir hobn(di) li -- be tsuzamen ge -- brakht!
+}
+
+\addlyrics{ \set stanza = #"3. "
+Oy, helf mir, goten -- yu, oy got in _  hi  _-- ml
+Helf mir got -- en -- yu, s'iz mir nit gut
+Shoyn tsayt dray yor -- el -- ekh, vi mir shpiln a li _ -- be,
+Un oysshpiln di li -- be kon -- en mir nit!
+}
+\addlyrics{ \set stanza = #"4. "
+
+}
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2
-  c2:m
-  g2*4
-  f2:m
-  g2
-  %b
-  g2*6
-  \parenthesize f2:m
-  g2
-  %c
-  c2:m
-  f2*3:m
-  c4*3:m
-  g4
-  \parenthesize f2:m
-  g2
-
-
+  s8 a2*4:m
+  c2
+  f4 g4:7
+  c2*4
+  e4:m
+  a4:m
+  f2
+  c2
+  d4:m e4:7
+  a2:m
 }
 
 \score {
   % transpose score below
-  %\transpose c d
+  \transpose a c'
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -102,9 +100,9 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Chusidl"
-    subtitle="p.84"
-    composer= "Chuidl : )"
+    title= "Dortn, Dortn"
+    subtitle=""
+    composer= ""
     instrument =""
     arranger= ""
   }

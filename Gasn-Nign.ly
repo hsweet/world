@@ -67,13 +67,18 @@ melody = \relative c' {
     gs16 b a4~
     a8. a,16 d f
 
+    <<
+      {
     a8. gs16 \tuplet 3/2{a gs f}
     a8. gs16 \tuplet 3/2{a gs f}
     e16 g f4~
-    f8.
-    a,16 d e
+    f8.a,16 d e|
+      }
+    \\
+    {d4. c4. b4. bf4.}
+    >>
 
-    f8. e16 \tuplet 3/2{f e d}|
+    f'8. e16 \tuplet 3/2{f e d}|
     f8. e16 \tuplet 3/2{f e d}|
     cs16 e d4~
     d8 r4
@@ -97,6 +102,8 @@ harmonies = \chordmode {
   d8*2:m c8:m
   d8*9:m
   %b
+   d8*3:m
+  %{ old b chords
   d8*12:m
   c8*6:m
   d8*12:m
@@ -104,6 +111,7 @@ harmonies = \chordmode {
   d8*3:m
   f8*6:m
   d8*6:m
+    %}
 }
 
 \score {

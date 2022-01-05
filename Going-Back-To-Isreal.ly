@@ -13,87 +13,76 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key g \minor
-  \time 2/4
+  \key a \minor
+  \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+theme = {
+  a8 g a b c b c d
+  e4 a r e'~
+  e8 g8 e d c b a b
+  c8 b a g
+  e8 d c b
+}
+
+melody = \relative c' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  \partial 8 g8 %lead in notes
 
   \repeat volta 2{
    \mark \default
-   g16(af) b8 b b
-   b16 (d)c8 c c
-   b8 c d16(ef) c(ef)
-   d4 g
+   \theme
+   \theme
+   %e4 a, a2~
 
-   g,16(af) b8 b b
-   b16 (d)c8 c c
-   c16(f,) g af b(c) b af
-   af16(g) g4.
+
+  }
+  \alternative {
+    {e4 a, a r8 g8}
+
+    {e'4 a, a2 }
   }
 
- % \break
   \repeat volta 2{
    \mark \default
-   f'16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g8 [b d g]
+   e''4 a a8 b a g
+  e4 a a2
+  e4 g2 g4|
+  a8 b a g e d c d
 
-   f16(ef) ef(d) d4
-   d16(c) c(b) b4
-   d16(c) c(b) b(af) af(g)
-   g4 r8 g
-    \break
+  e4 a a8 b a g
+  e4 a a2
+
+  e8 g8 e d c b a b
+  c8 b a g
+  e8 d c b
+   e4 a, a2~
   }
 
 
-  \repeat volta 2{
-  \mark \default
-  b16(d) c8 c c
-  c16 (b) af g f4
-  e16(f) g af  b(c) d ef %not marked?
-  f16(ef) d c b(af) g f
-
-  b16(d) c8 c c
-  f16(ef) d c b4
-  d16(c) c(b) b(af) af(g)
-   g4 r8 g
-
-  }
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2
-  c2:m
-  g2*4
-  f2:m
-  g2
-  %b
-  g2*6
-  \parenthesize f2:m
-  g2
-  %c
-  c2:m
-  f2*3:m
-  c4*3:m
-  g4
-  \parenthesize f2:m
-  g2
-
-
+ s8
+ a1*6:m
+ f1
+ e1
+ a1*2:m
+ % B
+ a1*2:m
+ g1*2
+ a1*2:m
+ f1
+ e1
+ a1:m
 }
 
 \score {
-  % transpose score below
-  %\transpose c d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -102,11 +91,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Chusidl"
-    subtitle="p.84"
-    composer= "Chuidl : )"
+    title= "Going Back To Isreal"
+    subtitle=""
+    composer= "June Drucker"
     instrument =""
-    arranger= ""
+    arranger= "as played by H. Sweet"
   }
   \layout{indent = 1.0\cm}
   \midi {
@@ -119,7 +108,6 @@ harmonies = \chordmode {
 % more verses:
 \markup{}
 \markup {
-  \font-size #2
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {

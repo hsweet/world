@@ -5,8 +5,7 @@
   print-all-headers = ##t
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
-
-%%\markup{ \italic{ " Updated " \date  }  }
+  \markup{ \italic{ \date  }  }
 
 %\markup{ Got something to say? }
 
@@ -57,8 +56,8 @@ melody = \relative c'' {
     g16 f f e g4
     f8 c f4
     g8 ef d c
-    ef16 ef ef g d d d g
-    c,4 r8 c
+    ef16 ef ef g f8 d% d d d g
+    c4. r8
 
   }
   % \alternative { { }{ } }

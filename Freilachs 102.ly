@@ -61,9 +61,12 @@ melody = \relative c' {
  e16(a) e (a) e8. d16
  d8 c16 b c4
  c16(b) a b c(d) c b
- a4 a'
+ %a4 a'
  }
-
+ \alternative{
+   {a4 a'}
+   {a,4 a'}
+}
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
@@ -71,7 +74,9 @@ melody = \relative c' {
 harmonies = \chordmode {
   a2*8:m
   c2*8
-  a2*8:m
+  a2*7:m
+  a2:m
+  a4:m d4:7
 
 }
 

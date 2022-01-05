@@ -1,5 +1,6 @@
 
-\version "2.18.0"
+\version "2.20.0"
+\include "english.ly"
 % automatically converted from Moldavian Hora.xml
 
 \paper{
@@ -14,7 +15,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 melody=   \relative c'' {
   \set Score.markFormatter = #format-mark-box-alphabet
-  \clef "treble" \key d \minor \time 3/8 
+  \clef "treble" \key d \minor \time 3/8
   \repeat volta 2 {
     \mark \default
     d8 a4 | % 2
@@ -23,7 +24,7 @@ melody=   \relative c'' {
     e8 d4 | % 5
     g8 f4 | % 6
 
-    g8. [ a16 bes16 g16 ] | % 7
+    g8. [ a16 bf16 g16 ] | % 7
 
     a4. ( | % 8
     a8. ) [ g16 f16 e16 ] | % 9
@@ -55,8 +56,8 @@ melody=   \relative c'' {
     d8 c4 | % 28
     c4. | % 29
 
-    c8. [ bes16 a16 bes16 ] |
-    c8. [ bes16 a16 bes16 ] | % 31
+    c8. [ bf16 a16 bf16 ] |
+    c8. [ bf16 a16 bf16 ] | % 31
 
     a4. ( | % 32
     a4. )
@@ -82,7 +83,7 @@ harmonies =  \chordmode {
   c4.*2 %r4.
   g4.*6 % r4.*5
   c4.*2 % r4.
-  bes4.*2 % r4.
+  bf4.*2 % r4.
   a4.*2:7 %r4.
 
 }
@@ -109,3 +110,11 @@ harmonies =  \chordmode {
   }
 }
 
+
+
+%{
+convert-ly (GNU LilyPond) 2.20.0  convert-ly: Processing `'...
+Applying conversion: 2.19.2, 2.19.7, 2.19.11, 2.19.16, 2.19.22,
+2.19.24, 2.19.28, 2.19.29, 2.19.32, 2.19.40, 2.19.46, 2.19.49,
+2.19.80, 2.20.0
+%}

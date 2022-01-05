@@ -77,7 +77,7 @@ melody = \relative c'' {
      d2.
      ef4 d c
      d4 g, c
-     bf4. a8 af bf
+     bf4.c8 af bf
      g2.
    }>>
 

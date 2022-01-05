@@ -50,7 +50,7 @@ melody = \relative c'
     a a
     a8 g f e
     d4. \tuplet 3/2 {f16 e d}
-    c4\fermata \tuplet 3/2 {c8\< d8 e8} f4\!
+    cs4\fermata \tuplet 3/2 {a8\< b8 cs8} f4\!
 
     a c
     f, g
@@ -94,7 +94,7 @@ melody = \relative c'
   }
   %C sectio
   \break
-  
+
   \repeat volta 2{
     \mark \default
 d8  e r f

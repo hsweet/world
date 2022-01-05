@@ -29,7 +29,7 @@ melody = \relative c'' {
     gis8 a(a)a
     gis8 e' d16 c b a
     gis8 e16 e fis 8 gis
-    a8. a16 e8 e ~
+    a8. a16 e8 e
     a16 a a a e8 a
     a,8 a'e a~
     a16 a a a e8 a
@@ -149,8 +149,8 @@ harmonies = \chordmode {
     } \melody
   >>
   \header{
-    title= "Oy Tate, S'iz Git Backup"
-    subtitle=" "
+    title= "Oy Tate, S'iz Git "
+    subtitle="2nd Part  "
     composer= ""
     instrument =""
     arranger=""

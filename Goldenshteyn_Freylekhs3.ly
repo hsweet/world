@@ -1,4 +1,5 @@
-\version "2.18.0"
+\version "2.20.0"
+\include "english.ly"
 
 \paper{
   tagline = ##f
@@ -7,7 +8,7 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\markup{ \italic{ " Updated " \date  }  }
+\markup{ \italic{ \date  }  }
 
 %\markup{ Got something to say? }
 
@@ -23,48 +24,49 @@ melody = \relative c' {
   \repeat volta 2{
   \mark \default
     r8 d16 d d8 d
-    fis8 fis fis4
-    fis8. d16 fis8 a|
-    g8 fis ees d
+    fs8 fs fs4
+    fs8. d16 fs8 a|
+    g8 fs ef d
 
     r8 d16 d d8 d|
     a'8 a a4
-    g8. fis16 g8 a|
+    g8. fs16 g8 a|
 
   }
-  \alternative { { g8 fis(fis4)}{g8 fis r d |} }
+  \alternative { { g8 fs(fs4)}{g8 fs r d |} }
 
   \repeat volta 2{
   \mark \default
-    g4   bes16(a) g8|
-    a16(bes)g8~g d
-    g4 bes16(a)g8|
-    a16(bes)g8~g d
+    g4   bf16(a) g8|
+    a16(bf)g8~g d
+    g4 bf16(a)g8|
+    a16(bf)g8~g d
 
-    g4 bes16(a)g8|
-    c8 bes a g
+    g4 bf16(a)g8|
+    c8 bf a g
   }
   \alternative {
     {
-      fis16 (g)a(g) fis(g)a(bes)
+      fs16 (g)a(g) fs(g)a(bf)
       a4 d8 d,
     }
     {
-      fis16(g)a(g)fis(g) fis(ees)
-      ees8 d(d4)
+      fs16(g)a(g)fs(g) fs(ef)
+      ef8 d(d4)
     }
   }
   \repeat volta 2{
+  \break
   \mark \default
-    d4-. ^\markup {\box C} d'--
-    c8 bes a g
-    fis16(g)a(g) fis8. ees16|
-    g8 fis~fis ees16(d)|
+    d4-.  d'--
+    c8 bf a g
+    fs16(g)a(g) fs8. ef16|
+    g8 fs~fs ef16(d)|
 
     d4-. d'--
-    c8 bes a g
-    fis16(g)a(g) fis8. ees16|
-    ees8 d~d4|
+    c8 bf a g
+    fs16(g)a(g) fs8. ef16|
+    ef8 d~d4|
 
   }
 }
@@ -73,20 +75,15 @@ melody = \relative c' {
 %################################# Chords #######################
 harmonies = \chordmode {
   d2*6
-  %r2*5
   c2:m
   d2*2
-  %r2
   %b
   g2*6:m
-  %r2*5
-  d4*5
-  %r4*3
-  c4:m
+  d4*4
+  d4 c4:m
   d2
   %c
   d4*13
-  %r4*11
   c4:m
   d2
 }
@@ -94,7 +91,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -105,10 +102,18 @@ harmonies = \chordmode {
     subtitle=""
     composer= ""
     instrument =""
-    arranger= "J. Warschauer"
+    arranger= ""
   }
   \layout{indent = 1.0\cm}
   \midi{
     \tempo 4 = 120
   }
 }
+
+
+%{
+convert-ly (GNU LilyPond) 2.20.0  convert-ly: Processing `'...
+Applying conversion: 2.19.2, 2.19.7, 2.19.11, 2.19.16, 2.19.22,
+2.19.24, 2.19.28, 2.19.29, 2.19.32, 2.19.40, 2.19.46, 2.19.49,
+2.19.80, 2.20.0
+%}
