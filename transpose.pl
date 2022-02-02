@@ -9,12 +9,12 @@ use Cwd;
 
 #*********************setup**************************
 
-my $cutoffage = 900;   #number of days to look back
+my $cutoffage = 7;   #number of days to look back
 
 my $targetnote;
 
 transpose("Bb");
-#transpose("Eb");
+transpose("Eb");
 #******************end setup************************
 
 sub age{
