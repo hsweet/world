@@ -9,12 +9,13 @@ use Cwd;
 
 #*********************setup**************************
 
-my $cutoffage = 7;   #number of days to look back
+my $cutoffage = @ARGV || 4;   #number of days to look back
+my $target;
 
-my $targetnote;
 
 transpose("Bb");
 transpose("Eb");
+transpose("Bass");
 #******************end setup************************
 
 sub age{
@@ -29,47 +30,55 @@ sub transpose{
 	(my $instrument) = @_;
 	 
 	 if ($instrument eq "Bb"){
-	     $targetnote="d";
+	     $target="d";
 		}
 	 elsif ($instrument eq "Eb"){
-		$targetnote = "a";
+		 $target = "a";
+		}
+	 elsif ($instrument eq "Bass"){
+		 $target = "bass";
 		}
 			
-	my $newfile_type="\.ly";
 	mkpath($instrument); 
-	my $path = cwd;   #path to read from
 	say $instrument;
-		
+	
+	#*******get lily source files from current directory ******
+	my $path = cwd;   #path to read from	
+	my $newfile_type="\.ly";
 	opendir(TEMP,$path) || die "$path is not a valid directory: $!"; 
 	my @files=grep(/$newfile_type/, readdir TEMP);	#Just lily files
-			
+	
+	
 	foreach my $newfile(@files){
-			 
-			open(MYFILE, $newfile ) || die "opening $newfile: $!";
-				my @text=<MYFILE>; 
-			close(MYFILE);  
-			
-			#***********process recently changed files *************
-			 
-			 if (age($newfile) < $cutoffage){
-				 my @basename = split(/\./, $newfile);
-			 
-			#Print a tune listing
-			print $basename[0]." ==> ";
-            $newfile = $basename[0]."_".$instrument.".ly";
-            say $newfile;
-			# Write transposed file 
-			open(OUT, ">$instrument/$newfile");	
-				foreach my $line(@text){
-					$line=~s/\\score \{/\\score \{\\transpose c $targetnote/;
-					print OUT $line;
-				}
-			close(OUT);
-				 
-			}
-			#*************************************************
+		open(MYFILE, $newfile ) || die "opening $newfile: $!";
+			my @text=<MYFILE>; 
+		close(MYFILE);  
+		
+		#***********process recently changed files *************
 		 
-			
+		 if (age($newfile) < $cutoffage){
+			 my @basename = split(/\./, $newfile);
+		 
+		#Print a tune listing
+		print $basename[0]." ==> ";
+		$newfile = $basename[0]."_".$instrument.".ly";
+		say $newfile;
+		# Write transposed file 
+		open(OUT, ">$instrument/$newfile");	
+		
+				foreach my $line(@text){
+					if ($target ne "bass"){
+						$line=~s/\\score \{/\\score \{\\transpose c $target/;
+						print OUT $line;
+					}
+					elsif ($target eq "bass"){
+						$line=~s/clef treble/clef bass/;
+						print OUT $line;
+						}			
+			}
+		close(OUT);
+			 
+		}
 	}
 }
 
