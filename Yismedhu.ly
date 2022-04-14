@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 % automatically converted from Yismedhu.xml
 %was in Clarinet key before \transpose e d
 
@@ -21,22 +22,22 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 %\markup{ \italic{ " Updated " \date  }  }
 melody =  \transpose e d \relative c' {
-  \transposition bes \clef "treble" \key e \minor \time 2/4 \partial 8
-  fis8 \repeat volta 2 {
+  \transposition bf \clef "treble" \key e \minor \time 2/4 \partial 8
+  fs8 \repeat volta 2 {
     % 1
     % 1
-    b16 [ c16 b16 c16 ] dis16 [ e16 dis16 c16 ]  % 2
-    dis8 [ b8 ] fis8 [ b8 ]  % 3
-    dis16 [ e16 dis16 e16 ] fis16 [ g16 fis16 e16 ]  % 4
-    fis8 [ dis8 ] b8 [ dis8 ]  % 5
-    b16 [ dis16 fis16 a16 ] g16 [ fis16 e16 dis16 ]  % 6
-    e16 [ dis16 c16 b16 ] a4  % 7
-    gis16 [ a16 b16 c16 ] dis16 [ e16 dis16 c16 ]
+    b16 [ c16 b16 c16 ] ds16 [ e16 ds16 c16 ]  % 2
+    ds8 [ b8 ] fs8 [ b8 ]  % 3
+    ds16 [ e16 ds16 e16 ] fs16 [ g16 fs16 e16 ]  % 4
+    fs8 [ ds8 ] b8 [ ds8 ]  % 5
+    b16 [ ds16 fs16 a16 ] g16 [ fs16 e16 ds16 ]  % 6
+    e16 [ ds16 c16 b16 ] a4  % 7
+    gs16 [ a16 b16 c16 ] ds16 [ e16 ds16 c16 ]
   }
   \alternative {
     {
       % 8
-      b4. fis8
+      b4. fs8
     }
     {
       % 9
@@ -44,16 +45,16 @@ melody =  \transpose e d \relative c' {
     }
   } \repeat volta 2 {
     \barNumberCheck #10
-    fis'4 fis4  % 11
-    fis16 [ dis16 b16 dis16 ] fis4  % 12
-    fis16 [ g16 fis16 g16 ] fis8 [ dis8 ]  % 13
-    b16 [ dis16 fis16 g16 ] fis4  % 14
-    fis16 [ g16 fis16 g16 ] fis8 [ dis8 ]  % 15
-    fis16 [ e16 dis16 c16 ] b4  % 16
-    fis'16 [ g16 fis16 g16 ] fis8 [ dis8 ]  % 17
-    b16 [ dis16 fis16 g16 ] a4  % 18
-    a16 [ g16 fis16 e16 ] fis16 [ e16 dis16 c16 ]  % 19
-    e16 [ dis16 c16 b16 ] b4 (
+    fs'4 fs4  % 11
+    fs16 [ ds16 b16 ds16 ] fs4  % 12
+    fs16 [ g16 fs16 g16 ] fs8 [ ds8 ]  % 13
+    b16 [ ds16 fs16 g16 ] fs4  % 14
+    fs16 [ g16 fs16 g16 ] fs8 [ ds8 ]  % 15
+    fs16 [ e16 ds16 c16 ] b4  % 16
+    fs'16 [ g16 fs16 g16 ] fs8 [ ds8 ]  % 17
+    b16 [ ds16 fs16 g16 ] a4  % 18
+    a16 [ g16 fs16 e16 ] fs16 [ e16 ds16 c16 ]  % 19
+    e16 [ ds16 c16 b16 ] b4 (
   }
   \alternative {
     {
@@ -68,14 +69,14 @@ melody =  \transpose e d \relative c' {
   \repeat volta 2 {
     % 22
     % 22
-    dis8. [ c16 ] b16 [ a16 b16 c16 ]  % 23
-    dis16 [ e16 dis16 c16 ] b4  % 24
-    b16 [ c16 dis16 e16 ] fis16 [ g16 fis16 e16 ]  % 25
-    fis4 b4  % 26
-    a16 [ g16 fis16 e16 ] dis16 [ e16 fis16 g16 ]  % 27
-    a16 [ g16 fis16 e16 ] dis4  % 28
+    ds8. [ c16 ] b16 [ a16 b16 c16 ]  % 23
+    ds16 [ e16 ds16 c16 ] b4  % 24
+    b16 [ c16 ds16 e16 ] fs16 [ g16 fs16 e16 ]  % 25
+    fs4 b4  % 26
+    a16 [ g16 fs16 e16 ] ds16 [ e16 fs16 g16 ]  % 27
+    a16 [ g16 fs16 e16 ] ds4  % 28
     a8 [ b8 ] c8 [ e8 ]  % 29
-    dis16 [ e16 dis16 c16 ] b4
+    ds16 [ e16 ds16 c16 ] b4
   }
 }
 

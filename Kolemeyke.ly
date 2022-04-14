@@ -1,6 +1,7 @@
 \version "2.18.0"
+\language "english"
 \paper{
-  tagline = ##f
+  tagline = "hsweet/lilypond"
   %print-all-headers = ##t
   #(set-paper-size "letter")
 }
@@ -20,42 +21,42 @@ melody = \relative c' {
   \time 2/4
   \partial 16*3 a'16 d f
   \repeat volta 2{
-    a16\upbow f e d a'\upbow f e d
-    a'16\upbow f e d a'\upbow f e d
-    e16 f gis a gis f e d
-    gis8\upbow a\upbow ~ a4
+    a16  f e d a'  f e d
+    a'16  f e d a'  f e d
+    e16 f gs a gs f e d
+    gs8  a  ~ a4
 
     a16 f e d a' f e d
     a'16 f e d a' f e d \breathe
-    e f gis a gis f e d
+    e f gs a gs f e d
     d4 ~ d16 a d f
     \break
   }
   \repeat volta 2{
-    c'8\upbow c ~ c16 b d c\upbow
-    b8\upbow b ~ b16a c b
+    c'8  c ~ c16 b d c
+    b8  b ~ b16a c b
     a8 -3 a ~ a16 a b a %gis b c
-    gis8. gis16 a f e d %12
+    gs8. gs16 a f e d %12
 
-    e16 f gis a gis f e d
-    gis8 a ~ a4
+    e16 f gs a gs f e d
+    gs8 a ~ a4
     c8 c ~ c16 b d c
     b8 b ~ b16a c b%16
 
     a8 -3 a ~ a16 a b a%gis b c
-    gis8. f16 gis f e d
-    e16 f gis a gis f e f
+    gs8. f16 gs f e d
+    e16 f gs a gs f e f
     d2%20
   }
   \repeat volta 2{
     a16 d f a a, d f a
-    a,16 d f a gis f e d
-    a16 d f a gis f e d
-    gis 8 a ~ a4
+    a,16 d f a gs f e d
+    a16 d f a gs f e d
+    gs 8 a ~ a4
 
     c16  b d c b a c b
-    a16 gis b a g f e d
-    e16 f gis a gis f e f
+    a16 gs b a g f e d
+    e16 f gs a gs f e f
     d2
     \break
   }
@@ -72,8 +73,8 @@ harmonies = \chordmode {
     c2 g2
     d2*4:m
     %r2*3
-    c2 g2 d2:m
-    r2
+    c2 g2 d2*2:m
+
     a2:7 d2:m
   }{
     d2*6:m
@@ -87,7 +88,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

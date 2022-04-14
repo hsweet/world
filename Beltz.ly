@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 \paper{
   tagline = ##f
   #print-all-headers = ##t
@@ -29,24 +30,24 @@ melody = \transpose d c \relative c' {
   f8 d r4 \tuplet 3/2{d8 c d}
   c4(c8.) c16 \tuplet 3/2 {c8 f g}| %4
 
-  a8 f4 a8 c16 c bes a
+  a8 f4 a8 c16 c bf a
   g4. g8 \tuplet 3/2{d'8 [d, d]}
-  d16 d d8 r f \tuplet3/2 {g8 [g ees]}
-  d4. a'8 \tuplet 3/2{c8 [bes a]}| %8
+  d16 d d8 r f \tuplet3/2 {g8 [g ef]}
+  d4. a'8 \tuplet 3/2{c8 [bf a]}| %8
 
   c4. a8 \tuplet 3/2 {g16 [f g]} f16 g
   f4. a8 c16 c d c
-  f4. c8 c16  bes a bes
-  a4. a8 \tuplet 3/2  {bes8 [a g]}| %12
+  f4. c8 c16  bf a bf
+  a4. a8 \tuplet 3/2  {bf8 [a g]}| %12
 
-  bes4. a8 \tuplet 3/2 {a8 [g f]}
+  bf4. a8 \tuplet 3/2 {a8 [g f]}
   a4. g8 \tuplet 3/2 {g8 [f e]}
   g2 \tuplet 3/2 {f8 e d}
-  a'4. a8 \tuplet 3/2 {bes8 [a g]}| %16
+  a'4. a8 \tuplet 3/2 {bf8 [a g]}| %16
 
-  bes4. a8 \tuplet 3/2 {a8 [g f]}
+  bf4. a8 \tuplet 3/2 {a8 [g f]}
   a4. g8 \tuplet 3/2 {g8 [f e]}
-  g2 \tuplet 3/2 {gis8 a f}|
+  g2 \tuplet 3/2 {gs8 a f}|
 
   %time change
   \time 2/4
@@ -61,7 +62,7 @@ melody = \transpose d c \relative c' {
   a8 g16 a g8 f16(g)
   f16 e d8 \tuplet 3/2 {g8 g d}
   f2 ~
-  f16 a c bes a bes a g|
+  f16 a c bf a bf a g|
 
 
   f2 ~
@@ -78,12 +79,12 @@ melody = \transpose d c \relative c' {
   d2~
   d8 r r4
 
-  a'8 a bes16 a bes8
-  c4 d16 c bes8
+  a'8 a bf16 a bf8
+  c4 d16 c bf8
   a8 f g c,
   f4 r8 f8
-  a8 a bes16 a bes8
-  c8 c des16 c bes8
+  a8 a bf16 a bf8
+  c8 c df16 c bf8
 
   %page 262
   a8 a g16(f)g8
@@ -94,7 +95,7 @@ melody = \transpose d c \relative c' {
   f2~
   f8 f g16 f g8
   a8 g16 a g8 f16(g)
-  f16 e d8 \tuplet 3/2 {bes'8 bes a}
+  f16 e d8 \tuplet 3/2 {bf'8 bf a}
   d2~
   d8 r8 r4
 
@@ -109,12 +110,12 @@ harmonies = \transpose d c \chordmode {
   f2 d4:7 g2:m g4:m d1:m d4:m  f2 f4 c4
   f4*9  g4*3:m  d4:m d2:m %14
 
-  a2:7 bes4 a4 d4:7 g2:m g2:m d2:m g4:m a2 a4
+  a2:7 bf4 a4 d4:7 g2:m g2:m d2:m g4:m a2 a4
   %change to 2/4
   d2*3:m d4:m g4:m d4*3:m  g4:m f4 g4:m
   d4:m g4:m d4*3:m  a4:7 d4*3:m g4:m d4*3:m  g4:m
-  d4*3:m  g4:m f4 g4:m d8*3:m  g8:m d2:m r4 c4:7 f4 bes4
-  f4 bes4 f4 c4 f4*3  g4:m f4 bes4:m f4 g4:m a2:7
+  d4*3:m  g4:m f4 g4:m d8*3:m  g8:m d2:m r4 c4:7 f4 bf4
+  f4 bf4 f4 c4 f4*3  g4:m f4 bf4:m f4 g4:m a2:7
   d4*3:m g4:m d4*3:m  g4:m f4 g4:m d4:m g4:m d2:m
 
 }

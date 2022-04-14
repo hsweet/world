@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 \paper{
   tagline = ##f
   # print-all-headers ##t
@@ -22,41 +23,41 @@ melody = \relative c' {
   \partial 8 a'8
 
   \repeat volta 2{
-    d8\upbow d  ees16 (d) ees (c) %slurs
-    d8 d  ees16 (d)ees (c)
-    b8 c d ees
-    fis8.\prall  ees16 fis16 ees d c
-    d8 d  ees16 (d)ees (c)
-    d8 d  ees16 (d)ees (c)
-    b16 c d ees
-    fis g fis ees
-    ees d (d4.)
+    d8\upbow d  ef16 (d) ef (c) %slurs
+    d8 d  ef16 (d)ef (c)
+    b8 c d ef
+    fs8.\prall  ef16 fs16 ef d c
+    d8 d  ef16 (d)ef (c)
+    d8 d  ef16 (d)ef (c)
+    b16 c d ef
+    fs g fs ef
+    ef d (d4.)
   }
   %\tuplet 3/2 {  }
 
   \repeat volta 2{
-    fis2  (a-1)
-    \grace ees (d'4) a \grace g (fis) d
-    fis8\prall ees16 fis ees8 d
-    fis8\prall ees16 fis ees8 d
-    r8 d fis16 ees fis16 a
+    fs2  (a-1)
+    \grace ef (d'4) a \grace g (fs) d
+    fs8\prall ef16 fs ef8 d
+    fs8\prall ef16 fs ef8 d
+    r8 d fs16 ef fs16 a
     g4 g
     %\tuplet 3/2{fis8 g fis}
     %\tuplet 3/2{ees8 fis ees}
-    fis16 g fis8
-    ees16 fis ees8
+    fs16 g fs8
+    ef16 fs ef8
     %\tuplet 3/2 {d8 ees d}c4\trill
-    d16 ees d8 c4\trill
+    d16 ef d8 c4\trill
 
-    \grace c b16 c d ees
-    fis g fis ees
-    ees d (d4.)
+    \grace c b16 c d ef
+    fs g fs ef
+    ef d (d4.)
   }
   %possible alternative ending
   r4^"alternative ending?" d8 d
-  d ees f g
-  a g f ees
-  f ees d c
+  d ef f g
+  a g f ef
+  f ef d c
   d2
 }
 

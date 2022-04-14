@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 
 \header{
@@ -27,7 +28,7 @@ melody = \relative c' {
     a'8  d a d
     a d f16 e d8
     f16 e d8 e f
-    gis8 a4.
+    gs8 a4.
 
     a,8 d a d
     a d f16 e d8
@@ -38,22 +39,22 @@ melody = \relative c' {
 
   \repeat volta 2{
   \mark \default
-    gis8  a b c
+    gs8  a b c
     b a4.
-    a8 gis4.
-    gis8 f4.
-    c'16 b a8 a16 gis f8
-    a16 gis f8
+    a8 gs4.
+    gs8 f4.
+    c'16 b a8 a16 gs f8
+    a16 gs f8
     f16 e d8
     d2 (d'4.)a8
 
-    gis8  a b c
+    gs8  a b c
     b e4.
     d8 c b a
-    gis f4.
+    gs f4.
 
-    c'16 b a8 a16 gis f8
-    a16 gis f8
+    c'16 b a8 a16 gs f8
+    a16 gs f8
     f16 e d8
     d2 (d2)
     %sheet has a low 1/4 note d. mistake?
@@ -62,15 +63,15 @@ melody = \relative c' {
     f e f g
     a2
 
-    c8 b a gis
-    a gis a b
-    c b a gis a2
-    gis8  a b c
+    c8 b a gs
+    a gs a b
+    c b a gs a2
+    gs8  a b c
     b e4.
     d8 c b a
-    gis f4.
-    c'16 b a8 a16 gis f8
-    a16 gis f8
+    gs f4.
+    c'16 b a8 a16 gs f8
+    a16 gs f8
     f16 e d8
     d2 (d2)
 

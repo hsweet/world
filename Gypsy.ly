@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 %moved \header into \score for includes to work
 
 \paper{
@@ -21,21 +22,21 @@ common = {
 %#################################### Melody ########################
 melody = \transpose d e \relative c'' {
   \common
-  \partial 16*3 a16 b cis   %lead in notes
+  \partial 16*3 a16 b cs   %lead in notes
 
   \repeat volta 2{
   \mark \default
     d8  a4.
-    bes8. a16 g fis g gis
-    a8 fis4 d'8
-    c8. c16 bes a g fis
+    bf8. a16 g fs g gs
+    a8 fs4 d'8
+    c8. c16 bf a g fs
 
     a2
     d8  a4.
-    bes8. a16 g fis g gis
-    a8 fis4 a8
+    bf8. a16 g fs g gs
+    a8 fs4 a8
 
-    g8 fis ees fis
+    g8 fs ef fs
 
     d2
   }
@@ -46,18 +47,18 @@ melody = \transpose d e \relative c'' {
   \repeat volta 2{
   \mark \default
     b'8  c c c
-    c4(c8) bes16 a
-    a8 bes bes bes
-    bes4(bes8)a16 g
+    c4(c8) bf16 a
+    a8 bf bf bf
+    bf4(bf8)a16 g
 
-    a8 fis4.|
-    r16 d' c bes a g fis g
+    a8 fs4.|
+    r16 d' c bf a g fs g
     a2|
 
     b8 c c c
-    ees4 d16 c bes g
-    a8 fis4 a8
-    g8 fis ees fis
+    ef4 d16 c bf g
+    a8 fs4 a8
+    g8 fs ef fs
     d2
   }
 

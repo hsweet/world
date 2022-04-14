@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \header{
   title= "Sadegruder Khosidl"
@@ -21,24 +22,24 @@ melody = \relative c'{
 
   \repeat volta 2{
 
-    bes'8. a16 g8 g~
-    g8. a16 bes a g8
-    a8. g16 fis8 fis
-    fis16 g fis ees d4
+    bf'8. a16 g8 g~
+    g8. a16 bf a g8
+    a8. g16 fs8 fs
+    fs16 g fs ef d4
 
-    fis16 d fis a g d g bes
-    a g a c bes a g fis
-    c'8 c c16 d ees c
-    d8 ees d16 c bes a
+    fs16 d fs a g d g bf
+    a g a c bf a g fs
+    c'8 c c16 d ef c
+    d8 ef d16 c bf a
 
-    bes8. a16 g8 g~
-    g8. a16 bes a g8
-    a8. g16 fis8 fis
-    fis16 g fis ees d4
+    bf8. a16 g8 g~
+    g8. a16 bf a g8
+    a8. g16 fs8 fs
+    fs16 g fs ef d4
 
     d'8. a16 c8. a 16
-    bes8. g16 a8. gis16
-    bes8 bes a16 g fis d
+    bf8. g16 a8. gs16
+    bf8 bf a16 g fs d
     g4. d8
   }
 %%%%%%%%%%%%%% Bsection, 1 repeat%%%%%%%%%%%%%%%%
@@ -54,7 +55,7 @@ melody = \relative c'{
     g4 b16 c b c
     b8 a16 g b c b8~
     b4 a8 a
-    g16 fis d fis g4
+    g16 fs d fs g4
   }
 %%%%%%%%%%%% C section, 1 repeat%%%%%%%%%%%%%%%%%%
 
@@ -66,14 +67,14 @@ melody = \relative c'{
     d4 d4
     d4 d4
 
-    g,16 bes d8 d d
+    g,16 bf d8 d d
     c8 r4 g8
-    c8 c  bes g
-    bes8 r4 d,8
+    c8 c  bf g
+    bf8 r4 d,8
 
-    g16 bes d8 d d
+    g16 bf d8 d d
     a8 r4 g8
-    bes16 f f bes bes gis gis g
+    bf16 f f bf bf gs gs g
     g2
   }
 

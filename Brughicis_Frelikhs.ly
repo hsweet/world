@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 \paper{
   tagline = ##f
   %print-all-headers = ##t
@@ -21,23 +22,23 @@ melody = \relative c' {
   %&A section
   \repeat volta 2{
     \mark \default
-    d8 d fis 16 ees d ees
-    fis8 fis a16 g fis ees
-    fis g a8 a16 g g fis
-    fis d ees fis ees d c b
-    c8 c' c16 bes bes a
+    d8 d fs 16 ef d ef
+    fs8 fs a16 g fs ef
+    fs g a8 a16 g g fs
+    fs d ef fs ef d c b
+    c8 c' c16 bf bf a
 
-    a8 g16 fis g fis g bes
-    bes a a8 a4 ~
+    a8 g16 fs g fs g bf
+    bf a a8 a4 ~
     a2
 
-    d,8 d fis 16 ees d ees
-    fis8 fis a16 g fis ees
-    fis g a8 a16 g g fis
-    fis d ees fis ees d c b
-    c8 c' c16 bes bes a
-    a8 g16 fis fis c d ees
-    ees16 d d8 d4 ~
+    d,8 d fs 16 ef d ef
+    fs8 fs a16 g fs ef
+    fs g a8 a16 g g fs
+    fs d ef fs ef d c b
+    c8 c' c16 bf bf a
+    a8 g16 fs fs c d ef
+    ef16 d d8 d4 ~
     d2
 
     %
@@ -47,20 +48,20 @@ melody = \relative c' {
   {
     \mark \default
     d'8 c16 b c8 d
-    d c16 b c8 bes16 a
-    c8 bes16 a bes8 a16 g
-    fis16 d ees fis ees d c b
-    c8 c' c16 bes bes a
-    a g g fis g fis g bes
-    bes a a8 a4
+    d c16 b c8 bf16 a
+    c8 bf16 a bf8 a16 g
+    fs16 d ef fs ef d c b
+    c8 c' c16 bf bf a
+    a g g fs g fs g bf
+    bf a a8 a4
     a4. d8
     d8 c16 b c8 d
-    d c16 b c8 bes16 a
-    c8 bes16 a bes8 a16 g
-    fis16 d ees fis ees d c b
-    c8 c' c16 bes bes a
-    a g g fis fis c des ees
-    ees d d8 d4
+    d c16 b c8 bf16 a
+    c8 bf16 a bf8 a16 g
+    fs16 d ef fs ef d c b
+    c8 c' c16 bf bf a
+    a g g fs fs c df ef
+    ef d d8 d4
   }
   \break
   %C Part
@@ -72,20 +73,20 @@ melody = \relative c' {
     b c d e d c b a
     g8 b b a16 g
     g a b c b8 a16 g
-    d' b c a b g a fis
+    d' b c a b g a fs
     g4. g8
   }
   \break
   %D Part
   \repeat volta 2{
     \mark \default
-    fis4 g
-    a bes
-    a8 a bes4
-    a16 bes c bes a g fis ees
-    fis4 g
-    a bes
-    a16 bes c bes a g fis ees
+    fs4 g
+    a bf
+    a8 a bf4
+    a16 bf c bf a g fs ef
+    fs4 g
+    a bf
+    a16 bf c bf a g fs ef
     d2
 
   }

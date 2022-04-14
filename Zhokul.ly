@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -22,34 +23,34 @@ melody = \transpose d c \relative c''' {
 
   \repeat volta 2{
   \mark \default
-    ais8.\trill g16 b8 b
-    ais8.\trill (g16)ais(g fis e)|
-    ais8.\trill g16 b8 b
+    as8.\trill g16 b8 b
+    as8.\trill (g16)as(g fs e)|
+    as8.\trill g16 b8 b
 
   }
   \alternative {
-    { e,4 \grace dis' (e8) e }
+    { e,4 \grace ds' (e8) e }
     { e,4 r8 e \break}
   }
 
   \repeat volta 2{
   \mark \default
-    dis16 (e) fis8~fis fis16(a)|
-    g16(fis e dis) e( fis g e)|
-    dis16 (e) fis8~fis fis16(a)|
+    ds16 (e) fs8~fs fs16(a)|
+    g16(fs e ds) e( fs g e)|
+    ds16 (e) fs8~fs fs16(a)|
 
   }
   \alternative {
-    {g16(fis e dis)e8 e, }
-    {g'16(fis e dis) e8 r \break}
+    {g16(fs e ds)e8 e, }
+    {g'16(fs e ds) e8 r \break}
   }
 
   \repeat volta 2{
   \mark \default
-    b,4 b16(dis fis a)|
-    g16(fis e dis)e(fis g e)|
-    dis16 (e) fis8~fis fis16(a)|
-    g16(fis e dis)e8 r
+    b,4 b16(ds fs a)|
+    g16(fs e ds)e(fs g e)|
+    ds16 (e) fs8~fs fs16(a)|
+    g16(fs e ds)e8 r
 
   }
 

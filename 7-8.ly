@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper {
   print-all-headers = ##t

@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -20,34 +21,34 @@ melody =  \transpose c g \relative c' {
   \repeat volta 2{
   \mark \default
     %
-    c8 c c bes16 a
+    c8 c c bf16 a
     g8 g g8. g16
-    g16 c c g c8 bes16 a|
+    g16 c c g c8 bf16 a|
     g8 g g4        %4
 
-    c8 c c bes16 a
+    c8 c c bf16 a
     g8 g g8. g16
-    g8 c ees des
+    g8 c ef df
     c2 ^\markup{ \italic Fine }  \bar ".."  % 8        fine and double bar
 
-    c8 c c8. bes16
+    c8 c c8. bf16
     g8 g g8. f16
-    g8 c ees f
+    g8 c ef f
     c4. r16 c16|   %12
 
-    c8 c c8. bes16
+    c8 c c8. bf16
     g8 g4 f8
-    g8 c, ees f
+    g8 c, ef f
     c4. c8|        %16
 
-    f8 f  g16(aes) g (aes)
-    f8 ees16(d) c4
-    f8 f g aes16(g)
+    f8 f  g16(af) g (af)
+    f8 ef16(d) c4
+    f8 f g af16(g)
     f8 f4.        %20
 
-    f8 f  g16(aes) g (aes)|
-    f8 ees16(d) c8 c
-    f8 f bes16(aes) g(f)
+    f8 f  g16(af) g (af)|
+    f8 ef16(d) c8 c
+    f8 f bf16(af) g(f)
     c8 c4.    ^\markup{ \italic D.C \italic al \italic Fine }       %24  }
     %original last line  was f8 f4.
 
@@ -100,8 +101,8 @@ harmonies = \chordmode {
   %verse
   g2:m d2:m g4:m c4:m
   g2:m s2 d2:m
-  g4:m c4:m g2:m c4:m ees4 g2:m c4:m ees4
-  c2:m s4 ees4 c4:m g4:m c4:m ees4 g2:m
+  g4:m c4:m g2:m c4:m ef4 g2:m c4:m ef4
+  c2:m s4 ef4 c4:m g4:m c4:m ef4 g2:m
 
 }
 %{

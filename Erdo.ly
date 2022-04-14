@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 %moved \header into \score for includes to work
 
 \paper{
@@ -21,20 +22,20 @@ notes = \relative c' {
 
   c4.  f8  \tuplet 3/2 { e4 f2} |
   g2 c2|
-  bes8 a g a g f4.|
+  bf8 a g a g f4.|
   c2 c4 r4|
   c8 f4. e8 f4.|
   g2 c|
 
-  bes8 a g a g f4.|
+  bf8 a g a g f4.|
   c2 c4 r4|
-  \tuplet 3/2 { c'4 c2 } \tuplet 3/2 { d4 bes2 }|
-  a8 g a bes d4 c
+  \tuplet 3/2 { c'4 c2 } \tuplet 3/2 { d4 bf2 }|
+  a8 g a bf d4 c
   f,4. f8 g g4.
   a8 g f e d4 c|
   c4. f8 e f4.
   g2 c
-  bes8 a g a g f4.
+  bf8 a g a g f4.
   c2 c4 r|
 
 }

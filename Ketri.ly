@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -12,27 +13,27 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 %\markup{ Got something to say? }
 
 %#################################### Melody ########################
-melody =\transpose gis g \relative c'' {
+melody =\transpose gs g \relative c'' {
   \clef treble
-  \key cis \minor
+  \key cs \minor
   \time 4/4
 
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-    gis4 gis8 fis gis fis4 fis8|
-    e8 fis fis e8 d2|
-    cis1|
+    gs4 gs8 fs gs fs4 fs8|
+    e8 fs fs e8 d2|
+    cs1|
 
-    gis'4 gis8 fis gis fis4 fis8|
-    e8 fis fis e8 d2|
-    cis1|
+    gs'4 gs8 fs gs fs4 fs8|
+    e8 fs fs e8 d2|
+    cs1|
 
     %second phrase
-    e8 dis fis4 e2|
-    e8 dis fis4 e2|
-    e8 dis e fis d( b) cis4|
-    d2 cis2|  %check time value
+    e8 ds fs4 e2|
+    e8 ds fs4 e2|
+    e8 ds e fs d( b) cs4|
+    d2 cs2|  %check time value
 
   }
   %\alternative { { }{ } }

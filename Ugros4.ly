@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -24,16 +25,16 @@ melody = \transpose e a \relative c {
   \mark \default
     e8  [a c a]
     e8 [a c a]
-    e'8 [e dis c]
+    e'8 [e ds c]
     b4 b
   }
   %\alternative { { }{ } }
 
   \repeat volta 2{
   \mark \default
-    e8. [fis16 g8 g]
-    a8 [g fis e]
-    fis8[e dis c]|
+    e8. [fs16 g8 g]
+    a8 [g fs e]
+    fs8[e ds c]|
   }
   \alternative { {b4 b }{a4 a } }
 
@@ -41,16 +42,16 @@ melody = \transpose e a \relative c {
   \mark \default
     e8 \downbow a16\downbow b\upbow c(b)a8|
     e8 \downbow a16\downbow b\upbow c(b)a8|
-    e'8 e dis c16(b)
+    e'8 e ds c16(b)
     b4 b|
   }
 
 
   \repeat volta 2{
   \mark \default
-    e8 \downbow -. e16\downbow fis\upbow g8\downbow -.fis16 \downbow -> g\upbow |
-    a8-. g-. \grace{fis (g)} fis -> e-.
-    g16(fis) e8-> -. dis8 c16->(b)
+    e8 \downbow -. e16\downbow fs\upbow g8\downbow -.fs16 \downbow -> g\upbow |
+    a8-. g-. \grace{fs (g)} fs -> e-.
+    g16(fs) e8-> -. ds8 c16->(b)
   }
   \alternative { { \grace a b4 b}{a4 a } }
 }

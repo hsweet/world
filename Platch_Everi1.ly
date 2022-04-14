@@ -1,4 +1,5 @@
 \version "2.16.0"
+\language "english"
 
 \paper{
   %print-all-headers = ##t
@@ -27,22 +28,22 @@ melody = \relative c'
   \repeat volta 2{
   \mark \default
     d2 d' 
-    bes4 a g bes
-    a8 bes a bes | a g4 f16 e
+    bf4 a g bf
+    a8 bf a bf | a g4 f16 e
     d2 ~ d 
     a' f' 
     e4 e
-    e8 d cis d
+    e8 d cs d
     e4 e
-    e8 d cis bes
-    a2  ~ a4 \times 2/3 {a8 ais bes} 
+    e8 d cs bf
+    a2  ~ a4 \times 2/3 {a8 as bf} 
     c4 c | d2
     c8 d c4 
     f, g 
     a a 
     a8 g4 f16 e 
     d4 \times 2/3 {f8 e d} 
-    cis2\fermata
+    cs2\fermata
     d8 e f4 
     a c 
     f, g 
@@ -55,18 +56,18 @@ melody = \relative c'
   \mark \default
   {
     %\bar "||"
-    a8 b4 cis 8 
+    a8 b4 cs 8 
     d2 d 
-    d4 ees c ees 
+    d4 ef c ef 
     d2 d
-    d4 ees c ees  
-    d4 \times 2/3 {g8 f ees} 
-    d4 r8 d8 d cis r d16 ees
-    e4 r8 e8 e d r d f4 f f8 e r d cis2 a
+    d4 ef c ef  
+    d4 \times 2/3 {g8 f ef} 
+    d4 r8 d8 d cs r d16 ef
+    e4 r8 e8 e d r d f4 f f8 e r d cs2 a
     e' e e4 f d4 \times 2/3 {a'8 g f}
     e2 e e4 f d \times 2/3 {a'8  g f}
-    e4 e cis a
-    a8 cis d e 
+    e4 e cs a
+    a8 cs d e 
     f e a f 
     d 4 r8 d' a4 f d2
   }	
@@ -76,7 +77,7 @@ melody = \relative c'
     \mark \default
     d8 e r f 
     g4 g 
-    bes2
+    bf2
     g4 g 
     g8 f r e
     f4 f 
@@ -84,8 +85,8 @@ melody = \relative c'
     f4 f 
     f8 e r d
     e4 e 
-    cis a
-    a8 cis d e 
+    cs a
+    a8 cs d e 
     
   }	
   \alternative {
@@ -93,7 +94,7 @@ melody = \relative c'
     {f8 e d f a2 ~ 
      a4 \times 2/3{e'8 f g}|
      a8 g f e
-     d8 c bes a
+     d8 c bf a
      a2~
      a2
     }

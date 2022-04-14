@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -22,23 +23,23 @@ melody = \relative c' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \mark \default
-  f4 e8 d cis d e f|
+  f4 e8 d cs d e f|
   d2. r8 d|
-  g4. a8 bes c bes(a)
+  g4. a8 bf c bf(a)
   a1
   \repeat volta 2{
   \mark \default
-    bes4 bes8 bes bes a g f|
+    bf4 bf8 bf bf a g f|
     % e2. e4|
     e2. \tuplet 3/2 {e8 f g}|
   }
   \alternative {
     {
-      a4. bes8 a (g f \prall g)|
+      a4. bf8 a (g f \prall g)|
       a2. r4|
     }
     {
-      a4. bes8 a (g f g)\fermata|
+      a4. bf8 a (g f g)\fermata|
     }
   }
   d1~
@@ -54,7 +55,7 @@ melody = \relative c' {
     f4 d8 e f4. d8|
 
     e4.(f8) e2~
-    e8 cis cis d e4 f
+    e8 cs cs d e4 f
 
   }
   \alternative {
@@ -82,15 +83,15 @@ secund = \relative c'{
   \key d \minor
 
   %begin part
-  a4  f'4. e8 d [cis]|
+  a4  f'4. e8 d [cs]|
   d e d2.|
-  r8 d g4. a8 bes [a]|
-  g8 bes a2.|
+  r8 d g4. a8 bf [a]|
+  g8 bf a2.|
   \repeat volta 2{
   \mark \default
-    g8 a bes2 g4~
+    g8 a bf2 g4~
     g8 e e2.|
-    a8 bes a4. g8 f4|
+    a8 bf a4. g8 f4|
 
   }
   \alternative {
@@ -117,7 +118,7 @@ secund = \relative c'{
     d4 g8 f e4 d|
     %d4 e8 f g4
 
-    bes2 a2~|
+    bf2 a2~|
     %a8 a8 d e4
     a8 e' e f g4 f
 

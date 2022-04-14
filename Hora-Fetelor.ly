@@ -13,8 +13,8 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key d \minor
-  \time 6/8
+  \key e \minor
+  \time 3/8
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
@@ -22,61 +22,63 @@ global = {
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
 melody = \relative c' {
   \global
-  \partial 16*3 a16 b cs   %lead in notes
+  \partial 16*3 b16 cs ds   %lead in notes
 
   \repeat volta 2{
    \mark \default
-   d8. a'16 f a d,8. a'16 f a
-   d,4. fs
-   g8. d'16 bf d g,8. d'16 bf d|
-   g,4. (g8.)cs16d ds
+   e8. b'16 g b e,8. b'16 g b
+   e,4. gs
+   a8. e'16 c e a,8. e'16 c e|
+   a,4. (a8.)ds16e es
 
-   e8. d16 d cs cs8. bf16 bf a
-   a8 d d d8. c16 c bf
-   a8. g16 g f c'8. bf16 c bf
-   a4.(a8.) cs16 d ds
-   e8. d16 d cs cs8. bf16 bf a
+   fs8. e16 e ds ds8. c16 c b
+   b8 e e e8. d16 d c
+   b8. a16 a g d'8. c16 d c
+   b4.(b8.) ds16 e es
+   fs8. e16 e ds ds8. c16 c b
 
-    a8 d d d8. c16 c bf
-    a8. bf16 g a f8. g16 e f
-    d8. a'16 f a d,4.
+    b8 e e e8. d16 d c
+    b8. c16 a b g8. a16 fs g
+    e8. b'16 g b e,4.
 
   }
 
 
   \repeat volta 2{
    \mark \default
-   a'8 f' f f8. e16 e d
-   c8 e e e4.
-   bf8 d d d8. c16 c bf
-   a8 c c c4.
+   b'8 g' g g8. fs16 fs e
+   d8 fs fs fs4.
+   c8 e e e8. d16 d c
+   b8 d d d4.
 
-   g8 bf bf bf8. a16 a g
-   f8 a a a8. a16 c bf
+   a8 c c c8. b16 b a
+   g8 b b b8. b16 d c
 
   }
    \alternative {
-     {a8. g16 g f c'8. bf16 c bf
-     a4.(a4.)}
-     {a8. bf16 g a f8. g16 e f
-     d8. a'16 f a d,4. }
+     {b8. a16 a g d'8. c16 d c
+     b4.(b4.)}
+     {b8. c16 a b g8. a16 fs g
+     e8. b'16 g b e,4. }
    }
    \break
      \repeat volta 2{
    \mark \default
-   c8. d16 e f g8. a16 bf g
-   bf8 a4(a4.)
-   g8. f16 f e c'8. bf16 c bf|
-   a2.
+   d8. e16 fs g a8. b16 c a
+   c8 b4(b4.)
+   a8. g16 g fs d'8. c16 d c|
+   b4.~|
+   b4.
 
-   c,8. d16 e f g8. a16 bf g|
-   a8 bf(bf2\fermata)  |
-   a8. bf16 g a f8. g16 e f
+   d,8. e16 fs g a8. b16 c a|
+   b8 c(c8 )~|
+   c4. \fermata |
+   b8. c16 a b g8. a16 fs g|
 
      }
   \alternative{
-  {d8. a'16 f a d,4.}
-  {d8. d'16 a f d4.}
+  {e8. b'16 g b e,4.}
+  {e8. e'16 b g e4.}
   }
 
 }
@@ -85,37 +87,39 @@ melody = \relative c' {
 %################################# Chords #######################
 harmonies = \chordmode {
   s16*3
-  d8*9:m d8*3
-  g4*6:m
-  a4*3:7
-  d8*3:m bf8*3
-  f8*3 c8*3:7
-  f8*6
-  a8*6:7
-  d8*3:m bf8*3
-  d8*3:m a8*3:7
-  d8*6:m
+  e8*9:m e8*3
+  a4*6:m
+  b4*3:7
+  e8*3:m c8*3
+  g8*3 d8*3:7
+  g8*6
+  b8*6:7
+  e8*3:m c8*3
+  e8*3:m b8*3:7
+  e8*6:m
   %b
-  f8*6
-  c8*6
-  bf8*6:
-  f8*6   %d7
-  g8*6:m
-  d8*6:m
-  d8*3:m c8*3:m
-  f8*6
-  d8*3:m a8*3:7
-  f8*6
+  g8*6
+  d8*6
+  c8*6:
+  g8*3   %d7
+  \parenthesize e8*3:7
+  a8*6:m
+  e8*6:m
+  e8*3:m d8*3:m
+  g8*6
+  e8*3:m b8*3:7
+  e8*6:m
   %c
-  c8*6:7
-  f8*6
-  c8*6:7
-  f8*6
-  c8*6:7
-  bf8*6
-  d8*3:m
-  a8*3:7
-  d8*12:m
+  d8*6:7
+  g8*6
+  d8*6:7
+  g8*6
+  d8*6:7
+  c8*6
+  e8*3:m
+  b8*3:7
+  e8*6:m
+  e8*6:m
 
 }
 

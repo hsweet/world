@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -21,11 +22,11 @@ melody = \transpose d c \relative c' {
   \repeat volta 3{
     e2 b4 g'
     e2. g4|
-    a4 g fis e
+    a4 g fs e
     d4 b b d
 
     c2 c4 e
-    dis2 e4 fis
+    ds2 e4 fs
     e1 ~
     e2 b4 g'
 
@@ -41,19 +42,19 @@ melody = \transpose d c \relative c' {
     b2 a4 b
     c2 \segno c4 c
     c2 b4 a
-    b2 a4 g g2 fis4 g
+    b2 a4 g g2 fs4 g
 
-    a2 g4 fis
-    fis2 e4 fis
+    a2 g4 fs
+    fs2 e4 fs
     g1~    %doesn't work
-    gis2 a4 b
+    gs2 a4 b
     c2 c4 c
 
     c2 b4 a
     b2 a4 g
-    g2 fis4 g
-    a2 g4 fis|
-    fis2 e4 dis
+    g2 fs4 g
+    a2 g4 fs|
+    fs2 e4 ds
 
 
   }

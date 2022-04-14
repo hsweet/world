@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \header{
   title= "Mishmo"
@@ -18,12 +19,12 @@ melody = \relative c' {
 
   \repeat volta 2{
     d'4 a | d f | a g~| g2 | f8 g f g | f4 e | d g| f2~ |f4 r4 |
-    d4 a | d f | a g~| g2 | f8 g a bes | a g f ees | g2|
+    d4 a | d f | a g~| g2 | f8 g a bf | a g f ef | g2|
   }
 
   \repeat volta 2{
-    d8 bes' a4 | g8 a g4|f8 g g4| d2| f8 c f a| g4 f8 e | d4 g | f2|
-    d8 bes' a4 | g8 a g4|f8 g g4| d2| f8 c f a|g4 f8 ees | d2~ | d2|
+    d8 bf' a4 | g8 a g4|f8 g g4| d2| f8 c f a| g4 f8 e | d4 g | f2|
+    d8 bf' a4 | g8 a g4|f8 g g4| d2| f8 c f a|g4 f8 ef | d2~ | d2|
   }
 
 }

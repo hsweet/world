@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 %moved \header into \score for includes to work
 
 \paper{
@@ -14,18 +15,18 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 %#################################### Melody ########################
 notes = \relative c' {
 
-  a'8 a g fis
+  a'8 a g fs
   a8 a b4
   a4 r
-  a8 a g fis
+  a8 a g fs
   a8 a g4
-  fis 4 r
+  fs 4 r
 
-  a8 a g fis
+  a8 a g fs
   a8 a b4
   a4 r
-  fis8 fis e d
-  fis8 fis e4
+  fs8 fs e d
+  fs8 fs e4
   d4 r
 }
 

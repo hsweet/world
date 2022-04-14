@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
 tagline = ##f
@@ -19,29 +20,29 @@ melody =  \relative c'' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-    a4.  ^\markup { \box A} bes8 a4 gis
+    a4.  ^\markup { \box A} bf8 a4 gs
     a8 a4 f8 d2
-    r8 d'4 d8  d c bes a
-    bes2 g4 g|
+    r8 d'4 d8  d c bf a
+    bf2 g4 g|
 
-    r8 bes4 g8 e4 bes'
+    r8 bf4 g8 e4 bf'
     a8 a4 f8 d4 r4|
-    r8 e4 e8 f e dis e
+    r8 e4 e8 f e ds e
 
   }
 
   \alternative {
-    {a4 bes a2 }
-    {r8 a4 bes8 a _rit g f e }
+    {a4 bf a2 }
+    {r8 a4 bf8 a _rit g f e }
   }
 
 
   \repeat volta 2{
-    d8 ^\markup { \box B} e f g a gis a4
+    d8 ^\markup { \box B} e f g a gs a4
 
-    r8 d4 bes8 g4 r4
+    r8 d4 bf8 g4 r4
     r8 a4 f8 d4 r4
-    g8 f e d cis d e f
+    g8 f e d cs d e f
     d2. r4|
 
   }

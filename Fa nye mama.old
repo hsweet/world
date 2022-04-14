@@ -1,0 +1,204 @@
+\version "2.12.2"
+\include "english.ly"
+\paper{
+  print-all-headers = ##t
+}
+date = #(strftime "%d-%m-%Y" (localtime (current-time)))
+
+\markup{ \italic{ "Sheet 31 | Updated " \date }  }
+
+%\markup{ Got something to say? }
+
+%#################################### Melody ########################
+%melody =  \transpose c d \relative c' {  %transpose for clarinet
+melody = \relative c'' {
+  \clef treble
+  \key g\major
+  \time 4/4
+
+  %\partial 16*3 a16 d f   %lead in notes
+
+  <<
+    {
+      e4 ^\markup { \box A} e8 d e4 e8 d
+      e4 e8 d c2
+      g'4 g8 fs g fs g a
+      e8 e e d e4 r8 e8|}
+    \\{
+      c4 c8 b c4 c8 b
+      c4 c8 b a2
+      e'4 e8 d e d e fs
+      c8 c c b c4 r8 c  %4
+  }>>
+
+  \time 3/4
+  a'16 a8.(a8) b16 a g8 r8|%raised octave for harmony
+  \time 4/4
+  a8 [e] e d16 c d8 e16 d c4|
+  d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
+  a4 a a2  %8
+
+  a'16 a r a r8 a4 b16 a g8 r|
+  a8 [e] e d16 c d8 e16 d c4|
+  d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
+  a4 a a2  %12
+  \bar "||"
+
+
+  e'4 ^Faster e8 d e4 e8 d
+  e4 e8 d c2
+  g'4 g8 fs g fs g a
+  e8 e e d e4 r8 e8|  %16
+
+
+
+  \repeat volta 2{
+    a8 ^\markup { \box B}[a] a a4 b16 a g4|
+    a8 [e] e d16 c d8 e16 d c4|
+    d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
+    a4 a a2 e8 d e4 e8 d
+  e4 e8 d c2
+  g'4 g8 fs g fs g a
+  e8 e
+  }
+  % \alternative { { }{ } }
+  %Faster
+  e'4 e8 d e4 e8 d|
+  e4 e8 d c2~
+  c2 a2~
+  \time 2/4 c2  %24
+
+  \time 4/4
+  %nested repeat********************************
+  \repeat volta 2{
+
+    \repeat volta 2{
+
+      a'8 \segno [a] a a4 g8 [fs] e|
+      e8 fs g fs e d c16 b a8|
+    }
+
+    \alternative{
+      {r8 c c16 b a8 c8 e4 c8|
+        b8 [b] b a b2|
+      }
+      {r8 c c16 b c b c d e8(e)c|
+        b8 [b] b a b2|
+      }
+    }
+
+    \repeat volta 2{
+      a'8 [b] c c c [c] c d~|
+      d b16 a b8 b16 ^\markup{
+        \italic {2x al Segno}}a b c b8(b4)|
+    }
+  }%end nested repeat
+  \repeat percent 2{
+    c8 [c] c c c d4.|
+    c2 b2~
+  }
+  c8 [c] c c c d4.|
+  c2 b2~
+  b1~
+  b1
+
+}
+%################################# Lyrics #####################
+%\addlyrics{  }
+%################################# Chords #######################
+harmonies = \chordmode {
+  a1:m
+  r2
+  c2
+  g1
+  e1
+  a4:m
+  r4*2
+  a2:m
+  c2
+  d1:m
+  a1:m
+  %
+  a1:m
+  r2
+  c2
+  d1:m
+  a1:m
+  %
+   a1:m
+  r2
+  c2
+  g1
+  e1
+  a1:m
+  a2:m
+  c2
+  d1:m
+  a1:m
+
+}
+
+\score {
+  <<
+    \new ChordNames {
+      \set chordChanges = ##t
+      \harmonies
+    }
+    \new Staff \
+       \melody
+  >>
+  \header{
+    title= "Fà nyé mama"
+    subtitle="Cook, Mama"
+    composer= ""
+    instrument =""
+    arranger= ""
+  }
+  \layout{ }
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment  120 4)
+    }
+
+    % \midi { }
+  }
+}
+%{
+% more verses:
+\markup{}
+\markup {
+  \fill-line {
+    \hspace #0.1 % distance from left margin
+    \column {
+      \line { "1."
+        \column {
+          ""
+        }
+      }
+      \hspace #0.2 % vertical distance between verses
+      \line { "2."
+        \column {
+         ""
+        }
+      }
+    }
+    \hspace #0.1  % horiz. distance between columns
+    \column {
+      \line { "3."
+        \column {
+          ""
+        }
+      }
+      \hspace #0.2 % distance between verses
+      \line { "4."
+        \column {
+         ""
+        }
+      }
+    }
+    \hspace #0.1 % distance to right margin
+  }
+}
+
+%}

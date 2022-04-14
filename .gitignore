@@ -1,0 +1,16 @@
+backup/
+Bass/
+Bb/
+book/
+changed/
+Ef/
+horn/
+new_tunes/
+oldversions/
+*.ly~
+*.midi
+*.pdf
+*.txt
+*.swp
+*.gz
+*.zip

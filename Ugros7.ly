@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 
 \paper{
   tagline = ##f
@@ -22,13 +23,13 @@ melody =\transpose d g\relative c'' {
 
 
   d8  [e f d]
-  e4 cis8 a
+  e4 cs8 a
   d8 [e f d]
-  e4 cis8 a \bar ".."
+  e4 cs8 a \bar ".."
 
   g8 [g g g] |
   c4 c8 c
-  d8 [d c bes]
+  d8 [d c bf]
   a4 a8 a|
 
 
@@ -36,15 +37,15 @@ melody =\transpose d g\relative c'' {
 
 
   d8-.  e-. f16->(e)d8-.|
-  e4-- cis8->-. a-.|
-  d16\upbow(cis)d e  f->(e) d8-.|
-  e4-- cis8\upbow-. a \upbow -.
+  e4-- cs8->-. a-.|
+  d16\upbow(cs)d e  f->(e) d8-.|
+  e4-- cs8\upbow-. a \upbow -.
 
   \repeat volta 2{
   \mark \default
-    \grace fis g8 g a16-> g a b|
+    \grace fs g8 g a16-> g a b|
     c8-- b16(c) d16-> c b c|
-    d16 cis d8-. c->-.  bes-.|
+    d16 cs d8-. c->-.  bf-.|
     a4 \grace d a8->-. a->-.
 
 

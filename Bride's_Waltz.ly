@@ -1,4 +1,5 @@
 \version "2.18.0"
+\language "english"
 \paper{
   tagline = ##f
   %#print-all-headers = ##t
@@ -21,18 +22,18 @@ melody = \relative c' {
     a'2.\upbow
     
     d2.
-    \grace f16 e8-2 d cis d e f
+    \grace f16 e8-2 d cs d e f
     e f d4 d
     a2.
     d2.
-    \grace f16 e8 d  cis bes a g
-    a8 bes a4 a
+    \grace f16 e8 d  cs bf a g
+    a8 bf a4 a
     a2.
     d2.
-    \grace f16 e8 d cis d e f
+    \grace f16 e8 d cs d e f
     e f d4 d
     a'2 c4
-    b8 c a4 fis
+    b8 c a4 fs
     a2.
     <a d>2.
   }
@@ -40,19 +41,19 @@ melody = \relative c' {
   \repeat volta 2{
   \mark \default
     d4     a a
-    gis8 a f2
-    gis8 a f4 f
+    gs8 a f2
+    gs8 a f4 f
     e8 f d2
     a'2 d4
-    b8 c a4 gis
+    b8 c a4 gs
     a2.~
     a2.
     d4 a a
-    gis8 a f2
-    gis8 a f4 f
+    gs8 a f2
+    gs8 a f4 f
     e8 f d2
     f4-3 e8 f d4
-    e4 d8 e cis4
+    e4 d8 e cs4
     d-1 d8 a f'-3 e
     d4 d8 e f a
   }
@@ -61,17 +62,17 @@ melody = \relative c' {
   \mark \default
     c8    b c b c b
     c d c4 b
-    a8 gis a gis a gis
-    a b a4 gis
-    a4 a8 gis a f
+    a8 gs a gs a gs
+    a b a4 gs
+    a4 a8 gs a f
     f4 f8 e e d
-    gis b a2
+    gs b a2
     a8 d a2
     c8 b c b c b
     c d c4 b
-    a8 gis a gis a gis
-    a b a4 gis
-    a4 a8 gis a f
+    a8 gs a gs a gs
+    a b a4 gs
+    a4 a8 gs a f
     f4 f8 e e d
 
   }
