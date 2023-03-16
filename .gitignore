@@ -10,6 +10,7 @@ oldversions/
 *.ly~
 *.midi
 *.pdf
+*.PDF
 *.txt
 *.swp
 *.gz

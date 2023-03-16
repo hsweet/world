@@ -12,7 +12,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 %\markup{ Got something to say? }
 
 %#################################### Melody ########################
-melody = \relative c' {
+melody = \relative c'' {
   \clef treble
   \key d \minor
   \time 2/4
@@ -58,9 +58,15 @@ melody = \relative c' {
 harmonies = \chordmode {
   s16*3
   f2*6
-  %r2*5
   c2:7
   f2
+  f2
+  %{
+  c2*6:7
+  a2:7
+  f2
+  e2:7
+  %}
 
   %b
   d2*6:m
@@ -71,7 +77,7 @@ harmonies = \chordmode {
 \score {\transpose c a
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

@@ -8,8 +8,8 @@
 }
 
 \paper {
-  obsolete-between-system-padding = #0.1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
-  obsolete-between-system-space = #0.1  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
+  %obsolete-between-system-padding = #0.1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+  %obsolete-between-system-space = #0.1  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   print-all-headers = ##t
@@ -25,84 +25,85 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key a\minor
+  \key d\minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
+
 %melody =  \transpose c d \relative c' {  %transpose for clarinet
 melody = \relative c' {
   \global
-
-  e8 f e4
-  gs8 a gs f
-  f8 e4.~
-  e4. r8
-
-  gs8 a b4|
-  c8 b c a
-  b8 gs4.~
-  gs4 r8 e
-
-  gs8 a gs e
-  gs a b c
-  b2~
-  b4. r8
-
-  e,8 f e4
-  gs8 a gs f
-  f8 e4.~
-  e4. r8
-
-  gs8 a b4
-  c8 b c a
-  b8 gs4.~
-  gs4 r8 gs
-
-  a8 d, e f
-  gs8 a f gs
-  e2~ \bar"|.|"
-  e8 e^Chorus a b
-
-  c4 b8 a
-  c8 c b a
-  gs8 b4.~
-  b8 e, b' c
-
-  d4 c8 b
-  d8 d c b
-  d8 c4.~
-  c8 a c d
-
-  e4 d8 c
-  e8 d f e
-  d2~
-  d8 a b c
-
-  d4 c8 b
-  c8 b c d
-  e8 r c r
-  b8 e, a b
-
-  c4 b8 a
-  c8 c b a
-  gs8 b4.~
-  b8 e, b' c
-
-  d4 c8 b
-  d8 d c b
-  d8 c4.~
-  c8 a c d
-
-  e4 d8 c
-  e8 d f e
-  d2~
-  d8 a b c
-
-  d4 e
-  d8 c b c
+ \partial 4*1 a8 bf  %lead in notes
   a2
+  cs8 d cs bf
+  bf8 a4.~
+  a4. r8
+
+  cs8 d e4|
+  f8 e f d
+  e8 cs4.~
+  cs4 r8 a
+
+  cs8 d cs a
+  cs d e f
+  e2~
+  e4. r8
+
+  a,8 bf a4
+  cs8 d cs bf
+  bf8 a4.~
+  a4. r8
+
+  cs8 d e4
+  f8 e f d
+  e8 cs4.~
+  cs4 r8 cs
+
+  d8 g, a bf
+  cs8 d bf cs
+  a2~ \bar"|.|"
+  a8 a^Chorus d e
+
+  f4 e8 d
+  f8 f e d
+  cs8 e4.~
+  e8 a, e' f
+
+  g4 f8 e
+  g8 g f e
+  g8 f4.~
+  f8 c f g
+
+  a4 g8 f
+  a8 g bf a
+  g2~
+  g8 d e f
+
+  g4 f8 e
+  f8 e f g
+  a8 r f r
+  e8 a, d e
+
+  f4 e8 d
+  f8 f e d
+  cs8 e4.~
+  e8 a, e' f
+
+  g4 f8 e
+  g8 g f e
+  g8 f4.~
+  f8 c f g
+
+  a4 g8 f
+  a8 g bf a
+  g2~
+  g8 d e f
+
+  g4 a
+  g8 f e f
+  d2
 }
 %################################# Lyrics #####################
 \addlyrics{ \set stanza = #"1. "
@@ -143,43 +144,46 @@ melody = \relative c' {
 }
 %################################# Chords #######################
 harmonies = \chordmode {
-  a2*5:m
-  %e2*3
-  a2:m
-  e2*11
-  %a2*2:m
- % e2*9
-  %a2*2:m
+  a4*3
 
-  a2*2:m
-  e2
-  d2*2:m
-  e2
-  %chorus
-
-  e2
-  a2*2:m
-  e2*3
   d2:m
-  a2*4:m
+  a2*3
+  d2:m
+  a2*2
+  d2*2:m
+  a2*3
+  d2
+  a2*3
+  d2:m
+  a2*2
+  g2*2:m
+  a2
+  %chorus
+  a2
+  d2*2:m
+  a2*2
+  g2*2:m
   d2*4:m
-  e2*2
-  a2*2:m
-  e2*2
+  g2*4:m
+  a2*2
   d2*2:m
-  a2*4:m
-  d2*2:m
-  e2*2
-  a2:m
+  a2*2
+  g2*2:m
+  d2*4:m
+  g2*2:m
+  a2*2
+  d2:m
 }
 
 \score {
   <<
     \new ChordNames {
       \set chordChanges = ##f
-      \transpose a d \harmonies
+      %\transpose a d
+      \harmonies
     }
-    \new Staff   \transpose a d \melody
+    \new Staff   %\transpose a d
+    \melody
   >>
   \header{
     title= "Avreml Der Marvikher"

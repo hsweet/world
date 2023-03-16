@@ -8,7 +8,7 @@ use Cwd;
 #Bf Clarinet C==>D		Ef  Horn C==>A  
 
 #*********************setup**************************
-my $cutoffage = @ARGV || 1;   #number of days to look back
+my $cutoffage = @ARGV || 120;   #number of days to look back
 my $target;
 
 transpose("Bb");
@@ -58,7 +58,7 @@ sub transpose{
 		 
 		#********** Print a tune listing *************
 		print $basename[0]." ==> ";
-		$newfile = $basename[0]."_".$instrument.".ly";
+		$newfile = $basename[0]."-".$instrument.".ly";
 		say $newfile;
 		
 		#******** make changes and write new files ******* 
@@ -99,18 +99,15 @@ say "Lily files all transposed and are in $instrument folder one level below cur
 print "Process all Lily files now? y/n  ";
 my $lily=<STDIN>;
 chomp $lily;
-
 if ($lily eq "y"){
 	chdir $instrument;
 	say cwd;
 	system ("lilypond * ")
 }
 __END__
-
 C==>D  Bf instrument
 C==>G  F instrument
 C==>A  Ef instrument
-
        
        bash for recent files....  find . -iname '*.ly' -mtime -10 -type f      
        

@@ -8,6 +8,7 @@
 #s/\\chordmode/\\transpose c d \\chordmode/  
 #s/Violin/Clarinet/i
 #s/Szélrózsa//
+# sed 's/instrument =\""/instrument = \"Violin\"/' 
 
 #####################Basic Usage#############################
 #sed -f sedscript <old >new

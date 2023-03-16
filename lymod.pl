@@ -28,32 +28,39 @@ foreach my $file(@files){
         @basename = split(/\./, $file);
          
         #Print a tune listing
-        printf(" %3s %-25s", ($cnt, $basename[0]));
-        print "\n";
+        #printf(" %3s %-25s", ($cnt, $basename[0]));
+        #print "\n";
       	 
 		open(OUT, ">changed/$file");	#output is to a folder called "Changed" one level deeper in tree
 			foreach my $line(@text){
 				#$line=~s:\\date:\\italic{ \"Sheet $cnt | Updated \" \\date } :;
 				#$line=~s:\\midi \{ }:$midistring:;	 		
-			    $line=~s/\\key [a-g] \\minor/\\key c \\major/;
-			    $line=~s/\\transpose [a-g] [a-g]//;
+			    #$line=~s/\\key [a-g] \\minor/\\key c \\major/;
+			    #$line=~s/\\transpose [a-g] [a-g]//;
+			    
+			    # Misc stuff
+			    #$line=~s/\s 		#fingerings and -. ->
+			    
+			     
 			    #A flat **********************
-				$line=~s/\saf([0-9])\s/ gs$1 /g;
-				$line=~s/\saf16/ gs16/g;
-				$line=~s/\saf\s/ gs /g ;
+				$line=~s/\saf(\d)\s/ gs$1 /g;  #note with time value
+				$line=~s/\saf(\d\.)\s/ gs$1 /g; #dotted time
+				$line=~s/\saf16/ gs16/g;        #16ths
+				$line=~s/\saf\s/ gs /g;          #naked notes
 
 				# B flat *********************
-				$line=~s/\sbf([0-9])\s/ as$1 /g;
+				$line=~s/\sbf(\d)\s/ as$1 /g;
+				$line=~s/\sbf(\d\.)\s/ as$1 /g;
 				$line=~s/\sbf16/ as16/g;
-				$line=~s/\sbf\s/ as /g ;
+				$line=~s/\sbf\s/ as /g;
 
 				#E flat  ******************
-				$line=~s/\ebf([0-9])\s/ ds$1 /g;
-				$line=~s/\ebf16/ ds16/g;
-				$line=~s/\ebf\s/ ds /g;
-
+				$line=~s/\sef(\d)\s/ ds$1 /g;
+				$line=~s/\sef(\d\.)\s/ ds$1 /g;
+				$line=~s/\sef16/ ds16/g;
+				$line=~s/\sef\s/ ds /g;
 			    
-			    print $line;
+			    #print $line;
 			    print OUT $line;
 		}
 		close(OUT);
