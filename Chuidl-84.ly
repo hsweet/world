@@ -105,7 +105,7 @@ harmonies = \chordmode {
     title= "Chusidl"
     subtitle="p.84"
     composer= "Chuidl : )"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

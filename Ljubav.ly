@@ -102,7 +102,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       #(set-paper-size "letter")
       #(set-paper-size "letter")
       \harmonies
@@ -114,7 +114,7 @@ harmonies = \chordmode {
     title= "Ljubav"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -8,6 +8,7 @@
 }
 \header{
   title= "Bulgar Rhythm"
+instrument= "Violin"
 }
 
 one = \relative c' {

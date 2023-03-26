@@ -137,7 +137,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -148,7 +148,7 @@ harmonies = \chordmode {
     title= "Mugur, Mugurel"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

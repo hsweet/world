@@ -111,7 +111,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
      \transpose d a\harmonies
     }
     \new Staff
@@ -121,7 +121,7 @@ harmonies = \chordmode {
     title= "Moscow Nights"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

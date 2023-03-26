@@ -3,7 +3,11 @@
 
 \header{
   title= "Mishmo"
+instrument= "Violin"
+instrument= "Violin"
   subtitle=""
+instrument= "Violin"
+instrument= "Violin"
   composer= " "
   %arranger= "H. Sweet"
 }
@@ -38,7 +42,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

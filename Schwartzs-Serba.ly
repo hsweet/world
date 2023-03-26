@@ -141,7 +141,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -152,7 +152,7 @@ harmonies = \chordmode {
     subtitle="Briv Fun Yisroel"
     subsubtitle="41"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

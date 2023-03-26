@@ -189,7 +189,7 @@ harmonies = \chordmode {
     title= "Avreml Der Marvikher"
     %subtitle="Abe the Pickpocket"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}
@@ -210,7 +210,8 @@ harmonies = \chordmode {
               \column {
                 "Shoyn nisht lang vet dos shpil gedoyern "
                 "Krank fun klep, gift fun tfise moyern "
-                "Nor eyn bakoshe, kh'volt azoy gevolt "
+                "(Gm) Nor eyn bakoshe, kh'volt azoy gevolt "
+                " -------- "
                 "Nokh mayn toyt in a tog a tribn "
                 "Zol oyf mayn matseyve shteyn geshribn "
                 "Mit oysyes groyse un fun gold"
@@ -227,14 +228,14 @@ harmonies = \chordmode {
     \column {
       \line { "Ch."
               \column {
-                "Do ligt Avreyml der feykster marvikher "
-                "A mentsh a groyser geven volt fun im zikher "
-                "A mentsh a fayner mit harts, mit a gefil "
-                "A mentsh a reyner vi got aleyn nor vil, oy, oy "
-                "Ven iber im volt gevakht a mames oygn "
-                "Ven s'volt di fintstere gas im nisht dertsoygn "
-                "Ven nokh als kind er a tatn volt gehat "
-                "Do ligt Avreyml, yener voyler yat. "
+                "Do ligt (Dm) Avreyml der feykster marvi(A)kher "
+                "A mentsh a groyser geven volt fun im (Dm) zikher "
+                "A mentsh a fayner mit harts, mit a ge (Gm) fil "
+                "A mentsh a reyner vi got aleyn nor (A) vil, oy, oy "
+                "Ven iber im (Dm) volt gevakht a mames (A) oygn "
+                "Ven s'volt di (Gm)fintstere gas im nisht dert (Dm) soygn "
+                "Ven nokh als kind er a tatn volt ge (Gm)hat "
+                "Do ligt Av (A)reyml, yener voyler (Dm) yat. "
               }
       }
       \hspace #0.2 % distance between verses

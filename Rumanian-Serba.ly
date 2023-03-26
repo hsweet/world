@@ -124,7 +124,7 @@ harmonies = \chordmode {
     title= "Romanian Serba"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

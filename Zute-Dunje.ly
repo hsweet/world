@@ -169,7 +169,7 @@ harmonies = \chordmode {
     title= "Zute Dunje"
     subtitle="Yellow Quinces"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

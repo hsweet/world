@@ -304,7 +304,7 @@ harmonies = \chordmode {
     title= "Bulgar Medley"
     subtitle=""
     composer= "German Goldensyteyn"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

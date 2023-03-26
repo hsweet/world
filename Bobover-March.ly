@@ -88,7 +88,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -98,7 +98,7 @@ harmonies = \chordmode {
     title= "Bobover March"
     subtitle="Chasiddik"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

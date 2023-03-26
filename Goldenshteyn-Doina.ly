@@ -102,7 +102,7 @@ harmonies =\transpose g d \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -112,7 +112,7 @@ harmonies =\transpose g d \chordmode {
     title= "Goldenshteyn Doina"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

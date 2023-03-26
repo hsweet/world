@@ -184,7 +184,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \primas
@@ -194,7 +194,7 @@ harmonies = \chordmode {
     title= "Vlasko"
     subtitle="Bulgaria"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

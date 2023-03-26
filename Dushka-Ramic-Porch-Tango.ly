@@ -132,7 +132,7 @@ harmonies = \chordmode {
     title= "Porch Tango"
     subtitle=""
     composer= "Dushka Ramic"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

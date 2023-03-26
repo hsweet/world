@@ -141,7 +141,7 @@ harmonies =  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
      \transpose g d \harmonies
     }
     \new Staff
@@ -151,7 +151,7 @@ harmonies =  \chordmode {
     title= "Yiddishe Mame"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

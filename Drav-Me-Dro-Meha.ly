@@ -116,7 +116,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
 
       \harmonies
     }
@@ -127,7 +127,7 @@ harmonies = \chordmode {
     title= "Dzav Me Dro Meha"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

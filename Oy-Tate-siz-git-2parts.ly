@@ -288,7 +288,7 @@ harmonies = \chordmode {
   \header{
     title= "Oy Tata, S'z Git"
     composer= "Brandwein"
-    instrument =""
+    instrument = "Violin"
     arranger= "Jeff Warshauer"
   }
   \layout{indent = 1.0\cm}

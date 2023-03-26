@@ -120,7 +120,7 @@ harmonies = \chordmode {
     title= "Odessa Bulgar #2"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

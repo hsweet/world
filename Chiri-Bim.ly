@@ -134,7 +134,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose g d \harmonies
     }
     \new Staff  \transpose g d \melody
@@ -143,7 +143,7 @@ harmonies = \chordmode {
     title= ""
     subtitle="Tshiri Bim"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

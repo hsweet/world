@@ -86,7 +86,7 @@ harmonies = \transpose f c\chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -96,7 +96,7 @@ harmonies = \transpose f c\chordmode {
     title= "Na Kraj Sela Cadava Mehana"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

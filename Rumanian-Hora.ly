@@ -118,7 +118,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -128,7 +128,7 @@ harmonies = \chordmode {
     title= "Romanian Hora"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "Kamman 13"
   }
   \layout{indent = 1.0\cm}

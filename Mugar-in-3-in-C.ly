@@ -147,7 +147,7 @@ harmonies = \transpose d c \chordmode {
     title= "Little Buds"
     subtitle="Mugar Mugurel"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

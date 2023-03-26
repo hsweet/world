@@ -7,6 +7,7 @@
 }
 \header{
   title= "Kolemeike"
+instrument= "Violin"
   composer= "Beregovski"
   arranger = ""
 

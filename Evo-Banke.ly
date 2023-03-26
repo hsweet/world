@@ -148,7 +148,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose g a \harmonies
     }
     \new Voice = "one" { \autoBeamOff \transpose g a \melody }
@@ -157,7 +157,7 @@ harmonies = \chordmode {
     title= "Evo Banke"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{ }

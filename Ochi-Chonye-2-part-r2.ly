@@ -172,7 +172,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -183,7 +183,7 @@ harmonies = \chordmode {
     title= "Ochi Chornye"
     subtitle="33"
     composer= "r-2"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

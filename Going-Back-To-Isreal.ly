@@ -94,7 +94,7 @@ harmonies = \chordmode {
     title= "Going Back To Isreal"
     subtitle=""
     composer= "June Drucker"
-    instrument =""
+    instrument = "Violin"
     arranger= "as played by H. Sweet"
   }
   \layout{indent = 1.0\cm}

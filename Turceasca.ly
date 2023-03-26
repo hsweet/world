@@ -124,7 +124,7 @@ harmonies = \chordmode {
     subtitle="Tarif De Haidouks"
     composer= ""\version "2.22.2"
 
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

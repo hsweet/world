@@ -192,7 +192,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -202,7 +202,7 @@ harmonies = \chordmode {
     title= "Szól a Kakas Már"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "h.s."
   }
   \layout{indent = 1.0\cm}

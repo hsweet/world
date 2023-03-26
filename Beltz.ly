@@ -8,6 +8,8 @@
 
 \header{
   title= "Beltz"
+instrument= "Violin"
+instrument= "Violin"
   arranger=""
 
 }date = #(strftime "%d-%m-%Y" (localtime (current-time)))
@@ -123,7 +125,7 @@ harmonies = \transpose d c \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

@@ -125,7 +125,7 @@ d2:m
     title= "Odessa Bulgar #1"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

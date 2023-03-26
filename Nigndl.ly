@@ -122,7 +122,7 @@ original_harmonies = \transpose c g \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -130,7 +130,11 @@ original_harmonies = \transpose c g \chordmode {
   >>
   \header{
     title= "Nigndl"
+instrument= "Violin"
+instrument= "Violin"
     subtitle= "Grandfather's Tune"
+instrument= "Violin"
+instrument= "Violin"
     arranger = ""
 
   }

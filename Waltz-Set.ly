@@ -4,7 +4,7 @@
     title= ""
     subtitle="Waltz Set"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
 

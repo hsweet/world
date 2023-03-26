@@ -119,7 +119,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -129,7 +129,7 @@ harmonies = \chordmode {
     title= "Kurobushka"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "Sokolow"
   }
   \layout{indent = 1.0\cm}

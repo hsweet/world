@@ -8,7 +8,9 @@
 }
 \header{
   title= "Klezmer Modes"
+instrument= "Violin"
   subtitle="(In C, D & G)"
+instrument= "Violin"
 
 }
 \markup{ \italic "C Misebeyrekh uses the same notes as D Fregish" }
@@ -51,7 +53,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
     }
     \new Staff \melody
   >>

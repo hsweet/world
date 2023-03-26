@@ -170,7 +170,7 @@ harmonies = \chordmode {
     title= "Ciganine Ti Sto Sviras"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

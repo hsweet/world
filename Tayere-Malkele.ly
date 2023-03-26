@@ -142,7 +142,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose e d\harmonies
     }
     \transpose e d\new Staff   \melody
@@ -151,7 +151,7 @@ harmonies = \chordmode {
     title= "Tayere Malkele "
     subtitle=""
     composer= "Nokhem Sternheim"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -152,7 +152,7 @@ harmonies = \chordmode {
   \transpose a d
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -160,6 +160,7 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Sheyn Vi Di Levone"
+instrument= "Violin"
     arranger = ""
   }
   \layout{indent = 1.0\cm}

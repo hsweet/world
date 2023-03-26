@@ -110,7 +110,7 @@ harmonies = \chordmode {
     title= "Shtil Di Nacht"
     subtitle=""
     composer= "Hirch Glick"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -129,7 +129,7 @@ harmonies = \transpose e d \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -139,7 +139,7 @@ harmonies = \transpose e d \chordmode {
     title= "Szép a Rózsám"
     subtitle="My Rose Is Beautiful"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

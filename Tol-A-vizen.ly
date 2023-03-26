@@ -43,7 +43,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -51,7 +51,11 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Tol a Vizen Van Egy Malom"
+instrument= "Violin"
+instrument= "Violin"
     subtitle=""
+instrument= "Violin"
+instrument= "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

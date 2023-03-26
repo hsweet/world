@@ -149,7 +149,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \vln
@@ -159,7 +159,7 @@ harmonies = \chordmode {
     title= "Moroccan Game"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
 

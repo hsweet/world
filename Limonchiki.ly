@@ -125,7 +125,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose d c\harmonies
     }
     \new staff \transpose d c\melody
@@ -146,7 +146,7 @@ harmonies = \chordmode {
     title= "Limonchiki"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{ }

@@ -114,7 +114,7 @@ harmonies =   \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -123,6 +123,8 @@ harmonies =   \chordmode {
   >>
   \header{
     title= "Amari Szi Amari"
+instrument= "Violin"
+instrument= "Violin"
     composer = "Rom"
     arranger= " "
   }

@@ -136,7 +136,7 @@ harmonies = \transpose c g \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \highpart
@@ -147,7 +147,7 @@ harmonies = \transpose c g \chordmode {
     title= "Jovano, Jovanke"
     subtitle=""
     composer= "Macadonia"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

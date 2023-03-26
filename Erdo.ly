@@ -105,13 +105,14 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \notes
   >>
   \header{
     title= "Erdo"
+instrument= "Violin"
     subtitle= ""
     arranger= ""
   }

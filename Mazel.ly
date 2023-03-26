@@ -115,7 +115,7 @@ harmonies = \chordmode {
     title= "Mazel"
     subtitle=""
     composer= "Ellstein-Pican"
-    instrument =""
+    instrument = "Violin"
     arranger= "Socolov"
   }
   \layout{indent = 1.0\cm}

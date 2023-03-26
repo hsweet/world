@@ -72,7 +72,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     % \new Staff   \octave
@@ -80,7 +80,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Enekeljunk"
+instrument= "Violin"
     subsubtitle=""
+instrument= "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

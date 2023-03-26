@@ -9,6 +9,7 @@
   encodingdate = "2010-01-04"
   composer = ""
   title = "Yismedhu"
+instrument = "Violin"
   arranger = ""
 }
 \paper{
@@ -110,7 +111,7 @@ harmonies = \transpose e d \chordmode {
 
 <<
   \new ChordNames {
-    \set chordChanges = ##t
+    \set chordChanges = ##f
     \harmonies
   }
   \new Staff

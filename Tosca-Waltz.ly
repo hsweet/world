@@ -80,7 +80,7 @@ harmonies = \chordmode {
     title= "Tosca Waltz"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

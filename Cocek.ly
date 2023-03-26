@@ -120,7 +120,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \primas
@@ -129,7 +129,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Cocek"
+instrument= "Violin"
     subtitle="Bulgarian Gypsy"
+instrument= "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -10,7 +10,7 @@
   title= "Menukho V'Simkho"
   subtitle=" "
   composer= " "
-  instrument =""
+  instrument = "Violin"
   arranger= " "
 }
 
@@ -26,7 +26,7 @@ melody = \relative c' {
 
   \repeat volta 2{
   \mark \default
-    g 
+    g
     f4 e8|
     g8 f4.|
     f8 g-. g-. g-.
@@ -104,7 +104,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

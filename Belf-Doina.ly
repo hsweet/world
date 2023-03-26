@@ -10,7 +10,7 @@
   title= "Belf Doina"
   %subtitle="Clarinet"
   composer= "Belf Orchestra"
-  instrument =""
+  instrument = "Violin"
   arranger= "Horowitz & Segelstein"
 }
 

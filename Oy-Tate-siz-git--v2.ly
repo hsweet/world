@@ -142,7 +142,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff  \with{
@@ -153,7 +153,7 @@ harmonies = \chordmode {
     title= "Oy Tate, S'iz Git "
     subtitle="2nd Part  "
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger=""
   }
   \layout{indent = 1.0\cm}

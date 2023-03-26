@@ -66,7 +66,8 @@ melody = \relative c'' {
 harmonies = \chordmode {
   d1*6
   c1:m
-  d1*2
+  d1
+  d1
   %add progression for 2nd ending
   g1*2:m
   ef1*2
@@ -83,7 +84,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -93,7 +94,7 @@ harmonies = \chordmode {
     title= "Yosis ישיש"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

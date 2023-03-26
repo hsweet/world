@@ -133,7 +133,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose g c \harmonies
     }
     \new Staff  \transpose g c' \melody
@@ -142,7 +142,7 @@ harmonies = \chordmode {
     title= "Cygany Ljubjat Pensji"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

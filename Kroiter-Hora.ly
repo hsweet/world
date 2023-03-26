@@ -247,7 +247,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff  \melody
@@ -257,7 +257,7 @@ harmonies = \chordmode {
     title= "Kroiter Hora"
     subtitle=""
     composer= "Emil Kroiter"
-    instrument =""
+    instrument = "Violin"
     arranger= "Jeff Warshauer"
   }
   \layout{indent = 1.0\cm}

@@ -107,7 +107,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -117,7 +117,7 @@ harmonies = \chordmode {
     title= "Meydelekh un Veybelekh"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "Andres Schmitges"
   }
   \layout{indent = 1.0\cm}

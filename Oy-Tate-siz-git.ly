@@ -169,7 +169,7 @@ harmonies = \chordmode {
   \header{
     title= "Oy Tata, S'z Git"
     composer= "Brandndwein"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -65,7 +65,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody
@@ -74,7 +74,7 @@ harmonies = \chordmode {
     title= "Zhokul Rezeshilor"
     subtitle="Moldavian Dance"
     composer= "German Goldensteyn"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 0.0\cm }

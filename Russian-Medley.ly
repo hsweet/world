@@ -4,7 +4,7 @@
   title= "Russian Medley"
   subtitle=""
   composer= ""
-  instrument =""
+  instrument = "Violin"
   arranger= ""
 }
 

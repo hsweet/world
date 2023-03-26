@@ -10,7 +10,7 @@
   title= "Hora"
   subtitle="Merlin"
   composer= ""
-  instrument =""
+  instrument = "Violin"
   arranger= ""
 }
 ending = { g8. g'16 d bf g4. }
@@ -125,7 +125,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

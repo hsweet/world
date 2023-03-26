@@ -110,7 +110,7 @@ harmonies = \transpose d c \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -120,7 +120,7 @@ harmonies = \transpose d c \chordmode {
     title= "Sholom Alaichem"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

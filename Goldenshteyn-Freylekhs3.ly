@@ -101,7 +101,7 @@ harmonies = \chordmode {
     title= "Goldenshteyn Freylekhs #3"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -197,7 +197,7 @@ harmonies = \chordmode {
     title= "Tumbalalaika"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -80,7 +80,7 @@ harmonies =  \transpose d e \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -88,7 +88,9 @@ harmonies =  \transpose d e \chordmode {
   >>
   \header{
     title= "Gypsy"
+instrument= "Violin"
     subtitle=""
+instrument= "Violin"
     arranger=""
   }
   \layout{indent = 1.0\cm}

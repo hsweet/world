@@ -137,7 +137,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
      \transpose g f \harmonies
     }
    \transpose g f \new Staff   \melody
@@ -146,7 +146,7 @@ harmonies = \chordmode {
     title= "Arbetlose March"
     subtitle="ארבעטלאָזע מאַרש"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

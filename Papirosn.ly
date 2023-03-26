@@ -119,7 +119,7 @@ harmonies = \chordmode {
     title= "Papirosn"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "eng. lyrics Dylan Blackthorn"
   }
   \layout{indent = 1.0\cm}

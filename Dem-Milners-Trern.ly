@@ -92,7 +92,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff   \melody
@@ -101,7 +101,7 @@ harmonies = \chordmode {
     title= "Dem Milners Trern"
     subtitle="The Miller's Tears"
     composer= "M.M. Warshawsky"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

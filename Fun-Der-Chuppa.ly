@@ -106,7 +106,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \with {
@@ -116,7 +116,7 @@ harmonies = \chordmode {
     title= "Fun Der Chuppa"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{ }

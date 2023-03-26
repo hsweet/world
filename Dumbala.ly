@@ -47,7 +47,7 @@ melody = \relative c' {
     \mark \default
     e16 fs g a fs8. d16
     e16 fs g d fs8. d16
-    e16 fs g r fs16 e e cs
+    e16 fs g r a16 g g fs
     fs16 e e cs d fs a fs
 
     e16 fs g a fs8. d16
@@ -231,7 +231,7 @@ harmonies = \chordmode {
     subtitle=""
     composer= "Tarif De Haiduks"
 
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

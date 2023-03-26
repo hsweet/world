@@ -164,7 +164,7 @@ harmonies = \chordmode {
     title= "Mugar Mugurel"
     subtitle="Little Buds"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

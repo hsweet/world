@@ -70,7 +70,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -80,7 +80,7 @@ harmonies = \chordmode {
     title= "Khosidl"
     subtitle=""
     composer= "German Goldenshteyn"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

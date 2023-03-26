@@ -155,7 +155,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
     }
     \new Staff
     \melody
@@ -164,7 +164,7 @@ harmonies = \chordmode {
     title= "Nane Socha"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -6,6 +6,7 @@
 \header {
 
   title = "Oy, Tate"
+instrument = "Violin"
 }
 \paper{
   tagline = ##f
@@ -157,7 +158,7 @@ harmonies =  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

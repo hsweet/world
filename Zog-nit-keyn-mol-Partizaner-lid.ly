@@ -90,7 +90,7 @@ harmonies = \chordmode {
     title= "Zog nit keyn mol - Partizaner lid"
     subtitle="זאָג ניט קײן מאָל - פאַרטיזאַנער ליד"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

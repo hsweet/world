@@ -75,7 +75,7 @@ harmonies = \chordmode {
   \transpose a g
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff   \melody
@@ -84,7 +84,7 @@ harmonies = \chordmode {
     title= "Di Tsukunft"
     subtitle="The Future"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

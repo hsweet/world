@@ -136,7 +136,7 @@ harmonies = \chordmode {
     title= "Hora Fetelor"
     %composer="Sergei Lunkevitch"
     %composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

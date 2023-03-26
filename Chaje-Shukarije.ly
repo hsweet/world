@@ -97,7 +97,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose a d \harmonies
     }
     \new Staff  \transpose a d \melody
@@ -106,7 +106,7 @@ harmonies = \chordmode {
     title= "Čaje Šukarije"
     subtitle=""
     composer= "Esma Redzepova"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm} 

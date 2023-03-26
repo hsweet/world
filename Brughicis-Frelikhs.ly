@@ -7,7 +7,9 @@
 }
 \header{
   title= "Boughicis Frelekhs"
+instrument= "Violin"
   %subtitle="(Yevrieskaya Melodie)"
+instrument= "Violin"
   %composer= "Naye Kapele"
   %arranger= "H. Sweet"
 }
@@ -116,7 +118,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

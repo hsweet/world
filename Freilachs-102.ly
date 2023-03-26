@@ -94,7 +94,7 @@ harmonies = \chordmode {
     title= "Freilachs"
     subtitle="Ultimate Klezmer p. 102"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -99,7 +99,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose d g
       \harmonies
     }
@@ -111,7 +111,7 @@ harmonies = \chordmode {
     title= "Nakhes Fun Kinder"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

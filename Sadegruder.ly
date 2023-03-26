@@ -3,6 +3,8 @@
 
 \header{
   title= "Sadegruder Khosidl"
+instrument= "Violin"
+instrument= "Violin"
   %arranger= "H. Sweet"
 }
 \paper{
@@ -105,7 +107,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

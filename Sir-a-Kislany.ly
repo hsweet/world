@@ -90,7 +90,7 @@ harmonies = \transpose g d \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -98,7 +98,11 @@ harmonies = \transpose g d \chordmode {
   >>
   \header{
     title= "Sir a Kislany"
+instrument= "Violin"
+instrument= "Violin"
     subtitle="Hungarian"
+instrument= "Violin"
+instrument= "Violin"
     composer= ""
     arranger= ""
 

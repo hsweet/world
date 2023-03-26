@@ -102,7 +102,7 @@ harmonies = \transpose f g\chordmode {
     title= "Baleboste"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

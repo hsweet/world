@@ -52,7 +52,7 @@ harmonies = \chordmode {
 
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff  \transpose g c \melody
@@ -61,7 +61,7 @@ harmonies = \chordmode {
     title= "Hungarian "
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

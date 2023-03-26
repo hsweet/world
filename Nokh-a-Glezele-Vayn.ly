@@ -169,7 +169,7 @@ harmonies = \chordmode {
     title= "Nokh a Glezele Vayn"
     subtitle="In a Rumanashye Shenk"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

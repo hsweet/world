@@ -120,7 +120,7 @@ harmonies = \chordmode {
     title= "Scotshne #59"
     subtitle=" ‫סקאָטשנאַ‬"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

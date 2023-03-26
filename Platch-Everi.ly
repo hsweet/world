@@ -11,6 +11,8 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 \header{
   subtitle ="Platch Everi"
   title="Yevrieskaya Melodie"
+instrument= "Violin"
+instrument= "Violin"
   composer= "Belf/Naye Kapele"
 
 }
@@ -208,7 +210,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

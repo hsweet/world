@@ -103,7 +103,7 @@ harmonies = \chordmode {
     title= "Dortn, Dortn"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

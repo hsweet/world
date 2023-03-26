@@ -160,7 +160,7 @@ harmonies = \transpose d a  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff = "zero"
@@ -179,7 +179,7 @@ instrumentName = "Improv2"}{ \autoBeamOff \improvtwo }
   title= "Ochi Chorney"
   subtitle=""
   composer= ""
-  instrument =""
+  instrument = "Violin"
   arranger= ""
 }
 \layout{indent = 1.0\cm}
@@ -271,7 +271,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -281,7 +281,7 @@ harmonies = \chordmode {
     title= ""
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

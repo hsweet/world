@@ -79,7 +79,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \with {
@@ -92,7 +92,11 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Rumelaj"
+instrument= "Violin"
+instrument= "Violin"
     subtitle="Balkan Gypsy"
+instrument= "Violin"
+instrument= "Violin"
     arranger= " "
   }
   \layout{indent = 1.0\cm}

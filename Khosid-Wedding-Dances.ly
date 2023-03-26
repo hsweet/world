@@ -87,7 +87,7 @@ harmonies = \chordmode {
     title= "Khosid Wedding Dances"
     subtitle="Chassid Lakodalmi Tancok כסדל"
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= "Musikas"
   }
   \layout{indent = 1.0\cm}

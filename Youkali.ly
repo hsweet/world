@@ -207,7 +207,7 @@ harmonies = \chordmode {
     title= "Youkali"
     subtitle="Tango Habanera "
     composer= "Kurt Weill"
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
   \layout{ }
