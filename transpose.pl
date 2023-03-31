@@ -4,29 +4,61 @@ use feature ':5.10';
 use File::Path;
 use Cwd;
 
-# Transpose recently changed lilypond files
-#Bf Clarinet C==>D		Ef  Horn C==>A  
+=pod
+useage ...  transpose.pl [number of days to look back]
+ex. transpose.pl 7 looks back a week
 
+Adds instrument name, transposition, saves to appropriate
+folder, then runs makes the individual pdf files.  Finally
+it joins them into a single .pdf in the world/combined folder
+
+Transpose recently changed lilypond files
+Bf Clarinet C==>D		Ef Horn C==>A   Bass just change clef
+ 
+=cut
 #*********************setup**************************
-my $cutoffage = @ARGV || 120;   #number of days to look back
+my $cutoffage = @ARGV || 4;   #number of days to look back
 my $target;
+my @trans=qw(Bb Ef Bass);
+my $basepath="/home/harry/Music/charts/world";
+chdir ($basepath);
 
+#********process each instrument ************************
 transpose("Bb");
 transpose("Eb");
-transpose("Bass");
-#******************end setup************************
+#show the finished pdf
+my $chart=transpose("Bass");
+#system ("evince combined/$chart");
+# I just hardcoded the instruments... 
+makepdf(@trans); #send a list of transposing instruments, Bb, Eb, Bass
+
 
 sub age{
-	(my $file)= @_;
+    (my $file)= @_;
 	my @is_recent = stat $file;
 	my $mtime = $is_recent[9];
 	my $daysold = ((time)- $mtime) /86400;
 	return $daysold;
 	}
+	
+sub tunes{
+	my @tunes2use;
+    chdir ($basepath);	
+	my $tune_type="\.ly";
+	opendir(TEMP,$basepath) || die "$basepath is not a valid directory: $!"; 
+	my @files=grep(/$tune_type/, readdir TEMP);	#All the lily files
+	 
+	foreach my $tune(@files){
+		if (age($tune) < $cutoffage){
+		push @tunes2use, $tune;
+		}
+	}
+	return @tunes2use; 
+}
 
 sub transpose{
 	(my $instrument) = @_;
-	 
+	
 	 if ($instrument eq "Bb"){
 	     $target="d";
 		}
@@ -35,83 +67,67 @@ sub transpose{
 		}
 	 elsif ($instrument eq "Bass"){
 		 $target = "bass";
-		}
-			
-	mkpath($instrument); 
-	say $instrument;
-	
-	#*******get lily source files from current directory ******
-	my $path = cwd;   #path to read from	
-	my $newfile_type="\.ly";
-	opendir(TEMP,$path) || die "$path is not a valid directory: $!"; 
-	my @files=grep(/$newfile_type/, readdir TEMP);	#Just lily files
-	
-	foreach my $newfile(@files){
-		open(MYFILE, $newfile ) || die "opening $newfile: $!";
+	 }		
+	#mkpath($instrument); #if !exist?
+	my @files = tunes();
+	#say @files;
+	foreach my $tune(@files){
+		open(MYFILE, $tune ) || die "opening $tune: $!";
 			my @text=<MYFILE>; 
 		close(MYFILE);  
-		
-		#*********** process recently changed files *************
-		 
-		 if (age($newfile) < $cutoffage){
-			 my @basename = split(/\./, $newfile);
-		 
-		#********** Print a tune listing *************
-		print $basename[0]." ==> ";
-		$newfile = $basename[0]."-".$instrument.".ly";
-		say $newfile;
-		
-		#******** make changes and write new files ******* 
-		open(OUT, ">$instrument/$newfile");	
-				foreach my $line(@text){
-					if ($target ne "bass"){
-						$line=~s/\\score \{/\\score \{\\transpose c $target/;
-						if ($target eq "Eb"){
-							$line=~s/relative c''/relative c'/;
-							$line=~s/relative c'/relative c/;		
-						}	
-						print OUT $line;
-					}
-					elsif ($target eq "bass"){
-						$line=~s/clef treble/clef bass/;
-						$line=~s/relative c'*/relative c/;
-						print OUT $line;
-						}			
+	#**************************************************	 
+	
+		 say "-" x 60;
+		 say "Processing $instrument/$tune...";
+		 say "-" x 60;
+		#******** make changes and rewrite  ******* 
+		open(OUT, ">$instrument/$tune");	
+		foreach my $line(@text){
+			$line=~s/Violin/$instrument/;  #for Bb and Eb add "instrumet"
+			
+			if ($target ne "bass"){
+				$line=~s/\\score \{/\\score \{\\transpose c $target/;
+					
+			if ($target eq "Eb"){
+				$line=~s/relative c''/relative c'/;
+				$line=~s/relative c'/relative c/;		
+			}	
+			print OUT $line;
 			}
-		close(OUT);
-			 
+			elsif ($target eq "bass"){
+				$line=~s/clef treble/clef bass/;
+				$line=~s/relative c'*/relative c/;
+				print OUT $line;
+			}			
 		}
+		close(OUT);
+		
+	
+	}  # end foreach loop
+}  #end sub
+
+sub makepdf{
+	my @tunes = tunes();
+	#make pdfs
+	foreach my $tune (@tunes){
+		chdir "$basepath/Bb";
+		my $x= `lilypond -s $basepath/Bb/$tune`;
+		chdir "$basepath/Eb";
+		$x= `lilypond -s $basepath/Eb/$tune`;
+		chdir "$basepath/Bass";
+		$x= `lilypond -s $basepath/Bass/$tune`;
 	}
+	#combine pdfs
+	foreach my $tune (@tunes){
+		my @basename= split(/\./,$tune);
+		my $pdf = "$basename[0].pdf";	
+		chdir $basepath; 
+		system("pdftk $pdf Bb/$pdf Eb/$pdf Bass/$pdf cat output combined/$pdf")
+	}
+	#display finished files
+	system("nautilus $basepath/combined");
 }
 
-sub lily{
-	my $outfolder = @_;
-	my $currentfolder = cwd;
-	chdir $outfolder;
-	say cwd;
-	system ("lilypond *.ly");
-	chdir $currentfolder;
-	}
+#system ("evince combined/$pdf") # to open file
 
-__END__
-#*************************** Process all the files with Lilypond*************************
-say "Lily files all transposed and are in $instrument folder one level below current";
-print "Process all Lily files now? y/n  ";
-my $lily=<STDIN>;
-chomp $lily;
-if ($lily eq "y"){
-	chdir $instrument;
-	say cwd;
-	system ("lilypond * ")
-}
-__END__
-C==>D  Bf instrument
-C==>G  F instrument
-C==>A  Ef instrument
-       
-       bash for recent files....  find . -iname '*.ly' -mtime -10 -type f      
-       
-        \score {
-  % transpose score below
-  %\transpose c f
-  <<
+ 
