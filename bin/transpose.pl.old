@@ -1,0 +1,125 @@
+#!/usr/bin/perl -w
+use strict;
+use feature ':5.10';
+use File::Path;
+use Cwd;
+
+=pod
+useage ...  transpose.pl [number of days to look back]
+ex. transpose.pl 7 looks back a week
+
+Adds instrument name, transposition, saves to appropriate
+folder, then runs makes the individual pdf files.  Finally
+it joins them into a single .pdf in the world/combined folder
+
+Transpose recently changed lilypond files
+Bf Clarinet C==>D		Ef Horn C==>A   Bass just change clef
+ 
+=cut
+#*********************setup**************************
+my $cutoffage = @ARGV || 3;   #number of days to look back
+my $target;
+my $basepath="/home/harry/Music/charts/world";
+chdir ($basepath);
+
+#********process each instrument ************************
+transpose("Bb");
+transpose("Eb");
+#show the finished pdf
+my $chart=transpose("Bass");
+#system ("evince combined/$chart");
+print tunes();
+
+sub age{
+    (my $file)= @_;
+	my @is_recent = stat $file;
+	my $mtime = $is_recent[9];
+	my $daysold = ((time)- $mtime) /86400;
+	return $daysold;
+	}
+	
+sub tunes{
+	my @tunes2use;
+    chdir ($basepath);	
+	my $tune_type="\.ly";
+	opendir(TEMP,$basepath) || die "$basepath is not a valid directory: $!"; 
+	my @files=grep(/$tune_type/, readdir TEMP);	#All the lily files
+	 
+	foreach my $tune(@files){
+		if (age($tune) < $cutoffage){
+		push @tunes2use, $tune;
+		}
+	}
+	say @tunes2use;
+	return @tunes2use; 
+}
+     
+
+sub transpose{
+	(my $instrument) = @_;
+	 if ($instrument eq "Bb"){
+	     $target="d";
+		}
+	 elsif ($instrument eq "Eb"){
+		 $target = "a";
+		}
+	 elsif ($instrument eq "Bass"){
+		 $target = "bass";
+	 }
+			
+	mkpath($instrument); #if !exist?
+	
+	#******* get lily source files from current directory ******
+	my $path="/home/harry/Music/charts/world";
+    chdir ($path);	
+	my $tune_type="\.ly";
+	opendir(TEMP,$path) || die "$path is not a valid directory: $!"; 
+	my @files=grep(/$tune_type/, readdir TEMP);	#All the lily files
+	
+	foreach my $tune(@files){
+		open(MYFILE, $tune ) || die "opening $tune: $!";
+			my @text=<MYFILE>; 
+		close(MYFILE);  
+	#**************************************************	 
+		 if (age($tune) < $cutoffage){
+			 say "-" x 60;
+			 say "Processing $instrument./.$tune...";
+             say "-" x 60;
+			#******** make changes and rewrite  ******* 
+			open(OUT, ">$instrument/$tune");	
+			foreach my $line(@text){
+				$line=~s/Violin/$instrument/;  #for Bb and Eb add "instrumet"
+				
+				if ($target ne "bass"){
+					$line=~s/\\score \{/\\score \{\\transpose c $target/;
+						
+				if ($target eq "Eb"){
+					$line=~s/relative c''/relative c'/;
+					$line=~s/relative c'/relative c/;		
+				}	
+				print OUT $line;
+				}
+				elsif ($target eq "bass"){
+					$line=~s/clef treble/clef bass/;
+					$line=~s/relative c'*/relative c/;
+					print OUT $line;
+				}			
+			}
+			close(OUT);
+			
+			# run lilypond  
+			chdir "$basepath/$instrument";
+			my $x= `lilypond /home/harry/Music/charts/world/$instrument/$tune`;
+			chdir "$basepath";
+			
+			# combine .pdfs
+			my @basename= split(/\./,$tune);
+			my $pdf = "$basename[0].pdf";	 
+			system("pdftk $pdf Bb/$pdf Eb/$pdf Bass/$pdf cat output combined/$pdf") if -e "$basepath/Bass/$pdf"; 
+			#say "The pdf is done" if -e "$basepath/combined/test.pdf";
+			return $pdf;
+		} #**** end if
+	}  # end foreach loop
+}  #end sub
+
+#system ("evince combined/$pdf")
