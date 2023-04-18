@@ -124,17 +124,13 @@ harmonies = \chordmode {
   \header{
     title= "Ofn Veg Shteyt  A Boym"
     subtitle=""
-    composer= "Itzak Manger"\version "2.22.2"
+    composer= "Itzak Manger"
 
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

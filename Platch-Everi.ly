@@ -217,11 +217,7 @@ harmonies = \chordmode {
    % \new Staff \secund
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment  120 4)
-    }
   }
-}
+

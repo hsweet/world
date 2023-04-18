@@ -16,7 +16,7 @@
   #(set-paper-size "letter")
 }
 
-melody = \relative c' {
+melody = \relative c {
   \clef treble
   \key c \major
   \time 2/4
@@ -97,6 +97,6 @@ harmonies = \chordmode {
     \new Staff \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
 }

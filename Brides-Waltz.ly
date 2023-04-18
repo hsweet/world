@@ -22,7 +22,7 @@ melody = \relative c' {
   \repeat volta 2{
   \mark \default
     a'2.\upbow
-    
+
     d2.
     \grace f16 e8-2 d cs d e f
     e f d4 d
@@ -95,6 +95,6 @@ harmonies = \chordmode {
     \new Staff \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
 }

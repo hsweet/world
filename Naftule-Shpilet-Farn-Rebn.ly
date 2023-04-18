@@ -4,8 +4,8 @@
   tagline = ##f
   print-all-headers= ##t
   #(set-paper-size "letter")
-  obsolete-between-system-padding = #0.1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
-  obsolete-between-system-space = #0.1  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
+  %obsolete-between-system-padding = #0.1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+  %obsolete-between-system-space = #0.1  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
   ragged-last-bottom = ##f
   ragged-bottom = ##f
 
@@ -203,12 +203,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

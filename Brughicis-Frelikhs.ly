@@ -124,6 +124,6 @@ harmonies = \chordmode {
     \new Staff \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
 }

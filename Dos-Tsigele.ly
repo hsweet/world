@@ -72,12 +72,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:
@@ -116,4 +112,50 @@ harmonies = \chordmode {
   }
 }
 
+%}
+%{
+Der tate hot gekoyft a tsigele
+mit yorn ful tsurik,
+In khad gadye es farshpart,
+gebundn oyf a shtrik.
+Iz troyerik dos tsigele,
+vind iz im un vey,
+Zumer zet es nisht keyn groz
+un vinter nisht keyn shney.
+
+Zog mayn bruder, "Itsik, her,
+vi derlozt es Got?
+Tsu iz im nisht dos tsigele
+dos vaysinke a shod?"
+Zog ikh, "Notl, bist gerekht!"
+un nisht lang getrakht,
+S'iz geven vi zeltn
+ven a sheyne vesne-nakht.
+Der tate shloft, di mame shloft,
+s'shloft dos gantse hoyz,
+Firn mir funem khad gadye
+dos tsigele aroys.
+
+Mir firn bay di herner es,
+di velt iz vayt un groys,
+Un vu mir lozn es aleyn
+dos zogn mir nisht oys.
+Pesakh di ershte seder-nakht
+s'tsigele nishto,
+Fregt der tate: "Itsik, du?"
+Zog ikh, "Abervo."
+Der tate fregt, "Notl, du?"
+Zogt er, "Vos un ven,
+Zint farayorn pesakh-tsayt
+dos tsigele nisht gezen."
+
+Der tate veynt, di mame veynt,
+keyner veyst nisht vos,
+Zingt men dem khad gadye op
+un dos iz shoyn nisht dos.
+To vu zhe iz dos tsigele,
+s'shpringt arum in feld,
+Un hot hanoe fun der zun
+un fun der gantser velt.
+https://lyricstranslate.com
 %}

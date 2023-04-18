@@ -186,7 +186,7 @@ instrumentName = "Improv2"}{ \autoBeamOff \improvtwo }
 \midi {
   \tempo 4 = 120
 
-  % \midi { }
+  
 }
 }
 %{
@@ -288,7 +288,7 @@ harmonies = \chordmode {
   \midi {
     \tempo 4 = 120
 
-    % \midi { }
+    
   }
 }
 %{

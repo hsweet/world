@@ -7,7 +7,7 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-\markup{ \italic{ " Updated " \date  }  } \markup{Cm Gm Cm D7 G x2 ||Cm7 Gm Cm D7 G} x2
+\markup{ \italic{ " Updated " \date  }  } \markup{Cm Gm Cm D7 G x2 ||Cm7 Gm Cm D7 G x2}
 
 %\markup{ Got something to say? }
 
@@ -166,12 +166,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 90
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

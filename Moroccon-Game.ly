@@ -21,7 +21,7 @@ common = {
   \clef treble
   \key a \minor
   \time 12/8
-  \compressFullBarRests
+  %\compressFullBarRests
 }
 
 pone = { ds16(e)e e e e   ds16(e)e e e e   e ds c b c ds }
@@ -163,12 +163,8 @@ harmonies = \chordmode {
     arranger= ""
   }
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4. = 40
-
-    % \midi { }
-  }
 }
 %{
 c1 \mark \markup { \musicglyph #"scripts.segno" }

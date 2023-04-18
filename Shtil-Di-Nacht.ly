@@ -88,8 +88,8 @@ harmonies = \chordmode {
 
 
   d2:m
-  g2*2:m
-  c2
+  g2:m
+  c2*2
   f2
   a2:7
   d2:m
@@ -113,12 +113,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 
 \markup{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ }

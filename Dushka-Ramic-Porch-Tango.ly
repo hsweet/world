@@ -98,7 +98,7 @@ melody = \relative c' {
   a1 \fermata
 
 }
-}
+
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
@@ -135,10 +135,6 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }

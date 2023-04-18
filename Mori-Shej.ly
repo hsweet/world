@@ -38,7 +38,7 @@ melody = \relative c'' {
  \break
   \repeat volta 2{
   %\mark \default
-    d2 
+    d2
     e16 fs8. g4|
     a16 b8. a8 g|
     e16 d8. c4|
@@ -98,7 +98,7 @@ harmonies = \chordmode {
   g2
   e2:7
   a2*2:m
-   
+
 
 }
 
@@ -118,8 +118,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
 }
 %{
 Buter káj egy berseszki szán

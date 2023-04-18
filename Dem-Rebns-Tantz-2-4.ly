@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.20.0"
 \include "english.ly"
 \paper{
   tagline = #ff
@@ -19,79 +19,99 @@ global = {
 }
 
 %#################################### Melody ########################
-%melody =  \transpose c d \relative c' {  %transpose for clarinet
-endphrase = {
-  r8 c16 c b8 c
-  d8 ef d c
-  r8 g'16 g fs8 g
-  a8 bf a g
-  fs4  g %
-  fs ef
-}
-
 melody = \relative c'' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  %\partial 4 g4    %lead in notes
 
   \repeat volta 2{
-   \mark \default
-   d8 bf' a g
-   fs4 ef8 d
-   r8 g4 g16 g
-   %r8 g4. ~
-   fs8 g g8. d16
-   %g4. d8
-   d8 bf'a g
-   fs4 ef8 d
-   c4. c16 c
-   b8 c c4
+    \mark \default
+   d8 d d d
+   d fs ef4
+   ef8 fs d4 d8 ef c4
+   d8 d d d d g fs ef
+   d8ef fs4 ~ fs2
+   fs8 fs fs fs fs g ef4
+   ef8 ef ef ef ef fs d4
+   ef4 d c4 d8 ef
+   fs8 ef d4~ d2
+  }
 
-   \endphrase
-  }
-  \alternative {
-    { d2~
-    d4. d8}
-    {d2~
-    d8 d fs g}
-  }
-  \break
+ \break
   \repeat volta 2{
-   \mark \default
-   a2~
-   a2
-   d2~
-   d2
-   \repeat unfold 2{a8 g16 g g8 fs}
-   a8 g16 g g8 fs16 fs
-   fs8 ef16 ef ef8 d
-   c4. c16 c
-   b8 c c4
-   %c2~ c2
-   \endphrase
-  }
-   \alternative {
-     {d2~
-    d8 d fs g}
-     {d2~d2  }
-   }
+    \mark \default
+    d2 d
+    ef8 d c b c d(d4)~
+    d4 d d8 d d4
+    ef8 d c b c ef d4
 
+    bf2 bf
+    c8 bf a g a bf g4  %triplet
+    c8 bf a g a bf a g
+    fs8 g a4~a2|
+  }
+  %\break
+\repeat volta 2{
+    \mark \default
+    g8 g g g g ef' d c
+    c d c d c bf a g
+    bf4 a8 g bf4 a8 g
+    cs8 e d4~d2
+
+    g,8 g g g g ef' d c
+    c d c d c bf a g
+    bf8 c bf c bf4\trill a8 g
+    a8 bf g4~g2
+  }
+
+  \repeat volta 2{
+    \mark \default
+    d'4 d d d
+    d4 d ef4.-> d8
+    c8 ef c ef a g fs ef
+    fs8 ef d4~d2
+
+    d8 d' d, d' d, d' d, d'
+    d,8 d d d ef4.-> d8
+     c8 ef c ef a g fs ef
+    fs8 ef d4~d2
+  }
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2*6:m
-  c2*8:m
-  d2*2
-  d2*2
- %b
- d2*8
- c2*8:m
- d2*2
- d2*2
+    d4*6 c2:m
+    d2*8
+    c2*2:m
+    d2*2
+    %b
+
+    d2*2
+    c2:m d2*3
+    c2:m d2
+    g2*2:m
+    d2 g2:m
+    d2 g2:m
+    d2*2
+    %c
+    g2*2:m
+    c2:m g2*3:m
+    a2:7 d2
+    g2*2:m
+    c2:m g2*5:m
+    %d
+    d2*4
+    c2*2:m
+    d2*6
+    c2*2:m
+    d2
+
+
 }
 
 \score {
+  % transpose score below
+  %\transpose c d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -100,10 +120,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Goldensyteyn Bulgar"
+    title= "Dem Rebn's Tantz"
     subtitle=""
     composer= ""
-    instrument = "Violin"
+
+    instrument ="Violin"
     arranger= ""
   }
   \midi{\tempo 4 = 120}
@@ -113,33 +134,34 @@ harmonies = \chordmode {
 % more verses:
 \markup{}
 \markup {
+  \font-size #2
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {
       \line { "1."
-	\column {
-	  ""
-	}
+\column {
+ ""
+}
       }
       \hspace #0.2 % vertical distance between verses
       \line { "2."
-	\column {
-	 ""
-	}
+\column {
+""
+}
       }
     }
     \hspace #0.1  % horiz. distance between columns
     \column {
       \line { "3."
-	\column {
-	  ""
-	}
+\column {
+ ""
+}
       }
       \hspace #0.2 % distance between verses
       \line { "4."
-	\column {
-	 ""
-	}
+\column {
+""
+}
       }
     }
     \hspace #0.1 % distance to right margin

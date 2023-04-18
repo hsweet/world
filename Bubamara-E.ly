@@ -116,10 +116,8 @@ instrument= "Violin"
     arranger= ""
 
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi{
-    \tempo 4 = 120
-  }
 }
 \markup \fontsize #2 {[Em] Shamale [Am] Romale (3x) [B7] Ajde Te Khela  }
 %{

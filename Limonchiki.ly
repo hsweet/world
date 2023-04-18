@@ -149,12 +149,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{ }
-  \midi {
-    \tempo 4 = 60
-
-    % \midi { }
-  }
 }
 
 % more verses:

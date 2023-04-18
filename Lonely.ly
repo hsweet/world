@@ -111,16 +111,12 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment  120/4)
-    }
 
-    % \midi { }
+
   }
-}
+
 %{
   % more verses:
   \markup{}

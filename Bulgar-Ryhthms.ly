@@ -3,7 +3,7 @@
 
 \paper{
   tagline = ##f
-  #print-all-headers = ##t
+  #print-all-headers  ##t
   #(set-paper-size "letter")
 }
 \header{
@@ -52,6 +52,6 @@ three = \relative c' {
 
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
 }

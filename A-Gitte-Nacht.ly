@@ -125,12 +125,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= "Transcription, P. Rusefky based on Piano Roll Collected by Bob Berkman"
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
   % more verses:

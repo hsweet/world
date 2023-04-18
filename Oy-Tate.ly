@@ -13,6 +13,7 @@ instrument = "Violin"
   #print-all-headers  ##t
   #(set-paper-size "letter")
 }
+  \midi{\tempo 4 = 120}
 \layout {
   \context {
     \Score
@@ -165,8 +166,6 @@ harmonies =  \chordmode {
     \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi{
-    \tempo 4 = 120
-  }
 }

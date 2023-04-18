@@ -21,35 +21,30 @@ melody = \relative c'' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-<<<<<<< HEAD
     \mark Verse
-=======
   \mark \default
->>>>>>> a846c5ec809e3d351e0ed8548570c4eeb69fa3c9
     af4  af8 (g) f4 f
     g4 g8 (f) e2|
     f4 f8 (e) df 4 df|
     e4 e8 (df) c2|
-<<<<<<< HEAD
+
 
     g'8 g af4 b c|
     b8 (af) g4 af g8 (f)|
     f4 f   g4 g8 (f)  |
     e1|
-=======
->>>>>>> a846c5ec809e3d351e0ed8548570c4eeb69fa3c9
+
 
   }
   %\alternative { { }{ } }
   \break
   \repeat volta 2{
-<<<<<<< HEAD
     \mark Chorus
     df4-2 df8 (c) bf4 bf|
-=======
+
   \mark \default
     df4 df8 (c) bf4 bf|
->>>>>>> a846c5ec809e3d351e0ed8548570c4eeb69fa3c9
+
     df4 df8 (c) bf2
     f'4 f8 (e) df4 df
     e4 e8 (df) c2
@@ -79,8 +74,7 @@ melody = \relative c'' {
   Ka -- ko u -- vil to pa-ma -- to, a man mar -- ga kor -- ko -- ro.
   A gar -- av -- la kaj ge -- li, ti -- la -- ta -- ri za vo -- gi.
 }
-
-=======
+\addlyrics {
 Tut -- ti frut -- ti te ke -- las,  te ke -- las te gil -- ja -- vas.
 Te ke -- las te gil -- ja -- vas, e rom -- en -- car te pag -- jas.
 }
@@ -88,21 +82,19 @@ Te ke -- las te gil -- ja -- vas, e rom -- en -- car te pag -- jas.
 \addlyrics {
 Sa-o roma da -- je te ke -- lav, sa-o roma da -- je on pije -- lav.
 }
->>>>>>> a846c5ec809e3d351e0ed8548570c4eeb69fa3c9
 %################################# Chords #######################
 harmonies = \chordmode {
   f1:m
   c1
   bf1:m
   c1
-<<<<<<< HEAD
+
 
   f1:m
   c1
   bf1:m
   c1
-=======
->>>>>>> a846c5ec809e3d351e0ed8548570c4eeb69fa3c9
+
   %B
   bf1*2:m
 
@@ -125,12 +117,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 
 % more verses:

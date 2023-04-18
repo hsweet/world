@@ -13,60 +13,101 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
+  \key a \minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
+theme = {r8 c c c
+         gs'f r4
+         r4 f8 f
+         f f f f
+         g c, r4
 
+         r4 r8 c
+         f8 f f f
+         f bf r bf
+         gs8 g f g
+
+         bf gs r4
+         r1}
 %#################################### Melody ########################
 melody = \relative c' {
   \global
-  \partial 8 c8    %lead in notes
+  %\partial 4 g4    %lead in notes
 
   \repeat volta 2{
     \mark \default
-    c8 c gs' f~
-    f2
+    r8 c c c
+    gs'f ~f4~
+    f f8 f
+    f f f f
+    g c,~c4 ~
+
+    c4 r8 c
     f8 f f f
-    f f g c,~
-    c4.c8
-    f8 f f f
-    f8 bf4 bf8
+    f bf r bf
     gs8 g f g
-    bf8 gs4.~
-    gs2
 
+    bf8 gs~ gs4~ |
+    gs4 r4
   }
-  \alternative {
-    { }
-    { }
-  }
-
-  \repeat volta 2{
-    \mark \default
-    c8, c gs' f~
-    f2
-    f16 f f f
-    f f r8
-    g c,~
-    c4.c8
-    f8 f f f
-    f8 bf4 bf8
-    gs8 g f g
-    bf8 gs4.~
-    gs2
-  }
-  \alternative {
-    { }
-    { }
+ \alternative {
+    { r8 c, c c}
+    {f4 g  }
   }
 
+
+  %f8 g
+  gs4 gs
+  bf bf c gs
+  g f8 g
+  gs4 g
+  f e
+  f g
+  gs bf \bar"||"
+
+  %yai dai
+  c4. b8
+  c4. b8
+  c4 gs
+  g f8 g
+
+  gs4 g
+  f e
+  f g
+  gs bf
+
+  c4. b8
+  c4. b8
+  c4 gs
+  g f8 g
+
+  gs4 g
+  f e
+  f2
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-
+ s2
+ c2*3:m
+ g2*3:7
+ f2*2:m
+ bf4:7 ef4
+ s4*2
+ %
+  c2:m
+  f2:m
+  c2*2:m
+  g2*2:7
+  c2*2:m
+  %
+  c2*4:m
+  g2*2:7
+  c2*6:m
+  g2:7
+  c2:m
 }
 
 \score {
@@ -80,19 +121,15 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Mashke"
+    title= "Der Mashke"
     subtitle=""
-    composer= ""\version "2.22.2"
+    composer= ""
 
-    instrument = "Violin"
+    instrument ="Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

@@ -2,7 +2,7 @@
 \language "english"
 \paper{
   tagline = ##f
-  #print-all-headers = ##t
+  #print-all-headers ##t
   #(set-paper-size "letter")
 }
 
@@ -132,8 +132,6 @@ harmonies = \transpose d c \chordmode {
     \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi{
-    \tempo 4 = 120
-  }
 }

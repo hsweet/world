@@ -87,12 +87,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= "Macedonian Rom"
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 
 %\markup{\vspace #4}

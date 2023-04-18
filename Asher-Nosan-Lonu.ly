@@ -96,11 +96,10 @@ harmonies = \chordmode {
     \new Staff \melody
   >>
 
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi { }
+
 }
-
-
 %{
 convert-ly (GNU LilyPond) 2.14.2 Processing `'...  Applying
 conversion: 2.12.3, 2.13.0, 2.13.1, 2.13.4, 2.13.10, 2.13.16, 2.13.18,

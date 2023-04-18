@@ -38,7 +38,7 @@ voicedefault =  {
     }
 
   >>
+  \midi{\tempo 4 = 120}
   \layout {
   }
-  \midi {}
 }

@@ -77,11 +77,16 @@ melody = \relative c' {
 
      a8 d4 a'8
      a16 gs f8 f4
-     e8 d e f
-    d4. r8
-
+     e8 d e f|
   }
+  \alternative{
+  {d4. r8}
+  {d8 a [d f]}
+  }
+
 }
+
+
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
@@ -128,12 +133,8 @@ d2:m
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

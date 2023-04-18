@@ -77,8 +77,6 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 0.0\cm }
-  \midi{
-    \tempo 4 = 120
-  }
 }

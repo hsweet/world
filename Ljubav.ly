@@ -67,7 +67,7 @@ melody = \relative c'' {
 %################################# Chords #######################
 harmonies = \chordmode {
   a1:m
-  rs1
+  s1
   c1
   a1:m
   s1
@@ -117,12 +117,8 @@ harmonies = \chordmode {
     instrument = "Violin"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
 }
 %{
 % more verses:

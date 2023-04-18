@@ -105,8 +105,6 @@ instrument= "Violin"
     composer= "Rabatamasi"
     arranger= ""
   }
+  \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
-  \midi{
-    \tempo 4 = 120
-  }
 }
