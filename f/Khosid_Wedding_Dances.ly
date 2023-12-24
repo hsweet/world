@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -87,7 +88,7 @@ harmonies = \chordmode {
     title= "Khosid Wedding Dances"
     subtitle="Chassid Lakodalmi Tancok כסדל"
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= "Musikas"
   }
   \layout{indent = 1.0\cm}

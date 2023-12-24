@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -75,7 +76,7 @@ harmonies = \chordmode {
   \transpose a g
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff   \melody
@@ -84,7 +85,7 @@ harmonies = \chordmode {
     title= "Di Tsukunft"
     subtitle="The Future"
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

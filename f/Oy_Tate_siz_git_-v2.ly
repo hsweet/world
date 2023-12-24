@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 
 \paper{
@@ -142,18 +143,18 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff  \with{
-      instrumentName = "Violin2"
+      instrumentName = "F Horn2"
     } \melody
   >>
   \header{
     title= "Oy Tate, S'iz Git "
     subtitle="2nd Part  "
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger=""
   }
   \layout{indent = 1.0\cm}

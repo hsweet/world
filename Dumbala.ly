@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -62,7 +63,10 @@ melody = \relative c' {
       d,8 a' a, a'
     }
   }
-  \break
+  %\break
+
+  \repeat volta 2{
+   \mark \default
   a4.(a8)
   fs8 fs fs4
   e8 fs e e16(d)
@@ -83,10 +87,10 @@ melody = \relative c' {
   r8 f16 f e8 e
   d8 d d e
   \bar "||"
-  \break
+  %\break
 
   %Dum take....
-  fs8 fs 16 a e e e d
+  fs8 ^Chorus fs 16 a e e e d
   e8 d16 d d8 e
   fs8 fs16 a e e e d
   e8 d16 d d8 a
@@ -95,7 +99,10 @@ melody = \relative c' {
   e8 d16 d d8 e
   fs16 e e e e e e d
   e8 d16 d d8 d
-  \bar "||"
+  %end repeat here
+  }
+
+ % \bar "||"
   \break
   \verse
   \break
@@ -190,13 +197,19 @@ verse = \relative c'' {
 }
 %################################# Chords #######################
 harmonies = \chordmode {
-  d2*11  %intro
+  d2*4  %intro
+  d4 fs4
+  g4 gs4
+  a4 cs4
+  d2
+  d2*3
+
   d4*15  %verse
   d2*8:m
-  d4
+  d4 *9
 
   %%  chorus
-  d2*4
+  %d2*4
   d2:m
   d2*3
 

@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -115,7 +116,7 @@ harmonies = \chordmode {
     title= "Mazel"
     subtitle=""
     composer= "Ellstein-Pican"
-    instrument =""
+    instrument = "F Horn"
     arranger= "Socolov"
   }
   \layout{indent = 1.0\cm}

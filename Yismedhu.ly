@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+%\pointAndClickOff
 % automatically converted from Yismedhu.xml
 %was in Clarinet key before \transpose e d
 

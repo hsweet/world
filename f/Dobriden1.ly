@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -77,7 +78,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -87,7 +88,7 @@ harmonies = \chordmode {
     title= "Dobriden  1"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

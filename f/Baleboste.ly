@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -102,7 +103,7 @@ harmonies = \transpose f g\chordmode {
     title= "Baleboste"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

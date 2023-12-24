@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -122,7 +123,7 @@ original_harmonies = \transpose c g \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -130,7 +131,9 @@ original_harmonies = \transpose c g \chordmode {
   >>
   \header{
     title= "Nigndl"
+instrument = "F Horn"
     subtitle= "Grandfather's Tune"
+instrument = "F Horn"
     arranger = ""
 
   }

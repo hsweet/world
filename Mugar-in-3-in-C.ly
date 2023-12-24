@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -7,13 +8,13 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\markup{ \italic{ " Updated " \date  }  }
+\markup{ \italic{ " Updated " \date  }  }
 
 %\markup{ Got something to say? }
 
 global = {
   \clef treble
-  \key d \minor
+  \key d \major  % d minor if you want fewer accidentals
   \time 3/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
@@ -42,7 +43,7 @@ melody = \transpose d c\relative c' {
   e8 f f4 r8 e
   g4. ef8 ef d|
   \tuplet 4/3 {d4 e f g}
-  \tuplet 4/3 {gs4 a bf cs}
+  \tuplet 4/3 {gs4 a b cs}
 
   d8 a(a2)
   bf8 g(g2)
@@ -76,7 +77,7 @@ melody = \transpose d c\relative c' {
 }
 bass = \transpose d c\relative c'{
   \global
-  %\clef bass
+  \clef treble
   d2.
   d2.
   bf2.
@@ -114,7 +115,7 @@ bass = \transpose d c\relative c'{
 harmonies = \transpose d c \chordmode {
   d2.*3:m
   f2.*3
-  cs2.:7
+  g2.:m
   d2.:m
   s2.
   %b Ia Fate etc

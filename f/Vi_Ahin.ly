@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -101,7 +102,7 @@ harmonies = \chordmode {
     subtitle="װוּ אַהין זאָל איך גײן?"
     composer= ""\version "2.22.2"
 
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

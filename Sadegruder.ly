@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+%\pointAndClickOff
 
 \header{
   title= "Sadegruder Khosidl"

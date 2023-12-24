@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -10,7 +11,7 @@
   title= "Belf Doina"
   %subtitle="Clarinet"
   composer= "Belf Orchestra"
-  instrument =""
+  instrument = "F Horn"
   arranger= "Horowitz & Segelstein"
 }
 

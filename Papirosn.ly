@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -125,7 +126,7 @@ harmonies = \chordmode {
   \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
 }
-
+%{
 % more verses:
 \markup{}
 \markup {

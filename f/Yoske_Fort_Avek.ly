@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -99,7 +100,7 @@ harmonies = \transpose e d \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       #(set-paper-size "letter")
       #(set-paper-size "letter")
       \harmonies
@@ -111,7 +112,7 @@ harmonies = \transpose e d \chordmode {
     title= "Yoshke Fort Avek"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

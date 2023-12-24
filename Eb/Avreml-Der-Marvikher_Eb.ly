@@ -1,6 +1,7 @@
 
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   %tagline = #ff
   %print-all-headers = ##t
@@ -189,7 +190,7 @@ harmonies = \chordmode {
     title= "Avreml Der Marvikher"
     %subtitle="Abe the Pickpocket"
     composer= ""
-    instrument =""
+    instrument = "Eb Instrument"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

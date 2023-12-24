@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 % automatically converted from Yismedhu.xml
 %was in Clarinet key before \transpose e d
 
@@ -9,6 +10,7 @@
   encodingdate = "2010-01-04"
   composer = ""
   title = "Yismedhu"
+instrument = "F Horn"
   arranger = ""
 }
 \paper{
@@ -110,7 +112,7 @@ harmonies = \transpose e d \chordmode {
 
 <<
   \new ChordNames {
-    \set chordChanges = ##t
+    \set chordChanges = ##f
     \harmonies
   }
   \new Staff

@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -160,7 +161,7 @@ harmonies = \transpose d a  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff = "zero"
@@ -179,7 +180,7 @@ instrumentName = "Improv2"}{ \autoBeamOff \improvtwo }
   title= "Ochi Chorney"
   subtitle=""
   composer= ""
-  instrument =""
+  instrument = "F Horn"
   arranger= ""
 }
 \layout{indent = 1.0\cm}
@@ -221,6 +222,7 @@ instrumentName = "Improv2"}{ \autoBeamOff \improvtwo }
 	 ""
 	}\version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
 tagline = ##f
   print-all-headers = ##t
@@ -271,7 +273,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -281,7 +283,7 @@ harmonies = \chordmode {
     title= ""
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 %showLastLength = R1*5
 % sudo timidity -iA started midi
 \paper{
@@ -125,7 +126,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose d c\harmonies
     }
     \new staff \transpose d c\melody
@@ -146,7 +147,7 @@ harmonies = \chordmode {
     title= "Limonchiki"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{ }

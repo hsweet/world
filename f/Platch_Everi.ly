@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   %print-all-headers = ##t
@@ -10,7 +11,9 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 %\markup{ \italic{ " Updated " \date  }  }
 \header{
   subtitle ="Platch Everi"
+instrument = "F Horn"
   title="Yevrieskaya Melodie"
+instrument = "F Horn"
   composer= "Belf/Naye Kapele"
 
 }
@@ -208,7 +211,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

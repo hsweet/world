@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 %moved \header into \score for includes to work
 
 \paper{
@@ -66,7 +67,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -74,7 +75,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Kiment"
+instrument = "F Horn"
     subtitle=""
+instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

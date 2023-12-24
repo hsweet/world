@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 %moved \header into \score for includes to work
 
 \paper{
@@ -90,7 +91,7 @@ harmonies = \transpose g d \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -98,7 +99,9 @@ harmonies = \transpose g d \chordmode {
   >>
   \header{
     title= "Sir a Kislany"
+instrument = "F Horn"
     subtitle="Hungarian"
+instrument = "F Horn"
     composer= ""
     arranger= ""
 

@@ -1,10 +1,12 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 \header {
   crossRefNumber = "1"
   footnotes = ""
   tagline = ""
   title = "Shalom Aleichem"
+instrument = "F Horn"
 }
 voicedefault =  {
   \set Score.defaultBarType = "-"

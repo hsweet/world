@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -19,13 +20,13 @@ global = {
 }
 
 %#################################### Melody ########################
-melody = \relative c'' {
+melody = \relative c' {
   \global
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
     \mark \default
-    d,8 bf' a g fs d fs g
+    d8 bf' a g fs d fs g
     a4 a a a
     d,8 bf' a g fs d fs g
     a4. d8(d2)|
@@ -77,18 +78,16 @@ harmonies = \chordmode {
   d1
   d1
   g1:m
-
-
 }
 
-\score {
+\score { \displayLilyMusic
   <<
     \new ChordNames {
       \set chordChanges = ##f
       \harmonies
     }
     \new Staff
-    \melody
+   \melody
   >>
   \header{
     title= "Yosis ישיש"

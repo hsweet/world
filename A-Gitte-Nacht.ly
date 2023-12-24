@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -18,7 +19,7 @@ melody = \relative c'' {
   \time 3/4
   \set Score.markFormatter = #format-mark-box-alphabet
 
-  \partial 4*2 r8 a,8 bf cs   %lead in notes
+  \partial 4*2 r8 a,8 b cs   %lead in notes
 
   \repeat volta 2{
     \mark \default
@@ -99,8 +100,8 @@ harmonies = \chordmode {
   g4*3:m
   d2:m g4:m
   d2:m g4:m
-  d4*5
-  c4
+  d4*3
+  c4*3
   f4*6
   g4*6
   d2:m g4:m
@@ -123,7 +124,8 @@ harmonies = \chordmode {
     subtitle=""
     composer= ""
     instrument = "Violin"
-    arranger= "Transcription, P. Rusefky based on Piano Roll Collected by Bob Berkman"
+    arranger= "Transcription, P. Ruseshefky based on Piano Roll Collected by Bob Berkman"
+    arranger= "Transcription, P. Ruseshefky based on Piano Roll Collected by Bob Berkman"
   }
   \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}

@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -38,6 +39,7 @@ melody = \relative c' {
     \cadence
     d2
   }
+  \break
 
   %\break
   \repeat volta 2{
@@ -52,7 +54,7 @@ melody = \relative c' {
     \cadence
     d2
   }
-  %\break
+  \break
   \repeat volta 2{
     \mark \default
     f4. e16 f

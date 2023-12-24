@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 %#(ly:expect-warning "cannot end volta")
 %showLastLength = R1*8
 
@@ -133,7 +134,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \transpose g c \harmonies
     }
     \new Staff  \transpose g c' \melody
@@ -142,7 +143,7 @@ harmonies = \chordmode {
     title= "Cygany Ljubjat Pensji"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

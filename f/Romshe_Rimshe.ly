@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 
 \paper{
@@ -94,7 +95,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -102,7 +103,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Romshe Rimtshe"
+instrument = "F Horn"
     subtitle="A finf un tsvantsiker"
+instrument = "F Horn"
     arranger = ""
   }
   \layout{indent = 1.0\cm}

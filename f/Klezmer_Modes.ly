@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -8,7 +9,9 @@
 }
 \header{
   title= "Klezmer Modes"
+instrument = "F Horn"
   subtitle="(In C, D & G)"
+instrument = "F Horn"
 
 }
 \markup{ \italic "C Misebeyrekh uses the same notes as D Fregish" }
@@ -51,7 +54,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
     }
     \new Staff \melody
   >>

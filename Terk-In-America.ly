@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -77,7 +78,7 @@ melody = \relative c' {
 
   a8 g a bf a g f4
   fs8 g4. fs8 ef ef d
-  d4 ef'16( d c bf a bf a g fs g fs e)
+  d4 ef'16( d c bf a bf a g fs g fs ef)
   fs8 g4. fs8 ef ef d
   d1
   }

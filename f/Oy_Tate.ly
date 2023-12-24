@@ -1,4 +1,5 @@
 \language "english"
+\pointAndClickOff
 
 \version "2.18.0"
 % automatically converted from Oy Tate.xml
@@ -6,6 +7,7 @@
 \header {
 
   title = "Oy, Tate"
+instrument = "F Horn"
 }
 \paper{
   tagline = ##f
@@ -157,7 +159,7 @@ harmonies =  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

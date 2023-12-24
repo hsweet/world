@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -35,7 +36,7 @@ melody = \transpose f g\relative c' {
     g8 f r4
 
   }
-  % \break
+   \break
 
   \repeat volta 2{
     \mark \default

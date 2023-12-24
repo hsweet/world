@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 \paper{
   tagline = ##f
   # print-all-headers ##t
@@ -9,7 +10,7 @@
   title= "Abe Schwartz Chusidl"
   %subtitle="(Yevrieskaya Melodie)"
   %composer= "Naye Kapele"
-  instrument ="Violin"
+  instrument ="F Horn"
   composer = ""
   %arranger= "H. Sweet"
 }
@@ -80,7 +81,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

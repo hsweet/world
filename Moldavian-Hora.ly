@@ -1,6 +1,7 @@
 
 \version "2.20.0"
 \include "english.ly"
+%\pointAndClickOff
 % automatically converted from Moldavian Hora.xml
 
 \paper{

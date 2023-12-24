@@ -1,6 +1,7 @@
 \version "2.14.2"
 
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   print-all-headers = ##t
   #(set-paper-size "letter")

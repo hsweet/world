@@ -1,4 +1,5 @@
 \language "english"
+%\pointAndClickOff
 
 \version "2.18.0"
 % automatically converted from Di Sapozhkelekh.xml
@@ -30,14 +31,15 @@ melody =  \relative c' {
   a'8. [ g16 f16 e16 ] | % 14
   f8. [ g16 f16 e16 ]  | % 15
 
-  d8. [ d'16 a16 f16 ] | % 16
+  d8. [ d'16^chorus a16 f16 ] \bar"||" | % 16
+  \break
   d8. [ d16 f16 a16 ] | % 17
   d8 [ r16 c16 bf16 a16 ] | % 18
-  a8 [ r16 g16 f16 e16 ] | % 19
-  g8 [ a8 a8 ]
+  af8 [ r16 g16 f16 e16 ] | % 19
+  af8 [ a8 a8 ]
   a4. | % 21
   d8 [ r16 c16 bf16 a16 ] | % 22
-  a8 [ r16 g16 f16 e16 ] | % 23
+  af8 [ r16 g16 f16 e16 ] | % 23
   f8 [ d8 d8 ] | % 24
   d4. | % 25
   c'8. [ bf16 a16 g16 ] | % 26
@@ -84,16 +86,27 @@ melody =  \relative c' {
 }
 harmonies =  \chordmode {
 
-  s8 g16:m5 | % 2
-  s16*17 d16:m5 | % 5
-  s16*5 g8:m5 | % 6
-  s8*5 d4.:m5 | % 8
-  s4. g16:m5
-  s16*17 d16:m5 | % 13
-  s16*5 a8.:m5 | % 14
-  s16*9 d8.:m5 | % 16
-  s16*57 a8.:m5 | % 26
-  s8. d8.:m5 | % 27
+  s8
+  g8*9:m
+  d8*3:m
+  g8*6:m
+  d8*6:m
+  g8*9:m
+  d8*6:m
+  a8*3:7
+  d8*30:m
+  f8*6
+  g8*6:m
+  d8*3:m
+  a8*3:7
+  d8*3:m
+
+  %{
+  a8.:m | % 14
+  s16*9 d8.:m | % 16
+  s16*57 a8.:m | % 26
+  s8. d8.:m | % 27
+  %}
 }
 
 %{
@@ -123,11 +136,11 @@ harmonies =  \chordmode {
 }
 %}
 
-\score {
+\score {\transpose f c'
   <<
     \new ChordNames {
       \set chordChanges = ##f
-      \harmonies
+       \harmonies
     }
     \new Staff   \melody
   >>

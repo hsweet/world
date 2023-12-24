@@ -1,6 +1,7 @@
 
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 % automatically converted from Montreal Hora.xml
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
@@ -101,7 +102,7 @@ harmonies =  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -111,7 +112,7 @@ harmonies =  \chordmode {
     title= "Goldensteyn Hora"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

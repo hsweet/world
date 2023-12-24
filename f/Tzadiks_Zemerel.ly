@@ -1,12 +1,13 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 
 \header{
   title= "Tzadik's Zemerel"
   subtitle=""
   composer= ""
-  instrument =""
+  instrument = "F Horn"
   arranger= ""
 }
 \paper{
@@ -83,7 +84,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

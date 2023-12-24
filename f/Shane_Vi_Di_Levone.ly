@@ -1,6 +1,7 @@
 \version "2.18.0"
 %moved \header into \score for includes to work
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -152,7 +153,7 @@ harmonies = \chordmode {
   \transpose a d
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -160,6 +161,7 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Sheyn Vi Di Levone"
+instrument = "F Horn"
     arranger = ""
   }
   \layout{indent = 1.0\cm}

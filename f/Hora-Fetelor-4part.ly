@@ -1,5 +1,6 @@
 \version "2.18.2"
 \language "english"
+\pointAndClickOff
 
 \header {
   title = "Hora Fetelor"
@@ -14,7 +15,7 @@ global = {
   \partial 8.
 }
 
-scoreAViolinI = \relative c' {
+scoreAF HornI = \relative c' {
   \global
   % Music follows here.
   \repeat volta 2{
@@ -76,7 +77,7 @@ scoreAViolinI = \relative c' {
 
 }
 
-scoreAViolinII = \relative c' {
+scoreAF HornII = \relative c' {
   \global
   % Music follows here.
   s8.
@@ -125,15 +126,15 @@ scoreACello = \relative c {
 
 }
 
-scoreAViolinIPart = \new Staff \with {
-  instrumentName = "Violin I"
+scoreAF HornIPart = \new Staff \with {
+  instrumentName = "F Horn I"
   midiInstrument = "violin"
-} \scoreAViolinI
+} \scoreAF HornI
 
-scoreAViolinIIPart = \new Staff \with {
-  instrumentName = "Violin II"
+scoreAF HornIIPart = \new Staff \with {
+  instrumentName = "F Horn II"
   midiInstrument = "violin"
-} \scoreAViolinII
+} \scoreAF HornII
 
 scoreAViolaPart = \new Staff \with {
   instrumentName = "Viola"
@@ -147,8 +148,8 @@ scoreACelloPart = \new Staff \with {
 
 \score {
   <<
-    \scoreAViolinIPart
-    \scoreAViolinIIPart
+    \scoreAF HornIPart
+    \scoreAF HornIIPart
    % \scoreAViolaPart
   %  \scoreACelloPart
   >>

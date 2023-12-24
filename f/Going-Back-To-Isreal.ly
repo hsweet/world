@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -94,7 +95,7 @@ harmonies = \chordmode {
     title= "Going Back To Isreal"
     subtitle=""
     composer= "June Drucker"
-    instrument =""
+    instrument = "F Horn"
     arranger= "as played by H. Sweet"
   }
   \layout{indent = 1.0\cm}

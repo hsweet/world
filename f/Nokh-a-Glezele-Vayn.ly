@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -169,7 +170,7 @@ harmonies = \chordmode {
     title= "Nokh a Glezele Vayn"
     subtitle="In a Rumanashye Shenk"
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

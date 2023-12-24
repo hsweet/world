@@ -1,5 +1,6 @@
 \version "2.16.0"
 \language "english"
+%\pointAndClickOff
 
 \paper{
   %print-all-headers = ##t

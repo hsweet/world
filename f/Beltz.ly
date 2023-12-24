@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 \paper{
   tagline = ##f
   #print-all-headers = ##t
@@ -8,6 +9,7 @@
 
 \header{
   title= "Beltz"
+instrument = "F Horn"
   arranger=""
 
 }date = #(strftime "%d-%m-%Y" (localtime (current-time)))
@@ -123,7 +125,7 @@ harmonies = \transpose d c \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff

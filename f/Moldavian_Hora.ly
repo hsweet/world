@@ -1,6 +1,7 @@
 
 \version "2.20.0"
 \include "english.ly"
+\pointAndClickOff
 % automatically converted from Moldavian Hora.xml
 
 \paper{
@@ -91,7 +92,7 @@ harmonies =  \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -101,7 +102,7 @@ harmonies =  \chordmode {
     title= "Moldavian Hora"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

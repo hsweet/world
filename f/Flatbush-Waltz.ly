@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -124,7 +125,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff   \melody
@@ -133,7 +134,7 @@ harmonies = \chordmode {
     title= "Flatbush Waltz"
     subtitle=""
     composer= "Andy Statman"
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

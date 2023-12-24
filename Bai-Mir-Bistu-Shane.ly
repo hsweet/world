@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+%\pointAndClickOff
 %moved \header into \score for includes to work
 
 \paper{

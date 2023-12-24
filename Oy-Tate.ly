@@ -1,4 +1,5 @@
 \language "english"
+%pointAndClickOff
 
 \version "2.18.0"
 % automatically converted from Oy Tate.xml
@@ -27,7 +28,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 melody =  \relative c' {
   \set Score.markFormatter = #format-mark-box-alphabet
 
-  \clef "treble" \key g \minor \time 2/4 
+  \clef "treble" \key g \minor \time 2/4
   \repeat volta 2 {
     % 1
     \mark \default
@@ -35,6 +36,7 @@ melody =  \relative c' {
     ef16 [ d16 c16 ef16 ] d4  % 3
     d16 [ ef16 fs16 g16 ] a16 [ bf16 a16 g16 ]  % 4
     a8. [ g16 ] fs8. [ ef16 ]  % 5
+    \break
     fs8. [ ef16 ] d8 [ d8 ]  % 6
     ef16 [ d16 c16 ef16 ] d4  % 7
     % 7
@@ -53,6 +55,7 @@ melody =  \relative c' {
     fs16 [ g16 fs16 g16 ] bf8 [ a16 g16 ]  % 12
     % 12
     fs16 [ g16 a8. ] s8.  % 13
+    \break
     fs16 [ g16 a8 ] r8 g8  % 14
     fs16 [ g16 fs16 ef16 ] d4  % 15
     % 15
@@ -62,7 +65,7 @@ melody =  \relative c' {
   }
   \break
   \repeat volta 2 {
-    \mark \default 
+    \mark \default
     % 17
     % 17
     g16 [ g16 g16 g16 ] bf8 [ a16 g16 ]  % 18
@@ -90,6 +93,7 @@ melody =  \relative c' {
     % 28
     bf16 [ c16 bf16 a16 ] g4  % 29
     % 29
+    \break
     fs16 [ g16 ] a4 c8
     c16 [ bf16 a16 g16 ] a8. [ g16 ]  % 31
     fs16 [ g16 a16 g16 ] fs16 [ ef16 fs16 ef16 ]  % 32
@@ -103,55 +107,55 @@ melody =  \relative c' {
 
 harmonies =  \chordmode {
   % 1
-  d8.:5  % 2
+  d8.  % 2
   % 3
   % 4
   % 5
   % 6
   % 7
   % 7
-  s16*45 c16:m5  % 8
+  s16*45 c16:m  % 8
   % 8
-  s16*7 d16:5  % 9
+  s16*7 d16:  % 9
   % 9
-  s16*7 d16:5
+  s16*7 d16:
   % 11
   % 11
-  s16*15 g16:m5  % 12
+  s16*15 g16:m  % 12
   % 12
-  s16*7 d16:5  % 13
+  s16*7 d16:  % 13
   % 14
   % 15
   % 15
-  s16*23 c16:m5  % 16
+  s16*23 c16:m  % 16
   % 16
-  s16*7 d8:5  % 17
+  s16*7 d8:  % 17
   % 17
-  s4. g16:m5  % 18
+  s4. g16:m  % 18
   % 18
-  s16*7 d16:5  % 19
+  s16*7 d16:  % 19
 
   % 21
   % 21
-  s16*23 c16:m5  % 22
+  s16*23 c16:m  % 22
   % 23
   % 24
   % 24
-  s16*23 d2:5  % 25
+  s16*23 d2: % 25
   % 25
-  g16:m5  % 26
+  g16:m % 26
   % 26
-  s16*7 c8:m5 s8 g4:m5  % 27
+  s16*7 c8:m s8 g4:m  % 27
   % 27
-  c4:m5  % 28
+  c4:m  % 28
   % 28
-  s4 g16:m5  % 29
+  s4 g16:m  % 29
   % 29
-  s16*7 d16:5
+  s16*7 d16:
   % 31
   % 32
   % 32
-  s16*23 d2:5
+  s16*23 d2:
 }
 
 % The score definition

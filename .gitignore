@@ -1,10 +1,16 @@
+oldversions/
+new_tunes/
 backup/
+kleztunes/
+changed/
 Bass/
 Bb/
 book/
+combined/
 changed/
 Ef/
-horn/
+f/
+nomidi/
 new_tunes/
 oldversions/
 *.ly~
@@ -15,3 +21,6 @@ oldversions/
 *.swp
 *.gz
 *.zip
+*.pl
+*.sh
+

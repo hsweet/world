@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 %#(ly:expect-warning "cannot end volta")
 %showLastLength = R1*8
 

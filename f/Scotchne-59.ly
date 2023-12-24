@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -120,7 +121,7 @@ harmonies = \chordmode {
     title= "Scotshne #59"
     subtitle=" ‫סקאָטשנאַ‬"
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

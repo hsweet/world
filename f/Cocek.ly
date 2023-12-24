@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -120,7 +121,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \primas
@@ -129,7 +130,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Cocek"
+instrument = "F Horn"
     subtitle="Bulgarian Gypsy"
+instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

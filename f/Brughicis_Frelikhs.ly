@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 \paper{
   tagline = ##f
   %print-all-headers = ##t
@@ -7,7 +8,9 @@
 }
 \header{
   title= "Boughicis Frelekhs"
+instrument = "F Horn"
   %subtitle="(Yevrieskaya Melodie)"
+instrument = "F Horn"
   %composer= "Naye Kapele"
   %arranger= "H. Sweet"
 }
@@ -116,7 +119,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

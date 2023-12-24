@@ -1,5 +1,6 @@
 \version "2.7.40"
 \include "english.ly"
+\pointAndClickOff
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 \markup{ \italic{ \date }  }
 
@@ -11,8 +12,10 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
   %meter = "horra"
   origin = "Rob Mendel"
   %subtitle = "Rob Mendel"
+instrument = "F Horn"
   tagline = "Lily was here 2.22.2 -- automatically converted from ABC"
   title = "Firn di Mekhutonim Ahem"
+instrument = "F Horn"
   transcription = "John Chambers <jc:trillian.mit.edu> http://trillian.mit.edu/~jc/music/"
 }
 voicedefault =  {

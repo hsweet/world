@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -8,6 +9,7 @@
 }
 \header{
   title= "Bulgar Rhythm"
+instrument = "F Horn"
 }
 
 one = \relative c' {

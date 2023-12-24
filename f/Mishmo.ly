@@ -1,9 +1,12 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \header{
   title= "Mishmo"
+instrument = "F Horn"
   subtitle=""
+instrument = "F Horn"
   composer= " "
   %arranger= "H. Sweet"
 }
@@ -38,7 +41,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \melody

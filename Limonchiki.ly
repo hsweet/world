@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 %showLastLength = R1*5
 % sudo timidity -iA started midi
 \paper{

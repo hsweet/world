@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -221,6 +222,7 @@ instrumentName = "Improv2"}{ \autoBeamOff \improvtwo }
 	 ""
 	}\version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
 tagline = ##f
   print-all-headers = ##t

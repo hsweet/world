@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
@@ -204,6 +205,7 @@ harmonies = \chordmode {
 	 ""
 	}\version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
 tagline = ##f
   print-all-headers = ##t

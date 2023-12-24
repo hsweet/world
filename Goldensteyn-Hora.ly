@@ -1,6 +1,7 @@
 
 \version "2.18.0"
 \include "english.ly"
+%\pointAndClickOff
 % automatically converted from Montreal Hora.xml
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 

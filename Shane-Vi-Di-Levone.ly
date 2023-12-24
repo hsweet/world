@@ -1,6 +1,7 @@
 \version "2.18.0"
 %moved \header into \score for includes to work
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t

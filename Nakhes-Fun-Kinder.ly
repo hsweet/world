@@ -1,6 +1,8 @@
 \version "2.18.0"
 \language "english"
+%\pointAndClickOff
 %\include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t

@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+%\pointAndClickOff
 \paper{
   tagline = "hsweet/lilypond"
   %print-all-headers = ##t

@@ -1,5 +1,6 @@
 \version "2.18.0"
 \include "english.ly"
+\pointAndClickOff
 %showLastLength = R1*12
 \paper{
   tagline = ##f
@@ -206,7 +207,7 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -218,7 +219,7 @@ harmonies = \chordmode {
     title= "Ederlezi"
     subtitle="Trad. Roma"
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

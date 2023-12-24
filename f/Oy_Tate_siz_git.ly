@@ -1,5 +1,6 @@
 \version "2.20.0"
 \language "english"
+\pointAndClickOff
 
 
 \paper {
@@ -169,7 +170,7 @@ harmonies = \chordmode {
   \header{
     title= "Oy Tata, S'z Git"
     composer= "Brandndwein"
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

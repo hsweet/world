@@ -1,6 +1,7 @@
 \version "2.14.2"
 
 \include "english.ly"
+\pointAndClickOff
 \paper{
   print-all-headers = ##t
   #(set-paper-size "letter")
@@ -201,13 +202,13 @@ harmonies = \chordmode {
       \harmonies
     }
     \new Staff \with {
-      instrumentName = "Violin"} \melody
+      instrumentName = "F Horn"} \melody
   >>
   \header{
     title= "Youkali"
     subtitle="Tango Habanera "
     composer= "Kurt Weill"
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{ }

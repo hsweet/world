@@ -1,5 +1,6 @@
 \version "2.18.0"
 \language "english"
+\pointAndClickOff
 
 \paper{
   tagline = ##f
@@ -110,7 +111,7 @@ harmonies = \transpose d c \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff
@@ -120,7 +121,7 @@ harmonies = \transpose d c \chordmode {
     title= "Sholom Alaichem"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{indent = 1.0\cm}

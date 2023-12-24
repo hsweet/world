@@ -1,5 +1,6 @@
 \version "2.16.0"
 %\include "english.ly"
+\pointAndClickOff
 \paper{
   print-all-headers = ##t
   #(set-paper-size "letter")
@@ -106,17 +107,17 @@ harmonies = \chordmode {
 \score {
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
     \new Staff \with {
-      instrumentName = "Violin"} \melody
+      instrumentName = "F Horn"} \melody
   >>
   \header{
     title= "Fun Der Chuppa"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "F Horn"
     arranger= ""
   }
   \layout{ }

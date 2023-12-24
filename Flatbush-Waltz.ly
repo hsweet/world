@@ -1,5 +1,6 @@
 \version "2.20.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
   tagline = #ff
   print-all-headers = ##t
@@ -114,7 +115,7 @@ harmonies = \chordmode {
   g2.:m
   d2.
   ef8*5 f8
-  b2.
+  bf2.
   c2.:m
   g4*3:m
   g4.:m af4.:
