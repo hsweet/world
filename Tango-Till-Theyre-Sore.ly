@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,101 +14,120 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key d \minor
+  \time 3/8
   \set Score.markFormatter = #format-mark-box-alphabet
 }
-theme = {r8 c c c
-         gs'f r4
-         r4 f8 f
-         f f f f
-         g c, r4
 
-         r4 r8 c
-         f8 f f f
-         f bf r bf
-         gs8 g f g
-
-         bf gs r4
-         r1}
 %#################################### Melody ########################
+start = {
+  a8. d16 f a
+  af8  a a
+  bf8. a16  f d
+  bf4 g8
+  a8. g16 a g
+  a8. g16 a bf
+  d16 e d e f e  % Kubaner
+  %d8. e16 f e   % Kubaner
+  %d8. d16 e f
+  d8. r8 d16
+}
+
 melody = \relative c' {
   \global
   %\partial 4 g4    %lead in notes
 
+   \start
+
+   %d8. r8 d16
+    a8. d16 f a
+  af8  a a
+  bf8. a16  f d
+  bf4 bf8
+  a8. g16 a g
+  %a8 bf c
+   a16 g a bf8.
+  %a8. g16 a bf
+  d8 e f16 e
+  %d8. e16 f e
+  d8. d16 e f
+
+ \break
   \repeat volta 2{
     \mark \default
-    r8 c c c
-    gs'f ~f4~
-    f f8 f
-    f f f f
-    g c,~c4 ~
-
-    c4 r8 c
-    f8 f f f
-    f bf r bf
-    gs8 g f g
-
-    bf8 gs~ gs4~ |
-    gs4 r4
   }
- \alternative {
-    { r8 c, c c}
-    {f4 g  }
-  }
+  g8. g16 g a
+  bf8 g bf
+  c8. d16 ef d|
+  ef4
+  ef8|
+  d8. a16 f d
+  e8 f g
+  gs8. a16 bf c
+  a8. r8 a16|
+
+  g8. f16 e d
+  f8. e16 f g
+
+  a8. a16 bf c
+  a8. r8 a16
+  g8. f16 e d
+  e8.g16 f d
+  d4.~
+  d4 r8
 
 
-  %f8 g
-  gs4 gs
-  bf bf c gs
-  g f8 g
-  gs4 g
-  f e
-  f g
-  gs bf \bar"||"
-
-  %yai dai
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f g
-  gs bf
-
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f2
 }
 %################################# Lyrics #####################
-%\addlyrics{ \set stanza = #"1. " }
+\addlyrics{ \set stanza = #"1. "
+  Spielt mir nokh a ho  -- ra!
+  Hent -- lach drey -- zikh oyfn grus
+  Di yung -- er men -- shn gey en dread
+  Di Ku -- ban -- er faln oyf di fus
+  Zey fo -- rn langs di payp -- layn
+  Tangoen biz zey ken nit mer,
+  Zey  legt zey -- e  -- re cho -- lem  -- es,
+  zey li -- gn bay der tir
+
+  Loz mich fa -- lozn fun fen -- ster a -- roys,
+  Mit kon -- fe -- ti in di hor,
+
+  Gib mir drey gute karten
+  Oyf a dekn bay di tir.
+  Ich vel dir zogen a sod in oyer
+  Ober (ikh)lign vegn mayn fargangenen
+  Shick mich aroys tsum shlof
+  oyf eyshik, far mir
+
+
+
+
+
+
+
+}
 %################################# Chords #######################
 harmonies = \chordmode {
- s2
- c2*3:m
- g2*3:7
- f2*2:m
- bf4:7 ef4
- s4*2
- %
-  c2:m
-  f2:m
-  c2*2:m
-  g2*2:7
-  c2*2:m
-  %
-  c2*4:m
-  g2*2:7
-  c2*6:m
-  g2:7
-  c2:m
+  d8*6:m
+  g8*6:m
+  a8*6:7
+  d8*6:m
+
+  d8*6:m
+  g8*6:m
+  a8*6:7
+  d8*6:m
+
+  %b
+  g8*6:m
+  a8*6:7
+  d8*6:m
+  g8*6:m
+  a8*6:7
+  d8*6:m
+  g8*3:m
+  a8*3:7
+  d8*3:m
 }
 
 \score {
@@ -122,11 +141,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Der Mashke"
-    subtitle=""
+    title= "Sora Hora"
+    subtitle="Tango Till They're Sore"
     composer= ""
 
-    instrument ="Violin"
+    instrument =""
     arranger= ""
   }
   \midi{\tempo 4 = 120}

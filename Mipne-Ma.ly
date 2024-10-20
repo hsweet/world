@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,23 +14,11 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key g \minor
+  \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
-theme = {r8 c c c
-         gs'f r4
-         r4 f8 f
-         f f f f
-         g c, r4
 
-         r4 r8 c
-         f8 f f f
-         f bf r bf
-         gs8 g f g
-
-         bf gs r4
-         r1}
 %#################################### Melody ########################
 melody = \relative c' {
   \global
@@ -38,82 +26,109 @@ melody = \relative c' {
 
   \repeat volta 2{
     \mark \default
-    r8 c c c
-    gs'f ~f4~
-    f f8 f
-    f f f f
-    g c,~c4 ~
+    d4 bf' g4 r
+    d4 bf' g4 r8 g8
+    a4. (g8) a4. (g8)
+    a4 c bf8 (a) g4
 
-    c4 r8 c
-    f8 f f f
-    f bf r bf
-    gs8 g f g
+    d4 bf' g4 r
+    d'4 d g, r
+    a4. g8 a4 c8 bf
 
-    bf8 gs~ gs4~ |
-    gs4 r4
   }
- \alternative {
-    { r8 c, c c}
-    {f4 g  }
+  \alternative {
+    {a4 g r2}
+    {a4 g r4 bf8 c }
   }
 
+  \repeat volta 2{
+    \mark \default
+    d2 d
+    c2 bf4. bf8
+    c4. (bf8) c4 d
+    f4 d c bf8 c
 
-  %f8 g
-  gs4 gs
-  bf bf c gs
-  g f8 g
-  gs4 g
-  f e
-  f g
-  gs bf \bar"||"
+    d2 d
+    c2 bf4. bf8
+    c8 (bf c bf) c4 d |
+    c bf g r
 
-  %yai dai
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
+  }
+  \alternative {
+    { }
+    { }
+  }
 
-  gs4 g
-  f e
-  f g
-  gs bf
+  \repeat volta 2{
+    bf2 d
+    c8 (d c bf) g4. g8
+    a4. (g8) a4. (g8)
+    a4 c bf8 (a) g4
 
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
+    bf2 d
+    c8 (d c bf) g4. g8
+    a4 g a c8 (bf)
+    a4 g r2
+  }
 
-  gs4 g
-  f e
-  f2
 }
 %################################# Lyrics #####################
-%\addlyrics{ \set stanza = #"1. " }
+\addlyrics{
+  \set stanza = #"1. "
+
+  Mip -- ne -- ma
+  Mip -- ne -- ma
+  Yo -- re -- do  ha -- nes -- o -- mo
+  Mip -- ne -- ma
+  Mip -- ne -- ma
+  Yo -- re -- do  han -- es -- o -- mo
+  _ _
+  m -- e -- ig -- ro ro -- mo
+  Le -- vi -- ro a -- m -- ik -- to
+  m -- e -- ig -- ro ro -- mo
+  Le -- vi -- ro a -- m -- ik -- to
+
+  %
+  Ha -- ye -- ri -- do
+  Ts -- oy -- rehk al -- i  -- o -- ti
+  Ha -- ye -- ri -- do
+  Ts -- oy -- rehk al -- i  -- o -- ti
+
+}
 %################################# Chords #######################
 harmonies = \chordmode {
- s2
- c2*3:m
- g2*3:7
- f2*2:m
- bf4:7 ef4
- s4*2
- %
+  g1*2:m
+  d1:m
+  c4:m  d4:m g2:m
+  g1*2:m
+  d2:m
   c2:m
-  f2:m
-  c2*2:m
-  g2*2:7
-  c2*2:m
+  g1:m
+  g1:m
   %
-  c2*4:m
-  g2*2:7
-  c2*6:m
-  g2:7
+  g1:m
+  c2:m g2:m
+  c1:m
+  d2:m g2:m
+   g1:m
+  c2:m g2:m
+  c1:m
+  d2:m g2:m
+  %
+  g1:m
+  d2:m g2:m
+  c1:m
+  d2:m g2:m
+  g1:m
+  d2:m g2:m
   c2:m
+  d2:m g2:m
+
 }
 
 \score {
   % transpose score below
-  %\transpose c d
+  \transpose g d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -122,11 +137,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Der Mashke"
+    title= "Mipney Ma"
     subtitle=""
     composer= ""
 
-    instrument ="Violin"
+    instrument =""
     arranger= ""
   }
   \midi{\tempo 4 = 120}

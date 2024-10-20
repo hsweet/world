@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -18,97 +18,78 @@ global = {
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
-theme = {r8 c c c
-         gs'f r4
-         r4 f8 f
-         f f f f
-         g c, r4
 
-         r4 r8 c
-         f8 f f f
-         f bf r bf
-         gs8 g f g
-
-         bf gs r4
-         r1}
 %#################################### Melody ########################
-melody = \relative c' {
+melody = \relative c'' {
   \global
-  %\partial 4 g4    %lead in notes
+  \partial 8 g16 f    %lead in notes
 
   \repeat volta 2{
     \mark \default
-    r8 c c c
-    gs'f ~f4~
-    f f8 f
-    f f f f
-    g c,~c4 ~
+    e16 f g8 g g
+    g16 af f8 f f|
+    g16 af b8 g16 af b8
+    c8 b4 af16 g
 
-    c4 r8 c
-    f8 f f f
-    f bf r bf
-    gs8 g f g
+    g8 c16 c c8 c
+    c8 f,4 g16 f|
 
-    bf8 gs~ gs4~ |
-    gs4 r4
+    e16 f g af bf c bf af
   }
- \alternative {
-    { r8 c, c c}
-    {f4 g  }
+  \alternative {
+    {af16 g g4 g16 f }
+    {af16 g g4 g8| }
   }
 
+  \repeat volta 2{
+    \mark \default
+    d'8. g,16 d'8. g,16|
+    ef'8 d4 c16 b
+    c16 b c b c ef d c|
+    c16 d b4 g8
 
-  %f8 g
-  gs4 gs
-  bf bf c gs
-  g f8 g
-  gs4 g
-  f e
-  f g
-  gs bf \bar"||"
+    g8 d'16 d d d d d
+    g8 d4 c16 b
+   c16 b c b c ef d c|
+   c16 d b4 g8
 
-  %yai dai
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
+   c16 c c c ef4
+   c16 c c c g4
+   b16 b b b d8 c
+   b8 af g f
 
-  gs4 g
-  f e
-  f g
-  gs bf
+   c'8. b16 c8. b16
+   c8 f,4 g16 f
+   e16 f g af b c b af|
 
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
+  }
+  \alternative {
+    {af16 g g4 g8| }
+    { af16 g g4 r8 |}
+  }
 
-  gs4 g
-  f e
-  f2
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
- s2
- c2*3:m
- g2*3:7
- f2*2:m
- bf4:7 ef4
- s4*2
- %
+  s8
+  g2*4
   c2:m
-  f2:m
-  c2*2:m
-  g2*2:7
-  c2*2:m
-  %
-  c2*4:m
-  g2*2:7
-  c2*6:m
-  g2:7
+  f2*2:m
+  g2*2
+  %b
+  g2*2
   c2:m
+  g2*3
+  c2:m
+  g2
+  c2*2:m
+  g2*2
+  f2*3:m
+  g2*2
+
+
 }
 
 \score {
@@ -122,11 +103,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Der Mashke"
+    title= "Alter Zhok"
     subtitle=""
     composer= ""
 
-    instrument ="Violin"
+    instrument =""
     arranger= ""
   }
   \midi{\tempo 4 = 120}

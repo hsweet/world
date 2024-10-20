@@ -149,7 +149,7 @@ harmonies = \chordmode {
   g4:m s4*2
   d4
   s4*2
-  bf4 %Gm ?
+  g4:m %Gm ?
   s4*2
   %b
   bf4

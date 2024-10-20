@@ -73,7 +73,7 @@ melody = \relative c'' {
   }
   \alternative {
     { b1~
-    b4 g8 a bf a8 g
+    b4 g8 a bf4 a8 g
     }
     { a4 fs8 g a4 b8 b
     e2. r4}

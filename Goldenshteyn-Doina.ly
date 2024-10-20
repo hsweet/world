@@ -8,7 +8,7 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\markup{ \italic{ " Updated " \date  }  }
+\markup{ \italic{ " Updated " \date  }  }
 
 %\markup{ Got something to say? }
 
@@ -74,30 +74,29 @@ melody = \transpose g d\relative c'' {
 %################################# Chords #######################
 harmonies =\transpose g d \chordmode {
   g1*4:m
-
   d1*2
-
   c1*4:m
-
-
-  g1*5:m
-
-
-  %g1*4:7  %removed extra measure
-
+  g1*2
+  g1*4:7:m
+  c1:m
+  d1*5
+  g1:m
+  g1*5:7
   c1*2:m
-
   d1*4
-
   g1*2:m
 
-  g1*4:7
 
+  %{
+  %g1*4:7  %removed extra measure
   c1*2:m
-
   d1*4
-
+  g1*2:m
+  g1*4:7
+  c1*2:m
+  d1*4
   g1:m
+  %}
 }
 
 \score {

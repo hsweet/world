@@ -84,29 +84,29 @@ melody =  \transpose e d \relative c' {
 
 harmonies = \transpose e d \chordmode {
 
-  s8 b16:5  % 2
+  s8 b16  % 2
 
-  s16*35 a16:m5  % 6
+  s16*35 a16:m  % 6
 
-  s16*11 e16:m5  % 8
+  s16*11 e16:m  % 8
 
-  s16*7 b4.:5  % 9
+  s16*7 b4.  % 9
 
-  s8*5 b4:5  % 11
+  s8*5 b4  % 11
 
-  s2*7 a4:m5  % 18
+  s2*7 a4:m  % 18
 
-  s2. b4:5
+  s2. b4
 
-  s1 b8.:5  % 23
+  s1 b8.  % 23
 
-  s16*29 a16:m5  % 27
+  s16*29 a16:m  % 27
 
   s16 *11 b4
 
   a4:m
 
-  s2 b4:5
+  s2 b4
 }
 
 

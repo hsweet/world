@@ -25,13 +25,13 @@ melody = \transpose d c\relative c' {
   %\partial 16*3 a16 d f   %lead in notes
 
   d2.
-  d2.
+  g2.
   g16 a8.(a4) f16 [g8.]|
   a2.
 
   r4. c,8 f a|
   c16 c8.(c4 c8) [b]|
-  d4. bf8 bf [a]
+  d4. bf8 bf [g]
   a16 d8.(d4) r|
   r2.
   %b
@@ -113,7 +113,9 @@ bass = \transpose d c\relative c'{
 
 %################################# Chords #######################
 harmonies = \transpose d c \chordmode {
-  d2.*3:m
+  d2.:m
+  g2.:m
+  d2.:m
   f2.*3
   g2.:m
   d2.:m
@@ -125,7 +127,9 @@ harmonies = \transpose d c \chordmode {
   c2.
   bf2.
   a2.:7
-  d2.*3:m
+  d2.*2:m
+  d2.:m
+
   g2.:m
   g2.:7
   c2.

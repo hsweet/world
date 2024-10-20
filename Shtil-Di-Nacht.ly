@@ -90,9 +90,9 @@ harmonies = \chordmode {
 
   d2:m
   g2:m
-  c2*2
-  f2
-  a2:7
+  c4*2
+  f4*3
+  a4*3:7
   d2:m
 
 }

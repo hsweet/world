@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,101 +14,76 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
+  \key d \minor
   \time 2/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
-theme = {r8 c c c
-         gs'f r4
-         r4 f8 f
-         f f f f
-         g c, r4
 
-         r4 r8 c
-         f8 f f f
-         f bf r bf
-         gs8 g f g
-
-         bf gs r4
-         r1}
 %#################################### Melody ########################
-melody = \relative c' {
+melody = \relative c'' {
   \global
   %\partial 4 g4    %lead in notes
+  a8 g f e
+  d4 d
+  d8 e f d
+  g2
 
+  f4 f
+  e4 a
+  d,4 d
+  d2
   \repeat volta 2{
     \mark \default
-    r8 c c c
-    gs'f ~f4~
-    f f8 f
-    f f f f
-    g c,~c4 ~
-
-    c4 r8 c
-    f8 f f f
-    f bf r bf
-    gs8 g f g
-
-    bf8 gs~ gs4~ |
-    gs4 r4
+   a'2
+   g4 c
+   a8 a a a
+   g2
+   f4 f
+   e4 a
+   d,4 d
+   d2
   }
- \alternative {
-    { r8 c, c c}
-    {f4 g  }
-  }
+% Gut Purim
+ %\break
+\key c \minor
+^Gut_Purim
+\partial 8 g8
+ c,8 c c d
+ ef8 d c d
+ f8 f f af
+ ef4 ef
+ af8 g f af
+ g8 f ef g
+ f8 ef d ef
+ c4 4
 
-
-  %f8 g
-  gs4 gs
-  bf bf c gs
-  g f8 g
-  gs4 g
-  f e
-  f g
-  gs bf \bar"||"
-
-  %yai dai
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f g
-  gs bf
-
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f2
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
- s2
- c2*3:m
- g2*3:7
- f2*2:m
- bf4:7 ef4
- s4*2
+ d2*3:m
+ g2:m
+ d2:m
+ c2
+ d2*2:m
  %
-  c2:m
-  f2:m
-  c2*2:m
-  g2*2:7
-  c2*2:m
-  %
-  c2*4:m
-  g2*2:7
-  c2*6:m
-  g2:7
-  c2:m
+ d2:m
+ c2
+ d2:m
+ g2:m
+ d2:m
+ c2
+ d2*2:m
+
+ %Purim
+ s8 c2*2:m
+ f2:m
+ c2:m
+ f2:m
+ c2:m
+ d2:7
+ c2:m
 }
 
 \score {
@@ -122,11 +97,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Der Mashke"
+    title= "Lyuli Da Lyuli"
     subtitle=""
     composer= ""
 
-    instrument ="Violin"
+    instrument =""
     arranger= ""
   }
   \midi{\tempo 4 = 120}

@@ -1,4 +1,3 @@
-
 \version "2.18.0"
 \include "english.ly"
 %\pointAndClickOff
@@ -72,7 +71,7 @@ melody = \relative c'' {
   \alternative{
     {d4. a8}
     % {d4. d'8}
-    {d4 d'4 cs4-3 c-3 }
+    {d8 d'8 cs8-3 c-3 }
   }
 
 \break
@@ -88,21 +87,13 @@ melody = \relative c'' {
    \tuplet 3/2{b8 bf b} g4-4
    }
 
-   fs8 g a as
-   cs8 as cs d
-
-   e4. d8
-   cs4. as8
-    bf16 (c bf a) a4~
-   %fix
-   %{
    d8-1 e fs g
    a8 (bf) \tuplet 3/2 {bf (a g-3)}
+   %fs8 g a bf
+   %cs8 d cs16 b cs8|
    e'4.-4  d8-4
    cs4. bf8
    bf16 (c bf a) a4~
-   %end fix
-   %%}
    %bf8 a a4~
    a2~
    a2~
@@ -125,7 +116,7 @@ melody = \relative c'' {
   }
    % needs pickup note for last section
    \alternative {
-     {d4 d' cs-3 c-3 }
+     {d8 d'8 cs8-3 c-3 }
      {d,4. g8 }
    }
    \break
@@ -145,24 +136,19 @@ melody = \relative c'' {
 %################################# Chords #######################
 harmonies = \chordmode {
   d2*4
-  g2*4:m
+  g2*4
   d2*6
   b2*2
   e2*4:m
-  c2*4:m
-  d2*4
-  %2nd end
-  d2*2
+  d2*9
   %b
   g2*8
-  g2*2:m
+  d2*2
   a2*6
   d4*7
   a4*9:7
-  c2*3:m
-  d2*6
-  d2
-  d2
+  d2*9
+  d2*4
   %lost chord back to D last 4 bars of A
 
 }

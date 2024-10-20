@@ -101,10 +101,11 @@ harmonies = \chordmode {
   d4:m a4
   d4*3:m
   %r4
-  a4*4
+  a4
+  d4*3:m
   %r4*3
-  a2:7
-  d4:m
+  a4:7
+  d4*2:m
   a2
   d2:m
   a2

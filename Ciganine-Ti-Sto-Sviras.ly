@@ -30,7 +30,7 @@ melody = \relative c' {
    e16 e a gs e c' b a
    c16 d b c a8 a16 e
    a16 a d cs a f' e d
-   f16 g e f d8 d16 a
+   f16-2 g e f d8-2 d16 a
 
    d16 d f e d f e d
    c16 c e d c e d c
@@ -59,7 +59,7 @@ melody = \relative c' {
    a2
 
    b8 c d c
-   c8 b a4
+   c8^tutti b a4
    gs2~
    gs2
 
@@ -90,7 +90,7 @@ melody = \relative c' {
    gs8 gs4 gs8 gs4 a4
    b1
 
-   c8 c4 c8 c4 c
+   \bar"||"   c4^\markup{ end 3rd x } c8  c8 c4 c
    r8 d4 c8 c(b) a4|
    r8 b4 a8 gs4 f
    }
@@ -141,7 +141,7 @@ harmonies = \chordmode {
   a2*4:m
   e2*2:7
   %dbl bar
-  fs2*2:m
+  f2*2
   d2*4:m
   e2*2
   %time change
@@ -168,7 +168,7 @@ harmonies = \chordmode {
     \new Staff   \transpose a d' \melody
   >>
   \header{
-    title= "Ciganine Ti Sto Sviras"
+    title= "Ciganine ti što sviraš."
     subtitle=""
     composer= ""
     instrument = "Violin"

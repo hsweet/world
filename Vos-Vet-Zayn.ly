@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,106 +14,88 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key g \minor
+  \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
-theme = {r8 c c c
-         gs'f r4
-         r4 f8 f
-         f f f f
-         g c, r4
 
-         r4 r8 c
-         f8 f f f
-         f bf r bf
-         gs8 g f g
-
-         bf gs r4
-         r1}
 %#################################### Melody ########################
 melody = \relative c' {
   \global
-  %\partial 4 g4    %lead in notes
+  \partial 4*2 d4 d    %lead in notes
 
   \repeat volta 2{
     \mark \default
-    r8 c c c
-    gs'f ~f4~
-    f f8 f
-    f f f f
-    g c,~c4 ~
-
-    c4 r8 c
-    f8 f f f
-    f bf r bf
-    gs8 g f g
-
-    bf8 gs~ gs4~ |
-    gs4 r4
+    bf'2 g4 g
+    a2 fs4 fs
+    \times 2/3{g4 g g} fs4 ef
+    d2 r4 d
+    d4 fs ef d
+    fs4 a g fs
   }
- \alternative {
-    { r8 c, c c}
-    {f4 g  }
+  \alternative {
+    { g4 g fs g
+    a2 d,4 d}
+    {g4 c,d ef
+    d2. r4}
   }
 
+  \repeat volta 2{
+    \mark \default
+    fs4  fs fs2
+    g4 g g2
+    fs4 g a bf
+    a4 g a2
+    fs4 fs fs2
+    g4 g g2
+    g4 c,d ef
+    d2. r4
 
-  %f8 g
-  gs4 gs
-  bf bf c gs
-  g f8 g
-  gs4 g
-  f e
-  f g
-  gs bf \bar"||"
+  }
+  \alternative {
+    { }
+    { }
+  }
 
-  %yai dai
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f g
-  gs bf
-
-  c4. b8
-  c4. b8
-  c4 gs
-  g f8 g
-
-  gs4 g
-  f e
-  f2
 }
 %################################# Lyrics #####################
-%\addlyrics{ \set stanza = #"1. " }
+\addlyrics{ \set stanza = #"1. "
+  Vos vet zayn? Vos vet zayn
+  Az mos -- hi -- ach vet kimen tsu gayn
+
+  Ge -- bro- tene toy -- bn vet men kloy -- bn oy -- fn ga -- sn breg
+
+  _ _ _ _  _ _ _ Fin pa- pir ve- ln mir bo- yen, bo- yen oy a brik
+  Kat- shn zik, kat- shn zik ind- zer land tze- rik. ind- zer land tze- rik.
+}
 %################################# Chords #######################
 harmonies = \chordmode {
- s2
- c2*3:m
- g2*3:7
- f2*2:m
- bf4:7 ef4
- s4*2
- %
-  c2:m
-  f2:m
-  c2*2:m
-  g2*2:7
-  c2*2:m
+  s2
+  g1:m
+  d1:7
+  c1:m
+  d1
+  d1:7
+  c1:m
+  g1:m
+  d1
+  g1:m
+  d1
   %
-  c2*4:m
-  g2*2:7
-  c2*6:m
-  g2:7
-  c2:m
+  d1:7
+  g1:m
+  d1:7
+  g1:m
+   d1:7
+  g1:m
+  d1:7
+  g1:m
+
 }
 
 \score {
   % transpose score below
-  %\transpose c d
+  \transpose c d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -122,11 +104,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Der Mashke"
+    title= "Vos Vet Zayn"
     subtitle=""
     composer= ""
 
-    instrument ="Violin"
+    instrument =""
     arranger= ""
   }
   \midi{\tempo 4 = 120}

@@ -153,7 +153,7 @@ harmonies = \chordmode {
   a2*2
   d2*2:m
   a2*3
-  d2
+  d2:m,
   a2*3
   d2:m
   a2*2

@@ -4,6 +4,8 @@
 \paper{
   tagline = #ff
   print-all-headers = ##t
+
+  page-count = #1
   #(set-paper-size "letter")
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
@@ -210,8 +212,8 @@ harmonies = \chordmode {
 
   %%  chorus
   %d2*4
-  d2:m
-  d2*3
+  d2*2:m
+  d2*2
 
   %%
   d4*15
@@ -252,6 +254,7 @@ harmonies = \chordmode {
 }
 
 % more verses:
+%{
 \markup{}
 \markup {
   %\font-size #2

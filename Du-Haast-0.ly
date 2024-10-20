@@ -7,8 +7,10 @@
   #(set-paper-size "letter")
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
+
+
 \markup{ \italic{ \date }  }
-%\markup{https://youtu.be/3C04TKCce8s}
+\markup{https://youtu.be/3C04TKCce8s}
 
 
 global = {
@@ -32,7 +34,7 @@ melody = \relative c'' {
   g8 e r8 e4 e8 g a
   g8 e r8 e4 e8 g a
   g8 e r8 e4 e8 g a
-  r4 ^\markup "solos > 2nd time" e-> e-> e->
+  r4 ^\markup "To Coda"^\markup "solos after 2nd play" e-> e-> e->
 
   % }
   \break
@@ -71,33 +73,24 @@ melody = \relative c'' {
   e8 e e e r4. e8|  %host mich gefregt
   e8 e e e r4. e8|
   e8 e e e r4. e8|
-  e8 e e4-> e->
-  e->    %gornisht
+  e8 e e4 e  e    %gornisht
 
   \break
   \repeat volta 2{
     \mark \default
   e4 \coda  e e e|
-  e4 fs8 g4 e8 r4|
-  %e4 r8 fs8 g8 e r4  |
-  r4 a8 a a4->r8 g
-  a4 g a b8 r
-
-  c2.  d8 c
-  b1
-  %fs [e] %r8|
-
-  %g8 g g4. g8|
-  %g4 fs g4 a  a b c2 d c b2. |
-
-  %fill
-  r8 b8 b fs b b b fs
-  b4-> b-> b->  b->
+  e4 fs8 g4 e4  g8|
+  fs [e] %r8|
+  g8 g g4. fs8|
+  g4 fs g4 a  |
+  c2. d8 c |
+  b2.^\markup { \italic "Head 2nd time" }
+  ^\markup {  \italic "Al Segno 1st time" }r4|
   }
 
   \break
-  \mark \default
-  e,4->  r e-> r
+  \mark Coda
+  e,4->  ^\markup{"After solos"}r e-> r
   e-> e-> e-> e->
   \repeat volta 2{
   e8 e16 e e8 b  e8 e16 e e8 b
@@ -106,9 +99,8 @@ melody = \relative c'' {
   a8 e a e a e a b
   c2. d8 c
   b2.r4
-  %fill
-  r8 b8 b fs b b b fs
-  b4-> b-> b->  b->
+  r8 b'8 b fs b b b fs
+  b4-> b-> b-> ^"Al Fine" b->
   }
 
   %g8 g16 g g8 d g8 g16 g g8 d
@@ -138,7 +130,7 @@ melody = \relative c'' {
   kh'hob gor -- nish dir ge -- zogt
 
   Vilst mir zayn ge -- tray far ey -- bik
-  _biz -- n toyt, biz tif -- en key -- ver?
+  _ _ _ _biz -- n toyt, biz ti -- fn key -- ver?
   Neyn! _ _ _
 }
 
@@ -161,15 +153,13 @@ harmonies = \chordmode {
   %
   e1*2:m
   a1*2:m
-  s1
-  c2.
-  b4*11
+  c1
+  b1
   %
-  e1*2:m
-  e1*2:m
+  e1*4:m
   a1*2:m
   c1
-  b1*3
+  b1
 }
 
 \score {
@@ -183,11 +173,11 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Du Host"
-    subtitle=" "
+    title= "Du Hast"
+    subtitle="!DRAFT!"
     composer= ""
 
-    instrument = "A/B/C/D || B/C/D || A/(solos)/E/D/B"
+    instrument = "A/B/C/D || B/C/D || A/(solos)/coda/D/B"
     arranger= ""
   }
   \midi{\tempo 4 = 120}
