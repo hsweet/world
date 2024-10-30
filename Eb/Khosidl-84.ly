@@ -14,7 +14,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 
 
-melody = \relative c' {
+melody = \relative c {
   \clef treble
 
   \key d \minor
@@ -134,7 +134,7 @@ harmonies = \chordmode {
   %}
 }
 
-\score {
+\score {\transpose c a
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -145,9 +145,9 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Kossidl 84"
-instrument= "Violin"
+instrument= "Eb"
     arranger=""
   }
-  \midi{\tempo 4 = 120}
+  
   \layout{indent = 1.0\cm}
 }

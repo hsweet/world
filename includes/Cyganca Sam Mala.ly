@@ -108,7 +108,7 @@ melody = \relative c'' {
   Crne tvo -- je ci -- gan -- ke
 %}
 
-}
+
 %################################# Chords #######################
 harmonies = \chordmode {
   a1:m

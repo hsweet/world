@@ -1,0 +1,128 @@
+\version "2.22.0"
+\include "english.ly"
+%\pointAndClickOff
+% https://musescore.com/user/61779358/scores/11278927
+\paper{
+  tagline = #ff
+  print-all-headers = ##t
+  #(set-paper-size "letter")
+}
+date = #(strftime "%d-%m-%Y" (localtime (current-time)))
+
+\markup{ \italic{ \date }  }
+
+%\markup{ Got something to say? }
+
+global = {
+  \clef treble
+  \key b \minor
+  \time 4/4
+  \set Score.markFormatter = #format-mark-box-alphabet
+}
+
+%#################################### Melody ########################
+melody = \relative c'  {
+  \global
+  %\partial 4 g4    %lead in notes
+
+  \repeat volta 2{
+    \mark \default
+   b8 e4 e8 ds c b4|
+   b8 e4 e8 ds c b4|
+   e4 fs g fs|
+   e4 g8 fs e2|
+  }
+
+
+  \repeat volta 2{
+    \mark \default
+    g4 g g g
+    g8 b4b8 b g e4|
+    fs4 fs fs fs
+    fs8 a4 a8 a fs e4|
+
+    g16 e8. e4 g16 e8. e4
+    e8 g4 e8 ds c b4|
+    b4 b b b
+    b8 g' fs g e2
+
+    b8 e4 e8 ds c b4|
+    b8 e4 e8 ds c b4|
+    e4 fs g fs
+    e4 g8 fs e2
+
+
+  }
+  \alternative {
+    { }
+    { }
+  }
+
+}
+%################################# Lyrics #####################
+%\addlyrics{ \set stanza = #"1. " }
+%################################# Chords #######################
+harmonies = \chordmode {
+
+}
+
+\score {
+  % transpose score below
+  %\transpose c d
+  <<
+    \new ChordNames {
+      \set chordChanges = ##f
+      \harmonies
+    }
+    \new Staff   \melody
+  >>
+  \header{
+    title= "L'cha Dodi"
+    subtitle=""
+    composer= ""
+
+    instrument =""
+    arranger= ""
+  }
+  \midi{\tempo 4 = 120}
+  \layout{indent = 1.0\cm}
+}
+%{
+% more verses:
+\markup{}
+\markup {
+  \font-size #2
+  \fill-line {
+    \hspace #0.1 % distance from left margin
+    \column {
+      \line { "1."
+\column {
+ ""
+}
+      }
+      \hspace #0.2 % vertical distance between verses
+      \line { "2."
+\column {
+""
+}
+      }
+    }
+    \hspace #0.1  % horiz. distance between columns
+    \column {
+      \line { "3."
+\column {
+ ""
+}
+      }
+      \hspace #0.2 % distance between verses
+      \line { "4."
+\column {
+""
+}
+      }
+    }
+    \hspace #0.1 % distance to right margin
+  }
+}
+
+%}

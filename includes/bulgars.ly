@@ -7,7 +7,7 @@
 }
 \include "../Odessa-Bulgar-1.ly"
 \include "../Odessa-Bulgar-2.ly"
-\include "../Goldensyteyn Bulgar Medley.ly"
+\include "../Goldensyteyn-Bulgar-Medley.ly"
 \pageBreak
 \include "../Goldensyteyn-Bulgar.ly"
 
