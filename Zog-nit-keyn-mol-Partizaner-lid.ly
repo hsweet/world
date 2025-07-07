@@ -29,24 +29,18 @@ melody = \relative c {
 
 
   a'8. cs16 e8. e16 e8. e16 g8. g16
-  | % 2
-  f8. e16 d8*5 r16 d
-  | % 3
+  f8. e16 d2. d8
   c8. e16 g8. g16 g8. g16 bf8. bf16
-  | % 4
-  a8. g16 a8*5 r8
-  | % 5
-  d8. a16 c8. c16 c8. c16 bf8. bf16
-  | % 6
-  a8. d,16 g8*5 r16 g
-  | % 7
-  f8. g16 a8. a16 a8. a16 g8. g16
-  | % 8
-  f8. e16 d8*5 r8
-  | % 9
-  d'8. a16 c8. c16 c8. c16 bf8. bf16
+  a8. g16 a2 r8 d|
+
+  a16 c8. c16 c8. c16 bf8. bf16 a8.|
+  d,16 g8. g2 r8 g |
+  f8. g16 a8. a16 a8. a16 g8. g16|
+  f8. e16 d2 r8  d'|
+
+ a16 c8. c16 c8. c16 bf8. bf16 a8.
   | % 10
-  a8. d,16 g8*5 r16 g
+   d,16 g2 r16 g
   | % 11
   f8. g16 a8. a16 a8. a16 g8. g16
   | % 12
@@ -58,13 +52,14 @@ melody = \relative c {
 
 
 %################################# Lyrics #####################
-\addlyrics{ \set stanza = #"1. "
-            Zog nit keyn mol az du geyst dem let -- stn veg,
-            khotsh him -- len bla -- ye -- ne far -- shte -- ln blo -- ye teg.
-            Ku -- men vet nokh und -- zer oys -- ge -- benk  -- te sho,
-            s'vet a poyk ton und -- zer trot: mir zay -- nen do! _
-            Ku -- men vet nokh und -- zer oys -- ge -- benk  -- te sho,
-            s' --  vet a poyk ton und -- zer trot: mir zay -- nen do!
+\addlyrics{
+  \set stanza = #"1. "
+  Zog nit keyn mol az du geyst dem let -- stn veg,
+  khotsh him -- len bla -- ye -- ne far -- shte -- ln blo -- ye teg.
+  Ku -- men vet nokh und -- zer oys -- ge -- benk -- te sho,
+  s'vet a poyk ton und -- zer trot: mir zay -- nen do! _
+  Ku -- men vet nokh und -- zer oys -- ge -- benk  -- te sho,
+  s' --  vet a poyk ton und -- zer trot: mir zay -- nen do!
 }
 \addlyrics {
   \set stanza = #"2. "

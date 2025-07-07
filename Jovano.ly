@@ -31,12 +31,15 @@ highpart = \transpose c g,\relative c'' {
     {gs4 \prall a8 b4. r8}
     {gs4 \prall f8 e4. r8}
   }
+\break
 
-  %\mark \default
+  \mark \default
   gs4. a8 [gs f e]
   e4.~e2
   b'4. c8 [b] a16 [gs a8]
-  b4.~b2
+  b4.~b2    | %9
+  b4.~b2    | %10
+
 
   \repeat volta 2{
     c4 c8 c4 c|
@@ -53,6 +56,7 @@ highpart = \transpose c g,\relative c'' {
   \alternative {
     {e4.~e2 }
     {e4.~e2 }
+
   }
 }
 lowpart = \transpose c g                                                                                \relative c''{
@@ -72,6 +76,7 @@ lowpart = \transpose c g                                                        
   b4.~b2
   gs'4. a8 [gs] f16 [e f8]
   gs4.~gs2
+   gs4.~gs2
 
   \repeat volta 2{
     a4 a8 a4 a|
@@ -108,7 +113,7 @@ harmonies = \transpose c g \chordmode {
   e8*5 d4:m
   e8*12
   d4:m
-  e8*7
+  e8*14
   %next part
   a8*7:m
   d8*7:m

@@ -15,57 +15,61 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 global = {
   \clef treble
   \key c \minor
-  \time 2/4
+  \time 4/4
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 melody = \relative c'' {
   \global
-  \partial 8 g16 f    %lead in notes
+  %\partial 4 g4    %lead in notes
+
+  g8 g fs g af g(g4)
+  f8 ef d ef d c(c4)
+  c'8 c b c d c b c
+  <<d,1 f b d>>
+
+  ef8 d c b d c(c 4)
+  c8 bf af  g bf af(af4)
+  g8 g bf af g f ef d
+  c2 r
+
+  ef4 c r8 ef d c|
+  f4 ef8 d(d4) r| %error in original ***********
+  d4 b r8 d c b|
+  ef4 d8 c (c4) r|  % and here
+
+ c4 af r8 c b c|
+ ef4 d8 c(c) g fs g
+ ef'2 d
+ c2 af'
+
+ g8 g fs g af g(g4)
+ f8 ef d ef d c(c4)
+ af'8 af b af d c b c|
+ <<d,1 f b d>>
+
+ef8 d c b d c(c4)
+c8 bf af g bf af(af4)
+g8 g bf af g f ef d
+c4 g' a b   % chords
+
+ef8 d c b d c(c4)
+c8 bf af g bf af(af4)
+g8 g fs g ef d c b
+<<c1 ef g c>>
+
+
+
+
+
 
   \repeat volta 2{
     \mark \default
-    e16 f g8 g g
-    g16 af f8 f f|
-    g16 af b8 g16 af b8
-    c8 b4 af16 g
-
-    g8 c16 c c8 c
-    c8 f,4 g16 f|
-
-    e16 f g af b c b af
   }
   \alternative {
-    {af16 g g4 g16 f }
-    {af16 g g4 g8| }
-  }
-
-  \repeat volta 2{
-    \mark \default
-    d'8. g,16 d'8. g,16|
-    ef'8 d4 c16 b
-    c16 b c b c ef d c|
-    c16 d b4 g8
-
-    g8 d'16 d d d d d
-    g8 d4 c16 b
-   c16 b c b c ef d c|
-   c16 d b4 g8
-
-   c16 c c c ef4
-   c16 c c c g4
-   b16 b b b d8 c
-   b8 af g f
-
-   c'8. b16 c8. b16
-   c8 f,4 g16 f
-   e16 f g af b c b af|
-
-  }
-  \alternative {
-    {af16 g g4 g8| }
-    { af16 g g4 r8 |}
+    { }
+    { }
   }
 
 }
@@ -73,22 +77,6 @@ melody = \relative c'' {
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  s8
-  g2*4
-  c2:m
-  f2*2:m
-  g2*2
-  %b
-  g2*2
-  c2:m
-  g2*3
-  c2:m
-  g2
-  c2*2:m
-  g2*2
-  f2*3:m
-  g2*2
-
 
 }
 
@@ -103,7 +91,7 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Alter Zhok"
+    title= "Murka"
     subtitle=""
     composer= ""
 

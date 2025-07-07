@@ -14,82 +14,53 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key a \minor
+  \time 4/4
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  \partial 8 g16 f    %lead in notes
+  \partial 2   r8 e a b   %lead in notes
 
   \repeat volta 2{
-    \mark \default
-    e16 f g8 g g
-    g16 af f8 f f|
-    g16 af b8 g16 af b8
-    c8 b4 af16 g
+    %\mark \default
+  c8 a4.(a8) e a b
+  c8 a4.(a8) e a b
+  c4 b8 a c4 b8 a
+  e'4 e e8 e d e
 
-    g8 c16 c c8 c
-    c8 f,4 g16 f|
-
-    e16 f g af b c b af
-  }
-  \alternative {
-    {af16 g g4 g16 f }
-    {af16 g g4 g8| }
-  }
-
-  \repeat volta 2{
-    \mark \default
-    d'8. g,16 d'8. g,16|
-    ef'8 d4 c16 b
-    c16 b c b c ef d c|
-    c16 d b4 g8
-
-    g8 d'16 d d d d d
-    g8 d4 c16 b
-   c16 b c b c ef d c|
-   c16 d b4 g8
-
-   c16 c c c ef4
-   c16 c c c g4
-   b16 b b b d8 c
-   b8 af g f
-
-   c'8. b16 c8. b16
-   c8 f,4 g16 f
-   e16 f g af b c b af|
+  f8 f4.(f8) f e d
+  f8 e4. (e8) e d c
+  b4 e c b
 
   }
   \alternative {
-    {af16 g g4 g8| }
-    { af16 g g4 r8 |}
+    {a2 r8 e a b }
+    { a2 r}
   }
+
 
 }
 %################################# Lyrics #####################
-%\addlyrics{ \set stanza = #"1. " }
+\addlyrics{ \set stanza = #"1. "
+  U -- na mat -- ti -- na mi so -- no al -- za -- to
+  O bel -- la ciao, bel -- la ciao, bel -- la ciao, ciao, ciao
+  U -- na mat -- ti -- na mi so -- no al -- za -- to
+  E ho tro -- va -- to l'in -- va -- sor
+}
 %################################# Chords #######################
 harmonies = \chordmode {
-  s8
-  g2*4
-  c2:m
-  f2*2:m
-  g2*2
-  %b
-  g2*2
-  c2:m
-  g2*3
-  c2:m
+  s2
+  a2*5:m
   g2
-  c2*2:m
-  g2*2
-  f2*3:m
-  g2*2
-
-
+  f2 e2
+  d1:m
+  a1:m
+  e1
+  a1:m
+  a1:m
 }
 
 \score {
@@ -103,7 +74,7 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Alter Zhok"
+    title= "Bella Ciao"
     subtitle=""
     composer= ""
 

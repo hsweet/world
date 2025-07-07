@@ -5,7 +5,7 @@
   title= "Russian Medley"
   subtitle=""
   composer= ""
-  instrument = "Violin"
+  instrument = ""
   arranger= ""
 }
 
@@ -23,6 +23,6 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 \include "Kurobushka.ly"
 \include "740.ly"
-\pageBreak
-\include "Bublitchki.ly"
+%\pageBreak
+%\include "Bublitchki.ly"
 

@@ -45,14 +45,15 @@ melody = \relative c'' {
 
     \time 3/4
   \set Score.markFormatter = #format-mark-box-alphabet
-    a16 a8.(a8) b16 a g8 s8|%raised octave for harmony
+    a16 a8.(a8) b16 a g8 r8|%raised octave for harmony
     \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
     a8 [e] e d16 c d8 e16 d c4|
     d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
     a4 a a2  %8
 
-    a'16 a r a s8 a4 b16 a g8 r|
+    %a'16 a r a s8 a4 b16 a g8 r|
+    a8 [a] a a4 b16 a g4|
     a8 [e] e d16 c d8 e16 d c4|
     d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
     a4 a a2  %12
@@ -62,7 +63,7 @@ melody = \relative c'' {
     e'4 ^Faster e8 d e4 e8 d  %13
     e4 e8 d c2
     g'4 g8 fs g fs g a
-    e8 e e d e4 s8 e8|  %16
+    e8 e e d e4 r8 e8|  %16
 
 
     \repeat volta 2{
@@ -106,11 +107,11 @@ melody = \relative c'' {
 
     \alternative{
       {
-        s8 c c16 b a8 c8 e4 c8|
+        r8 c c16 b a8 c8 e4 c8|
         b8 b b a b2|
       }
       {
-        s8 c c16 b c b c d e8(e)c|
+        r8 c c16 b c b c d e8(e)c|
         b8 b b a b2|
       }
     }
@@ -157,7 +158,8 @@ harmonies = \chordmode {
   a1:m  %repeat  (watch out for the 2/4 bar)
   s2*13   %was *19
   e1  %2nd ending
-  s1*2
+  s1
+  e1
   a8:m s8*6 d8:m
   s4 e4 s2  %short 2 bar repeat
   a4:m s8*3 d4:m s8

@@ -42,7 +42,7 @@ melody = \relative c' {
   \mark \default
     e16  f g4 g16 f|
     a g g f a g g f
-    g8 c b a
+    g8 c bf a
     gs f a r
     e16 f g f e d e f
     d8 a16 a d8 d

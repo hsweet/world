@@ -68,7 +68,9 @@ melody = \relative c' {
   \break
 
 
-  \key g \minor
+  \key g \minor  %?
+
+  \repeat volta 2{
   \mark \default
   bf16 c d4(d16) d
   d16 ef d ef d8. d16|
@@ -78,6 +80,7 @@ melody = \relative c' {
   af16 g f e df c bf a|
   bf16 f f bf bf af af g|
   g4. f8|
+  }
   \break
 
   \repeat volta 2{
@@ -102,7 +105,7 @@ melody = \relative c' {
 harmonies = \chordmode {
   g4*5:m
   f4
-  b4:6
+  bf4
   d4:7
   g4*5:m
   f4

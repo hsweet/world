@@ -161,9 +161,9 @@ harmonies = \chordmode {
   %
   e1*2:m
   a1*2:m
-  s1
-  c2.
-  b4*11
+  %s1
+  c1
+  b1*2
   %
   e1*2:m
   e1*2:m

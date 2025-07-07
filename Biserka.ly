@@ -72,8 +72,8 @@ melody = \relative c'' {
         a4. bf8 c d
         bf2.|
 
-        d4. g,8 a b
-        d4. g,8 a b
+        d4. g,8 a bf
+        d4. g,8 a bf
         d4 r d
         cs4.\prall bf8 a g
         \break

@@ -14,82 +14,76 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key f \major
+  \time 3/4
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 melody = \relative c'' {
   \global
-  \partial 8 g16 f    %lead in notes
+  %\partial 4 g4    %lead in notes
 
   \repeat volta 2{
     \mark \default
-    e16 f g8 g g
-    g16 af f8 f f|
-    g16 af b8 g16 af b8
-    c8 b4 af16 g
+   c4. bf8 bf a
+   a4. g8 g f
+   f4 f a
+   c2.
 
-    g8 c16 c c8 c
-    c8 f,4 g16 f|
+   c4. bf8 bf a
+   a4. g8 g f
+   f4 f a
+   c,2.
 
-    e16 f g af b c b af
+   c'4. bf8 bf a
+   a4. g8 g f
+   f4 f a
+   d2.
+
+   d4. c8 c b
+   b4. \trill af8 g f
+   g4 g g
+
   }
   \alternative {
-    {af16 g g4 g16 f }
-    {af16 g g4 g8| }
+    {g2 f4 }
+    {g2 d4 }
   }
 
   \repeat volta 2{
     \mark \default
-    d'8. g,16 d'8. g,16|
-    ef'8 d4 c16 b
-    c16 b c b c ef d c|
-    c16 d b4 g8
+    g4 g g
+    b4.\trill af8 g f
+    g4 g g
+    b4.\trill af8 g f
 
-    g8 d'16 d d d d d
-    g8 d4 c16 b
-   c16 b c b c ef d c|
-   c16 d b4 g8
-
-   c16 c c c ef4
-   c16 c c c g4
-   b16 b b b d8 c
-   b8 af g f
-
-   c'8. b16 c8. b16
-   c8 f,4 g16 f
-   e16 f g af b c b af|
-
+    g4 g g
+    d'4. ef8 d c
+    b4 c af
+    g2.
   }
-  \alternative {
-    {af16 g g4 g8| }
-    { af16 g g4 r8 |}
-  }
+
 
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  s8
-  g2*4
-  c2:m
-  f2*2:m
-  g2*2
-  %b
-  g2*2
-  c2:m
-  g2*3
-  c2:m
-  g2
-  c2*2:m
-  g2*2
-  f2*3:m
-  g2*2
+  f2.*7
+  c2.
+  f2.*2 f2.:7
+  bf2.
+  g2.
+  f2.:m
+  g2.*3
 
-
+  %
+  g4*5 f4:m
+  g4*5 f4:m
+  g2.*2
+  f2.:m
+  g2.
 }
 
 \score {
@@ -103,8 +97,8 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Alter Zhok"
-    subtitle=""
+    title= "Yidishe Hora from Ukraine"
+    subtitle="Kiselgof-Makonovetsky Project"
     composer= ""
 
     instrument =""

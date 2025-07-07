@@ -14,58 +14,68 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key c \minor
-  \time 2/4
+  \key e\minor
+  \time 4/4
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  \partial 8 g16 f    %lead in notes
+  \partial 16 e16    %lead in notes
 
   \repeat volta 2{
     \mark \default
-    e16 f g8 g g
-    g16 af f8 f f|
-    g16 af b8 g16 af b8
-    c8 b4 af16 g
+   b'2(d8)c b c
+   b2. (a8 g)
+   g8 a a g g f f e|
+   e2 r4 r16 a b cs|
 
-    g8 c16 c c8 c
-    c8 f,4 g16 f|
+   d8 cs(cs4) b8 a(a4)|
+   d8 cs(cs4) b8 cs cs b|
+   a2. \times 2/3{e8 a e}
+   a4 r2 r8.a16|
 
-    e16 f g af b c b af
+   b2(d8)c b c
+   b2. (a8 g)
+   g8 a a g g8.\trill f16 f8 e|
+   e8 d f16 e e d d4 r|
+
+   d'8 c c b b a a gs
+   b8 a a gs gs8. \trill f16 \times 2/3{a8 gs f}|
+ e4 r8. e16 d8 e f d
+
   }
   \alternative {
-    {af16 g g4 g16 f }
-    {af16 g g4 g8| }
+    {e4 r4 r8 b e g| }
+    {e4 r4 r8. e16 gs b8.| }
   }
 
   \repeat volta 2{
     \mark \default
-    d'8. g,16 d'8. g,16|
-    ef'8 d4 c16 b
-    c16 b c b c ef d c|
-    c16 d b4 g8
+    ds4 e e e
+    b2.(b8) a
+    cs8 d(d4) e e
+    b2 r
 
-    g8 d'16 d d d d d
-    g8 d4 c16 b
-   c16 b c b c ef d c|
-   c16 d b4 g8
+    g'8 fs(fs4) e2
+    d2(d8.) b16 \times 2/3{c8 b a}
+    d16 a8. (a2) b8 c|
+    a4 r r8 b c16 cs 8.|
 
-   c16 c c c ef4
-   c16 c c c g4
-   b16 b b b d8 c
-   b8 af g f
+    cs8 d d d d c c b|
+    a8 g b16 a a g g4. r8|
+    a8 b a b a4 g8 fs
+    e8 d f16 e e d d4 r|
 
-   c'8. b16 c8. b16
-   c8 f,4 g16 f
-   e16 f g af b c b af|
-
+    %d'8 c cl b b a a gs
+    d'8 c c b b a a gs
+    b8 a a gs gs8. \trill f16 g f e d
+    e4 r8. e16 d8 e f d
   }
   \alternative {
-    {af16 g g4 g8| }
-    { af16 g g4 r8 |}
+    {e2 r8 e gs b| }
+    {e,2 r8  b e g| }
   }
 
 }
@@ -73,21 +83,24 @@ melody = \relative c'' {
 %\addlyrics{ \set stanza = #"1. " }
 %################################# Chords #######################
 harmonies = \chordmode {
-  s8
-  g2*4
-  c2:m
-  f2*2:m
-  g2*2
-  %b
-  g2*2
-  c2:m
-  g2*3
-  c2:m
-  g2
-  c2*2:m
-  g2*2
-  f2*3:m
-  g2*2
+  s16
+  e1*4:m
+  a1*4
+  e1*3:m
+  d1*3:m
+  e2 d2:m
+  e1*2:m
+  %B
+  e1*2:m
+  b1*2:m
+  e1*2:m
+  a1*2:m
+  g1*2
+  e1:m
+  d1*3:m
+  e2 d2:m
+  e1*2:m
+
 
 
 }
@@ -103,7 +116,7 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Alter Zhok"
+    title= "Yidisher Soldat in di Trentches"
     subtitle=""
     composer= ""
 
