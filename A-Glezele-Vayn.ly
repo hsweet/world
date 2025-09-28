@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -16,7 +16,7 @@ global = {
   \clef treble
   \key g \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
@@ -42,7 +42,7 @@ melody = \relative c' {
     \mark \default
     %flat a 7th, flat e 3rd, b is natural!
     \relative c' {
-      \set Staff.keySignature = #`(( 2 . ,FLAT)
+      \set Staff.keyAlterations = #`(( 2 . ,FLAT)
                                    (5 . ,FLAT)
                                    )
       g'4(g16) \tuplet 3/2{f32 g f} e16 f|

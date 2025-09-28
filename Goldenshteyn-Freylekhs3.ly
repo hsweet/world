@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 
@@ -18,12 +18,12 @@ melody = \relative c' {
   \clef treble
   \key g \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     r8 d16 d d8 d
     fs8 fs fs4
     fs8. d16 fs8 a|
@@ -37,7 +37,7 @@ melody = \relative c' {
   \alternative { { g8 fs(fs4)}{g8 fs r d |} }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     g4   bf16(a) g8|
     a16(bf)g8~g d
     g4 bf16(a)g8|
@@ -57,11 +57,11 @@ melody = \relative c' {
     }
   }
   \repeat volta 2{
-  \break
-  \mark \default
+    \break
+    \mark \default
     d4-.  d'--
     c8 bf a g
-    fs16(g)a(g) fs8. ef16|
+    fs16(g)a(g) fs8. d16|
     g8 fs~fs ef16(d)|
 
     d4-. d'--

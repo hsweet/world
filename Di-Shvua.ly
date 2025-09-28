@@ -36,7 +36,7 @@ melody = \relative c'' {
   %
   \break
   g8d ef c bf d a d
-  g,4 bf8 d g,4 r
+  g,4 bf8 d g,4 r \bar"||"
 
   f'4 ^chorus ef8 d g f ef d
   ef4 ef8 ef ef d c4
@@ -52,25 +52,30 @@ melody = \relative c'' {
 }
 %################################# Lyrics #####################
 \addlyrics{ \set stanza = #"1. "
-  bri -- der  un sves -- ter fun ar -- bet un neyt
-  _ a -- le vos zay -- nen tse -- zeyt un tsesh -- peyt
-  tsu -- zam -- men. tsu -- zam -- en di fon iz greyt
-  zi flat -- ert fun tsorn, fun _ blut iz zi reyt
+            bri -- der  un sves -- ter fun ar -- bet un neyt
+            _ a -- le vos zay -- nen tse -- zeyt un tsesh -- peyt
+            tsu -- zam -- men. tsu -- zam -- en di fon iz greyt
+            zi flat -- ert fun tsorn, fun _ blut iz zi reyt
 
-  a  shv -- u -- e a shv -- u -- e, af le -- bn un teyt
+            a  shv -- u -- e a shv -- u -- e, af le -- bn un teyt
 
-  hi -- ml un erd vet undz oys -- he -- rn
-  ey -- des vet zayn di likh -- ti -- ke sht -- ern
-  a shv -- ue fun blut un a sh -- vue fun trern,
-  mir shv -- ern, mir shv -- ern, mir shv -- vern
+            hi -- ml un erd _ _ _  vet undz oys -- he -- e -- rn
+            ey -- des vet za --  yn di likh -- ti -- ke sht -- ern
+            a shv -- ue fun blut un a sh -- vue fun tr -- er -- n,
+            mir shv -- ern, mir shv -- ern, mir shv -- ve -- r -n
 
 }
 \addlyrics{ \set stanza = #"2. "
-  bro -- thers and sis -- ters to-a com -- mon strugle sworn
-  the count -- less before us and yet to be born
-  to -- get -- her, toget -- her we'll stand the flood
-  the pro -- mise we've in -- heri -- ted that _ pounds in our blood
+            bro -- thers and sis -- ters to-a com -- mon strugle sworn
+            the count -- less before us and yet to be born
+            to -- get -- her, toget -- her we'll stand the flood
+            the pro -- mise we've in -- heri -- ted that _ pounds in our blood
+            we swear a -- gain, we swear a -- gain, we swear a -- a -- gain
 
+            (the)stars in the an -- cient sky, the earth slow -- ly tu -- rn -- ing
+            bore wit -- ness to it's birth, when hope, grief, and yearn -- ing
+            in flames forged a prom -- ise that nev -- er stopped burn -- ing
+            we swear a -- gain, we swear a -- gain, we swear again
 }
 
 %################################# Chords #######################
@@ -93,15 +98,11 @@ harmonies = \chordmode {
   ef2 g4:7 c4:m
   g2:m/d d2:7
   g4   :m g4:/d g2:m
-
-
-
-
 }
 
 \score {
   % transpose score below
-  %\transpose c d
+  %\transpose g b
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -110,7 +111,7 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= ""
+    title= "Di Shvue"
     subtitle=""
     composer= ""
 
@@ -120,42 +121,50 @@ harmonies = \chordmode {
   \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
 }
-%{
-% more verses:
+
 \markup{}
 \markup {
-  \font-size #2
+  %\font-size #2
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {
       \line { "1."
-\column {
- ""
-}
+              \column {
+                "That we'll recall the path that our ancestors paved"
+                "dismantling the systems that keep us enslaved"
+                "we'll lift again the tear stained flag of love and of rage"
+                "we swear again, we swear again, we swear again"
+              }
       }
       \hspace #0.2 % vertical distance between verses
       \line { "2."
-\column {
-""
-}
+              \column {
+                "mir shvern tsu firn dem heylikn shtrayt"
+                "biz vanen di velt vet nit vern bafrayt"
+                "tsuzaman, tsuzamen, di fon iz greyt"
+                "a shvue, a shvue, af lebn un teyt"
+              }
       }
     }
     \hspace #0.1  % horiz. distance between columns
     \column {
       \line { "3."
-\column {
- ""
-}
+              \column {
+                "We swear to carry out the sacred struggle"
+                "Until the world is liberated"
+                "together, together the flag is ready"
+                "It trembles with rage, from blood it is red"
+                "An oath, an oath, of life and of death"
+              }
       }
       \hspace #0.2 % distance between verses
       \line { "4."
-\column {
-""
-}
+              \column {
+                ""
+              }
       }
     }
     \hspace #0.1 % distance to right margin
   }
 }
 
-%}

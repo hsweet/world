@@ -1,11 +1,11 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
   tagline = ##f
 
-  %obsolete-between-system-padding = #0.6  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
-  %obsolete-between-system-space = #0.6  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
+  %obsolete-between-system-padding = #0.6  system-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)
+  %obsolete-between-system-space = #0.6  system-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)
   ragged-last-bottom = ##f
   ragged-bottom = ##f
   print-all-headers = ##t
@@ -22,13 +22,13 @@ common = {
   \clef treble
   \key a \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 olahosB = {
   %second version
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \break
 
   e,8-. ^\markup {\box 1}a-. c16(b a8-.) e8-. a-. c16(b a8-.)| %grace 13

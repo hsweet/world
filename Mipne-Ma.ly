@@ -1,4 +1,4 @@
-\version "2.22.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,9 +14,9 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key g \minor
+  \key d \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
@@ -26,32 +26,32 @@ melody = \relative c' {
 
   \repeat volta 2{
     \mark \default
-    d4 bf' g4 r
-    d4 bf' g4 r8 g8
-    a4. (g8) a4. (g8)
-    a4 c bf8 (a) g4
+    a4 f' d4 r
+    a4 f' d4 r8 d8
+    e4. (d8) e4. (d8)
+    e4 g f8 (e) d4
 
-    d4 bf' g4 r
-    d'4 d g, r
-    a4. g8 a4 c8 bf
+    a4 f' d4 r
+    a'4 a d, r
+    e4. d8 e4 g8 f
 
   }
   \alternative {
-    {a4 g r2}
-    {a4 g r4 bf8 c }
+    {e4 d r2}
+    {e4 d r4 f8 g }
   }
 
   \repeat volta 2{
     \mark \default
-    d2 d
-    c2 bf4. bf8
-    c4. (bf8) c4 d
-    f4 d c bf8 c
+    a2 a
+    g2 f4. f8
+    g4. (f8) g4 a
+    c4 a g f8 g
 
-    d2 d
-    c2 bf4. bf8
-    c8 (bf c bf) c4 d |
-    c bf g r
+    a2 a
+    g2 f4. f8
+    g8 (f g f) g4 a |
+    g f d r
 
   }
   \alternative {
@@ -59,18 +59,44 @@ melody = \relative c' {
     { }
   }
 
+  \break
   \repeat volta 2{
-    bf2 d
-    c8 (d c bf) g4. g8
-    a4. (g8) a4. (g8)
-    a4 c bf8 (a) g4
+    \mark \default
+    f2 a
+    g8 (a g f) d4. d8
+    e4. (d8) e4. (d8)
+    e4 g f8 (e) d4
 
-    bf2 d
-    c8 (d c bf) g4. g8
-    a4 g a c8 (bf)
-    a4 g r2
+    f2 a
+    g8 (a g f) d4. d8
+    e4 d e g8 (f)
+    e4 d r2
+  }
+  \break
+  \repeat volta 2{
+    \mark English
+    a'4 a8 a d4 c
+    a2. a8 a|
+    a8 a a a g4 f|
+
+    \alternative{
+      {d2 r4 a'8 a }
+      {d,2 r4 f8 g}
+    }
+
   }
 
+  \repeat volta 2{
+    a2 a
+    g2 f2
+    g4. f8 g4 a
+    c4 a g f8 g
+
+    a2 a
+    g2 f4. f8
+    g8 (f g f) g4 a |
+    g f d r
+  }
 }
 %################################# Lyrics #####################
 \addlyrics{
@@ -95,40 +121,76 @@ melody = \relative c' {
   Ts -- oy -- rehk al -- i  -- o -- ti
 
 }
+
+\addlyrics {
+  \set stanza = #"2. "
+  Tell me why
+  tell me how
+  the Hu -- man soul has fall -- en
+
+  Tell me why
+  tell me how
+  the Hu -- man soul has fall -- en _ _
+  From the
+  \repeat unfold 46 {\skip 2}
+  top of the high -- est hill
+  to the bot -- tom of the deep -- est well
+  From the
+
+  well. _ _
+  I have fall -- en
+  So that I can rise back up again
+}
 %################################# Chords #######################
 harmonies = \chordmode {
+  d1*2:m
+  a1:m
+  g4:m  a4:m d2:m
+  d1*2:m
+  a2:m
+  g2:m
+  d1:m
+  d1:m
+  %
+  d1:m
+  g2:m d2:m
+  g1:m
+  a2:m d2:m
+  d1:m
+  g2:m d2:m
+  g1:m
+  a2:m d2:m
+  %
+  d1:m
+  a2:m d2:m
+  g1:m
+  a2:m d2:m
+  d1:m
+  a2:m d2:m
+  g2:m
+  a2:m d1:m
+  % english
+  d1:m
   g1*2:m
   d1:m
-  c4:m  d4:m g2:m
-  g1*2:m
-  d2:m
-  c2:m
-  g1:m
-  g1:m
+  d1:m
   %
+  d1:m
+  g2:m d2:m
   g1:m
-  c2:m g2:m
-  c1:m
-  d2:m g2:m
-   g1:m
-  c2:m g2:m
-  c1:m
-  d2:m g2:m
-  %
+  a2:m d2:m
+
+  d1:m
+  g2:m d2:m
   g1:m
-  d2:m g2:m
-  c1:m
-  d2:m g2:m
-  g1:m
-  d2:m g2:m
-  c2:m
-  d2:m g2:m
+  a2:m d2:m
+
 
 }
 
 \score {
   % transpose score below
-  \transpose g d
+  %\transpose g d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -138,7 +200,7 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Mipney Ma"
-    subtitle=""
+    subtitle="(draft)"
     composer= ""
 
     instrument =""
@@ -146,6 +208,18 @@ harmonies = \chordmode {
   }
   \midi{\tempo 4 = 120}
   \layout{indent = 1.0\cm}
+}
+
+%{
+Tell me why
+tell me how
+the Human soul has fallen
+
+ From the top of the highest hill
+ to the bottom of the deepest well
+
+ I have fallen
+ So that I can rise back up again
 }
 %{
 % more verses:

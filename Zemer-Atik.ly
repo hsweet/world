@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 
@@ -17,7 +17,7 @@ melody = \relative c'' {
   \clef treble
   \key g \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   %\partial 16*3 a16 d f   %lead in notes
   \mark \default

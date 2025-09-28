@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 %moved \header into \score for includes to work
@@ -15,7 +15,7 @@ common = {
   \clef treble
   \key g \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %\markup{ Got something to say? }

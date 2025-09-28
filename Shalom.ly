@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 \header {
@@ -9,7 +9,7 @@
 instrument = "Violin"
 }
 voicedefault =  {
-  \set Score.defaultBarType = "-"
+  \set Score.measureBarType = ""
 
   \override Staff.TimeSignature.style = #'C
   \time 4/4 \key a \minor   \bar "|"     e'4 ^"Am"   c''8    b'8    a'4    a'4

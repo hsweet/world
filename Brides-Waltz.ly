@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 \paper{
@@ -19,7 +19,7 @@ melody = \relative c' {
   \clef treble
   \key d \minor
   \time 3/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \repeat volta 2{
   \mark \default
     a'2.\upbow

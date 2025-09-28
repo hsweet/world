@@ -1,7 +1,7 @@
 \language "english"
 %pointAndClickOff
 
-\version "2.18.0"
+\version "2.24.0"
 % automatically converted from Oy Tate.xml
 
 \header {
@@ -26,7 +26,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 %\markup{ \italic{ " Updated " \date  }  }
 melody =  \relative c' {
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   \clef "treble" \key g \minor \time 2/4
   \repeat volta 2 {

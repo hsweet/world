@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 
@@ -38,13 +38,13 @@ melody = \relative c'
     e8 d cs d
     e4 e
     e8 d cs bf
-    a2  ~ a4 \times 2/3 {a8 as bf}
+    a2  ~ a4 \tuplet 3/2 {a8 as bf}
     c4 c | d2
     c8 d c4
     f, g
     a a
     a8 g4 f16 e
-    d4 \times 2/3 {f8 e d}
+    d4 \tuplet 3/2 {f8 e d}
     cs2\fermata
     d8 e f4
     a c
@@ -63,11 +63,11 @@ melody = \relative c'
     d4 ef c ef
     d2 d
     d4 ef c ef
-    d4 \times 2/3 {g8 f ef}
+    d4 \tuplet 3/2 {g8 f ef}
     d4 r8 d8 d cs r d16 ef
     e4 r8 e8 e d r d f4 f f8 e r d cs2 a
-    e' e e4 f d4 \times 2/3 {a'8 g f}
-    e2 e e4 f d \times 2/3 {a'8  g f}
+    e' e e4 f d4 \tuplet 3/2 {a'8 g f}
+    e2 e e4 f d \tuplet 3/2 {a'8  g f}
     e4 e cs a
     a8 cs d e
     f e a f
@@ -94,7 +94,7 @@ melody = \relative c'
   \alternative {
     {f8 e a f d4 r8 d' a4  f d2}
     {f8 e d f a2 ~
-     a4 \times 2/3{e'8 f g}|
+     a4 \tuplet 3/2{e'8 f g}|
      a8 g f e
      d8 c bf a
      a2~

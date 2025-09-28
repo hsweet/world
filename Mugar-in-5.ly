@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -15,7 +15,7 @@ secund =\relative c'{
   \clef treble
   \key d \minor
   \time 5/8
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \repeat volta 2{
   \mark \default
     <a d>4._"(a/d)"(<a d>4)
@@ -55,7 +55,7 @@ melody = \relative c' {
   \clef treble
   \key d \minor
   \time 5/8
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   %\partial 16*3 a16 d f   %lead in notes
 

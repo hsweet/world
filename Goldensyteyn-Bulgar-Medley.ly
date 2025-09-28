@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -14,11 +14,11 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 %#################################### Melody ########################
 melody = \transpose d c \relative c' {
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \clef treble
   \key g \major
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   %\partial 16*3 a16 d f   %lead in notes
 
@@ -59,7 +59,7 @@ melody = \transpose d c \relative c' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Bulgar 2%%%%%%%%%%%%%
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \bar "||"
   \mark \default
   e'8^\markup {\italic{ "Bulgar #2"}} e4.
@@ -106,7 +106,7 @@ melody = \transpose d c \relative c' {
   }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Bulgar 3%%%%%%%%%%%5
 
-  \bar ".|:"
+  \bar ".|:-|"
   \repeat volta 2{
   \mark \default
     \mark \default  %Section E
@@ -116,7 +116,7 @@ melody = \transpose d c \relative c' {
     a4 fs
     e4. ds8|
     d2~d2~d2~d2
-    \bar ".|:"
+    \bar ".|:-|"
   }
   \repeat volta 2{
   \mark \default

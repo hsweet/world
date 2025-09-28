@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -17,7 +17,7 @@ melody = \relative c'' {
   \clef treble
   \key g\major
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   %\partial 16*3 a16 d f   %lead in notes
   \repeat volta 2{
@@ -44,10 +44,10 @@ melody = \relative c'' {
    %}
 
     \time 3/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     a16 a8.(a8) b16 a g8 r8|%raised octave for harmony
     \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
     a8 [e] e d16 c d8 e16 d c4|
     d16e8 f16 (f8) e d e c b|  %might be fs 3rd note
     a4 a a2  %8
@@ -90,10 +90,10 @@ melody = \relative c'' {
   e4 e8 d c2~
   c2 a2
   \time 2/4 c2  %27
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   %nested repeat********************************
   \repeat volta 2{
   \mark \default

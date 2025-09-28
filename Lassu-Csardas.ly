@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 
@@ -18,7 +18,7 @@ melody = \relative c'' {
   \clef treble
   \key  g\major
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   e4-- ->(e-- ->)a(a16 g)a\downbow b\upbow|
   a4->(g8->)g fs4-> e->|

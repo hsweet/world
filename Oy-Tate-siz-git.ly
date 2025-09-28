@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 
@@ -22,7 +22,7 @@ melody = \relative c'' {
 
   \key c \major
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{

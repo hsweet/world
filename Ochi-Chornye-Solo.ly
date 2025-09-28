@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -16,7 +16,7 @@ global = {
   \clef treble
   \key d \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
@@ -203,7 +203,7 @@ harmonies = \chordmode {
       \line { "4."
 	\column {
 	 ""
-	}\version "2.18.0"
+	}\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -221,7 +221,7 @@ global = {
   \clef treble
   \key d \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################

@@ -1,5 +1,5 @@
 
-\version "2.20.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 % automatically converted from Moldavian Hora.xml
@@ -15,7 +15,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 
 melody=   \relative c'' {
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \clef "treble" \key d \minor \time 3/8
   \repeat volta 2 {
     \mark \default

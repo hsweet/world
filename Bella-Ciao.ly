@@ -53,16 +53,17 @@ melody = \relative c' {
 %################################# Chords #######################
 harmonies = \chordmode {
   s2
-  a2*5:m
-  g2
-  f2 e2
+  a1*4:m
   d1:m
   a1:m
   e1
   a1:m
   a1:m
 }
-
+% repeats
+%\melody
+%\melody
+%\melody
 \score {
   % transpose score below
   %\transpose c d

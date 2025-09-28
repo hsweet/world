@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 \pointAndClickOff
 \paper{
@@ -17,7 +17,7 @@ melody = \relative c'' {
   \clef treble
   \key d \minor
   \time 3/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   \partial 4*2 r8 a,8 b cs   %lead in notes
 

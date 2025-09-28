@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 %moved \header into \score for includes to work
 \include "english.ly"
 %\pointAndClickOff
@@ -20,7 +20,7 @@ melody = \relative c''{
 
   \key a \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \partial 16*2 a16 a16 | %lead in notes
 
   \repeat volta 2{

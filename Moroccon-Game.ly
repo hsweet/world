@@ -1,13 +1,13 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
   tagline = ##f
   print-all-headers = ##t
   #(set-paper-size "letter")
-  %obsolete-after-title-space = 2\mm  markup-system-spacing #'basic-distance = #(/ obsolete-after-title-space staff-space)
-  %obsolete-between-system-space = 1.5\cm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
-  %obsolete-between-system-padding = #1  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+  %obsolete-after-title-space = 2\mm  markup-system-spacing.basic-distance = #(/ obsolete-after-title-space staff-space)
+  %obsolete-between-system-space = 1.5\cm  system-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing.basic-distance = #(/ obsolete-between-system-space staff-space)
+  %obsolete-between-system-padding = #1  system-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing.padding = #(/ obsolete-between-system-padding staff-space)
   ragged-bottom=##f
   ragged-last-bottom=##f
 
@@ -22,7 +22,7 @@ common = {
   \clef treble
   \key a \minor
   \time 12/8
-  %\compressFullBarRests
+  %\compressEmptyMeasures
 }
 
 pone = { ds16(e)e e e e   ds16(e)e e e e   e ds c b c ds }
@@ -58,7 +58,7 @@ vln = \relative c'' {
 
     g'16 fs a g fs e \acciaccatura ds e8 c4 c16 b d c b a b c a4 \mark \markup  {"D.S. al Coda "}
   }
-  R1*3/2*4   \mark \markup  { \musicglyph #"scripts.coda" }
+  R1*3/2*4   \mark \markup  { \musicglyph "scripts.coda" }
 
   \bar ".."
   \repeat percent 2{
@@ -73,7 +73,7 @@ vln = \relative c'' {
 accordian = \relative c''{
   \common
   R1*6/4*3			%3 measures rest
-  r1 r4  a16 b c d \mark \markup { \musicglyph #"scripts.segno" }
+  r1 r4  a16 b c d \mark \markup { \musicglyph "scripts.segno" }
   \bar"||" ds16(e) e e e e   ds16(e)e e e e   e ds c b c ds e4 e16 fs
   %\pone e4.
   \pone e4 e16 fs|
@@ -109,7 +109,7 @@ accordian = \relative c''{
   %{
   \relative c'' {
    \pthreeb \acciaccatura b c8 a4|
-  \pthreeb b16 c a4  \mark \markup { \musicglyph #"scripts.coda" } %28
+  \pthreeb b16 c a4  \mark \markup { \musicglyph "scripts.coda" } %28
   \pthreeb \acciaccatura b c8 a4|
   \pthreeb b16 c a4
   }
@@ -168,9 +168,9 @@ harmonies = \chordmode {
   \layout{indent = 1.0\cm}
 }
 %{
-c1 \mark \markup { \musicglyph #"scripts.segno" }
-c1 \mark \markup { \musicglyph #"scripts.coda" }
-c1 \mark \markup { \musicglyph #"scripts.ufermata" }
+c1 \mark \markup { \musicglyph "scripts.segno" }
+c1 \mark \markup { \musicglyph "scripts.coda" }
+c1 \mark \markup { \musicglyph "scripts.ufermata" }
 c1
 %}
 

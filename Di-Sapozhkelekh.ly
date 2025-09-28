@@ -1,7 +1,7 @@
 \language "english"
 %\pointAndClickOff
 
-\version "2.18.0"
+\version "2.24.0"
 % automatically converted from Di Sapozhkelekh.xml
 
 \paper{

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 %showLastLength = R1*12
@@ -17,7 +17,7 @@ global = {
   \clef treble
   \key e \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
@@ -244,7 +244,7 @@ harmonies = \chordmode {
     \new Staff
     \primos
     \new Staff \secund
-    %\new Staff \partcombine \primos \secund
+    %\new Staff \partCombine \primos \secund
     \new Staff \third
   >>
   \header{

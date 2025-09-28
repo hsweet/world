@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \language "english"
 %\pointAndClickOff
 \paper{
@@ -22,7 +22,7 @@ melody = \relative c' {
 
   \key d \minor
   \time 2/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
   \partial 8 d'8   %lead in
 
   \repeat volta 2{

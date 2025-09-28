@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -16,7 +16,7 @@ global = {
   \clef treble
   \key g \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
@@ -24,10 +24,10 @@ melody = \relative c' {
   \global
   %\partial 16*3 a16 d f   %lead in notes
 
-  r4 d4-2 g8 d g4
-  bf2-1 g~
-  g8 bf a bf  c bf a g
-  a1-1~
+  r4 d4-2 g8 d g4|
+  bf2-1 g~|
+  g8 bf a bf  c bf a g|
+  a1-1~|
   \break
   a8 r d4 a8 d a4
   c2 a~

@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.24.0"
 \include "english.ly"
 %\pointAndClickOff
 \paper{
@@ -13,7 +13,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 %#################################### Melody ########################
 melody = \relative c''' {
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 
   \clef treble
   \key a \minor
@@ -128,8 +128,8 @@ harmonies = \chordmode {
   a8*7
   d4*8:m
   a8*5:m
-  d2*3:m
-  a4 f4*4:m
+  e2*3:7
+  a4:m f4*4:m
   s8
   af8*8:m
   %g8*5
