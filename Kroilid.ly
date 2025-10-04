@@ -11,11 +11,10 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 \markup{ \italic{ " Updated " \date } }
 
 %\markup{ Source filename: Kroilid-C.ly }
-%\markup{ Note: C part was generated from Bb part - see transpose statements }
 
 global = {
   \clef treble
-  \key e \minor
+  \key d \minor
   \time 4/4
   \set Score.markFormatter = #format-mark-box-alphabet
 }
@@ -26,28 +25,28 @@ global = {
 sopmusicA = { 
 \mark \default
 
-fs4 fs8 fs b4. fs8
- fs8 g e fs ds c b,4
- g4. g8 fs e ds e 
-fs2. ds8 e 
-fs4 fs8 fs b4. fs8 
-fs8 g e fs ds c b,4
- e4. e8 ds c b, c 
-b,2. r4
-a4. a8 g4. g8 
-fs8 fs e e ds e fs4
- b4 b as8 fs as cs' 
-b2. ds8 e 
-fs4 fs8 fs b4. fs8 
-fs8 g e fs ds c b,4
- e4. e8 ds8 c b, c
- b,2. \bar "|."
+e4 e8 e a4. e8
+ e8 f d e cs bf, a,4
+ f4. f8 e d cs d 
+e2. cs8 d 
+e4 e8 e a4. e8 
+e8 f d e cs bf, a,4
+ d4. d8 cs bf, a, bf,
+a,2 r8 a,8 cs e
+g4. g8 f4. f8 
+e8 e d d cs d e4
+ a4 a gs8 e gs b 
+a2. cs8 d 
+e4 e8 e a4. e8 
+e8 f d e cs bf, a,4
+ d4. d8 cs8 bf, a, bf,
+ a,2. \bar "|."
 }
 
 %#################################### Melody ########################
-melody = \transpose c bf' {
+melody = \transpose c c'' {
   \global
-  \partial 4 ds8 e     %lead in notes
+  \partial 4 cs8 d     %lead in notes
 \sopmusicA
 }
 %################################# Lyrics #####################
@@ -58,8 +57,9 @@ melody = \transpose c bf' {
 
 %################################# Chords #######################
 
-harmonies = \transpose c bf' \chordmode { 
-b1
+harmonies = \transpose c c \chordmode { 
+a1 s1 d1:m a1 s1*2 d1:m a1 
+g2:m d2:m a1 a2 e2 a1 s1*2 d1:m a1
 }
 
 \score {
@@ -78,6 +78,7 @@ b1
 
 \header {
     title="Kroilid"
+    instrument="Violin"
     composer="Karaite"
 	opus="Copyright 2004, Cookie Segelstein, The Music of Veretski Pass"
 }

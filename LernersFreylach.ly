@@ -133,6 +133,7 @@ c2.:m g2.:m c2.:m g2.:m bf2. c2.:m d2.:7 g2.:m
 \header {
     title="Lerner's Freylach"
     subtitle="KMDMP 01-36-946"
+    instrument="Violin"
     composer="Yekhiel Lerner of Kremenets"
 	opus="Copyright Institute of Manuscripts, Vernadsky National Library of Ukraine, CC-BY 4.0, klezmerinstitute.org"
 }

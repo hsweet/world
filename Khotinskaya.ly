@@ -112,6 +112,7 @@ g1:m g2:m c2:m g1:m g2:m g2
 
 \header {
   title = "Khotinskaya"
+  instrument="Violin"
   composer="Belf's Romanian Orchestra"
 }
 

@@ -114,7 +114,7 @@ melody = \transpose c c' {
 
 harmonies = \transpose c c \chordmode { 
 g2. s2. c4 g4 d4 g2.
-s4 c2 s4 c2 g2. s2. s2. g2. s2.
+s4 c2 g4 c2 g2. s2. s2. g2. s2.
 c4 g4 d4 g2. d2. s2. g2.
 d2. s2. c2. g2. s2. s2. d2. s2. c2 d4 g2.
 c2. g2. c2. d2. c4 g4 d4 g2.
@@ -138,6 +138,7 @@ g2. s2. s2. c2. s2. d2. g2. c2. d2. g2.
 \header {
 title="\"Shades Of Folk\" Dobriden"
     subtitle="KMDMP 19-58-1659"
+	instrument="Violin"
 	opus="Copyright Institute of Manuscripts, Vernadsky National Library of Ukraine, CC-BY 4.0, klezmerinstitute.org"
 }
 

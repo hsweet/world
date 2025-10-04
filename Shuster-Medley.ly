@@ -104,6 +104,7 @@ g2 s2 a2:m s2 d2 s2 g2 s2
 
 \header {
     title="Shuster (Shoemaker) Medley"
+	instrument="Violin"
     opus="M. Beregovsky, Jewish Instrumental Folk Music #233, 234 and Schwabische Turkei Schuster from Horak 1961"
 }
 
