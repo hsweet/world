@@ -25,4 +25,4 @@ temp/
 *.zip
 *.pl
 *.sh
-
+.DS_Store
