@@ -22,31 +22,31 @@ global = {
 
 %################################# Music Blocks ########################
 
-sopmusicA = { 
+sopmusicA = \relative c { 
 \mark \default
 
 e4 e8 e a4. e8
- e8 f d e cs bf, a,4
- f4. f8 e d cs d 
+ e8 f d e cs bf a4
+ f'4. f8 e d cs d 
 e2. cs8 d 
 e4 e8 e a4. e8 
-e8 f d e cs bf, a,4
- d4. d8 cs bf, a, bf,
-a,2 r8 a,8 cs e
+e8 f d e cs bf a4
+ d4. d8 cs bf a bf
+a2 r8 a8 cs e
 g4. g8 f4. f8 
 e8 e d d cs d e4
  a4 a gs8 e gs b 
-a2. cs8 d 
+a2. cs,8 d 
 e4 e8 e a4. e8 
-e8 f d e cs bf, a,4
- d4. d8 cs8 bf, a, bf,
- a,2. \bar "|."
+e8 f d e cs bf a4
+ d4. d8 cs8 bf a bf
+ a2. \bar "|."
 }
 
 %#################################### Melody ########################
-melody = \transpose c c'' {
+melody = \transpose c c'' \relative c {
   \global
-  \partial 4 cs8 d     %lead in notes
+  \partial 4 \relative c {cs8 d}     %lead in notes
 \sopmusicA
 }
 %################################# Lyrics #####################

@@ -22,74 +22,74 @@ global = {
 
 %################################# Music Blocks ########################
 
-sopmusicA = { 
+sopmusicA = \relative c { 
 \mark \default
 d4 g a 
-g16 (a b c') b2
- c'16 (d' c' b) b (c' b a) a (b a g)
+g16 (a b c) b2
+ c16 (d c b) b (c b a) a (b a g)
  g2.
- b8. (d'16) c'2
- b8. (d'16) c'2
+ b8. (d16) c2
+ b8. (d16) c2
  b4 g a 
-g16 a b c' b2
- d'16 c' b a b a g8 g4 
+g16 a b c b2
+ d16 c b a b a g8 g4 
 d4 g a 
-g16 (a b c') b2 
-c'16 (d' c' b) b (c' b a) a (b a g) 
+g16 (a b c) b2 
+c16 (d c b) b (c b a) a (b a g) 
 g2.
-\times 2/3 { d'8 c' b } a2 
-c'4 \times 2/3 {b8 a g fs g a}
+\times 2/3 { d'8 c b } a2 
+c4 \times 2/3 {b8 a g fs g a}
  b8 a16 g g2
 }
 
-sopmusicB = {
+sopmusicB = \relative c' {
 \mark \default
- d'4 d' d' 
-fs' e' d' 
-c'8 d'16 (c') b4 c'8 e' 
-d'2.
- g'4 fs' e' 
-g' fs' e' 
-fs'8 (d') d'2
- fs'4 e' d' 
-c'8 d'16 (c') b4 c'8 e' 
-d'2.
-c'8 c' b4 c'
-d'8 d' e'4 d'
- c'8 c' a4 b 
-c'8 c' d'4 b 
-c'16 (d' c' b) b (c' b a) a (b a g)
+ d4 d d 
+fs e d 
+c8 d16 (c) b4 c8 e 
+d2.
+ g4 fs e 
+g fs e 
+fs8 (d) d2
+ fs4 e d 
+c8 d16 (c) b4 c8 e 
+d2.
+c8 c b4 c
+d8 d e4 d
+ c8 c a4 b 
+c8 c d4 b 
+c16 (d c b) b (c b a) a (b a g)
 }
-sopmusicBA = {
+sopmusicBA = \relative c' {
  b2.
 }
-sopmusicBB = {
+sopmusicBB = \relative c' {
  g2.
 }
 
-sopmusicC = {
+sopmusicC = \relative c' {
 \mark \default
- b8. \segno d'16 c'4 c'4
- b8. d'16 a4 a4 
- \times 2/3 {d'8 c' b a b a g fs e}
+ b8. \segno d16 c4 c4
+ b8. d16 a4 a4 
+ \times 2/3 {d8 c b a b a g fs e}
  d2.
- b8. d'16 c'4 c' 
-b8. d'16 a4 a 
-\times 2/3 {d'8 e' d' d' a b} g4
+ b'8. d16 c4 c 
+b8. d16 a4 a 
+\times 2/3 {d8 e d d a b} g4
  g2. ^"Fine" 
 }
 
-sopmusicD = {
+sopmusicD = \relative c' {
 \mark \default
  b2  g4
  b8 b g2
  b8 b g2
- c'8 c' a2
- c'8 c' a2
- \times 2/3 {d'8 c' d'} d'2
- \times 2/3 {d'8 b d' g' fs' e'} d'4
- \times 2/3 {c'8 a c' e' d' c'} b4
- g16 a b c' b2
+ c8 c a2
+ c8 c a2
+ \times 2/3 {d8 c d} d2
+ \times 2/3 {d8 b d g fs e} d4
+ \times 2/3 {c8 a c e d c} b4
+ g16 a b c b2
  g2. ^"D.S. al Fine"
 }
 

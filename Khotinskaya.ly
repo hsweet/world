@@ -22,52 +22,52 @@ global = {
 
 %################################# Music Blocks ########################
 
-melodyA = {
+melodyA = \relative c' {
 \key g \major
 \time 4/4 
 g8 g g g a4 g 
-c' b a g 
-b8 g b d' c'4 a 
-c' b a g 
+c b a g 
+b8 g b d c4 a 
+c b a g 
 g8 g g g a4 g 
-c'4 b a g 
-b8 g b d' c'4 a 
+c4 b a g 
+b8 g b d c4 a 
 }
 
-aenda = { g1 }
-aendb = {
+aenda = \relative c' { g1 }
+aendb = \relative c' {
 g2^"Fine" g8 g a b
 }
 
-melodyB = {
-c'4 \segno c' g2
-c'8 b c' b a2
-c'8 b d' c' b a c' b 
+melodyB = \relative c' {
+c4 \segno c g2
+c8 b c b a2
+c8 b d c b a c b 
 }
 
-benda = {
+benda = \relative c' {
 a8 g b a g g a b
 }
-bendb = {
+bendb = \relative c' {
 a8 g b a g2^"D.C. al Fine"
 }
 
-melodyC = {
-d'1 
-d'1
-d'2 d'2
-d'2 d'2
-d'4 g d'2
-d'8 c' c' b d'2
-d'4 g d'2
-d'8 c' c' b d'2
-c'4 g c'2
-d'4 bf a g 
-bf8 bf bf d' c' c' c' d' 
+melodyC = \relative c' {
+d1 
+d1
+d2 d2
+d2 d2
+d4 g, d'2
+d8 c c b d2
+d4 g, d'2
+d8 c c b d2
+c4 g c2
+d4 bf a g 
+bf8 bf bf d c c c d 
 }
 
-cenda = { g1 }
-cendb = {
+cenda = \relative c' { g1 }
+cendb = \relative c' {
  g2 (g8) g8 a b^"D.S."
 }
 
