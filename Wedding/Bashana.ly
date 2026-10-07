@@ -8,7 +8,7 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-\markup{ \date }
+%\markup{ \date }
 %\markup{ Got something to say? }
 
 %#################################### Melody ########################
@@ -21,9 +21,9 @@ melody = \transpose d c \relative c' {
   \partial 4*2 b4 g'   %lead in notf
 
   \repeat volta 3{
-     e2 b4 g'
+    e2 b4 g'
     e2. g4|
-    a4 g fs e 
+    a4 g fs e
     d4 b b d
 
     c2 c4 e
@@ -47,7 +47,7 @@ melody = \transpose d c \relative c' {
 
     a2 g4 fs
     fs2 e4 fs
-    g1~    %dofn't work
+    g1
     gs2 a4 b
     c2 c4 c
 
@@ -69,15 +69,15 @@ melody = \transpose d c \relative c' {
 %################################# Lyrics #####################
 %\addlyrics{  }
 %################################# Chords #######################
-harmony = \transpose d c\chordmode {
- s2 e1:m s1 a1:m7 g1 c1
- b1:7 e1:m s1*2 a1:m
- g1 fs1:7 a1 b1:7 e1:m
- e1:7 a1:m d1:7 g1 c1
- a1:m6 b1:7 e1:m d2:7 a4:m e4:7 a1:m
- d1:7 g1 c1 a1:m6 b1:7
- e1:m
- %{ old chords
+harmonies = \transpose d c\chordmode {
+  s2 e1:m s1 a1:m7 g1 c1
+  b1:7 e1:m s1*2 a1:m
+  g1*2 a1 b1:7 e1:m
+  e1:7 a1:m d1:7 g1 c1
+  a1:m6 b1:7 e1:m d2:7 a4:m e4:7 a1:m
+  d1:7 g1 c1 a1:m6 b1:7
+  e1:m
+  %{ old chords
     s2 e1:m s1 d1:7 g1 a1:m
  b1 e1:m s1*2 c1
  d1:7 g1 a1 b1:7 e1:m
@@ -85,29 +85,27 @@ harmony = \transpose d c\chordmode {
  a1:m6 b1:7 e1:m d2:7 a4:m e4:7 a1:m
  d1:7 g1 c1 a1:m6 b1:7
  e1:m
- %}
+  %}
 }
 
 \score {
+  % transpose score below
+  %\transpose d a
   <<
     \new ChordNames {
-      \set chordChanges = ##t
-      \harmony
+      \set chordChanges = ##f
+      \harmonies
     }
-    \new Staff \
-       \melody
+    \new Staff   \melody
   >>
   \header{
-    title= "Bashana Haba'ah"
+    title= "Bashana Haba'a"
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = ""
     arranger= ""
   }
-  \layout{ }
-  \midi{ 
-	  \context { 
-		 \Score tempoWholfPerMinute = #(ly:make-moment 120 4) 
-	 } 
- }
+  %\midi{\tempo 4 = 120}
+  \layout{indent = 1.0\cm}
 }
+

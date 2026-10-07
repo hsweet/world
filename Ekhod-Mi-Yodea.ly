@@ -14,116 +14,129 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key e \minor
+  \key d \minor
   \time 4/4
   \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
 cadence = {
-  e8 g fs e e4 d
-  g4 a b8 a g fs
+  d8 f e d d4 c
+  f4 g a8 g f e
 }
 
-melody = \relative c'' {
+melody = \relative c' {
   \global
   %\partial 4 g4    %lead in notes
 
   \repeat volta 2{
     \mark \default
 
-  b8 e16 e e8 e e4 r8 b
-  \cadence
+    a8 d16 d d8 d d4 r8 a
+    \cadence
 
 
   }
   \alternative {
-    {e8 e16 e e8 e a2  }
-    {e8 e16 e e8 e e2  }
+    {d8 d16 d d8 d g2  }
+    {d8 d16 d d8 d d2  }
   }
 
   \repeat volta 2{
     \mark \default
-    a4 b a4. e8
+    g4 a g4. d8
     \cadence
 
   }
   \alternative {
-    {e8 e16 e e8 e a2  }
-    {e8 e16 e e8 e e2  }
+    {d8 d16 d d8 d g2  }
+    {d8 d16 d d8 d d2  }
   }
+  \mark \default
+  \break
+  g2 g
+  g4 g g g8 g16 g
+  g8 f f g16 g  g8 a a g
+  g8 g c c g4 r8 g16 g|
 
-   a2 a
-   a4 a a a8 a16 a
-   a8 g g a16 a  a8 b b a
-   a8 a d d a4 r8 a16 a|
 
+  g8 f f g g a a g
+  g8 g c c g4 r8 g16 g
+  g8 f f g g a a g
+  bf4 a8 g d'4 r8 g,16 g
 
-   a8 g g a a b b a
-   a8 a d d a4 r8 a16 a
-   a8 g g a a b b a
-   c4 b8 a e'4 r8 a,16 a
-
-   a8 a a a  a a  a4|
-   d8 d d4 c a4
-   c8 c c b  a4 r|
+  g8 g g g  g g  g4|
+  c8 c c4 bf g4
+  bf8 bf bf a  g4 r|
 
 
 
 }
 %################################# Lyrics #####################
-\addlyrics{ \set stanza = #"1. "
+\addlyrics{
+  \set stanza = #"1. "
   Ay dai dai dai dai dai
   Ek -- ho -- d mi yo -- de -- a
   Ek -- hod, ekh _ -- od _  mi _ _ yoy -- de -- a
 
-    _ _ _ _ _ _
+  _ _ _ _ _ _
   Yay day day,
   Der nes fun zu -- mer shprenk -- len
   Un di na -- ye kvey -- tn fun an  _ eln -- tn boym
 
-   _ _ _ _ _ _
+  _ _ _ _ _ _
   Yay day Yay day day day,
 
   Di _ shar -- fe layd fun an ersh -- te li -- be
-A -- ni yoy -- de -- o
-Keyn _ loyb -- ge -- zan -- gn far di gri --ber
-A -- ni maam -- in -- o
-Der bag -- in vos ef -- nt klo -- re oy --gn
-Oy ikh ken zen
-Di _ eyn -- sts -- el -- ne re -- ges vos sha -- fn a le -- bn
-A -- ni maam -- in -- o
+  A -- ni yoy -- de -- o
+  Keyn _ loyb -- ge -- zan -- gn far di gri --ber
+  A -- ni maam -- in -- o
+  Der bag -- in vos ef -- nt klo -- re oy --gn
+  Oy ikh ken zen
+  Di _ eyn -- sts -- el -- ne re -- ges vos sha -- fn a le -- bn
+  A -- ni maam -- in -- o
 }
 \addlyrics {
-   Ay dai dai dai dai dai
+  \set stanza = #"2. "
+  Ay dai dai dai dai dai
   Ek -- ho -- d ani yo -- de -- a
   Ekh -- od a -- ni yoy -- de _ _ _ _  _ _ a
 
   _ _ _ _ _
   Yay day day,
-  der fin-- kl fun mayn tre -- rn
+  der fin -- kl fun mayn tre -- rn
   Ekh -- od a -- ni ma -- ami  _ _ _ _ _ _ no
 
-   _ _ _ _ _
-   A shors -- tik strup af a vey -- khe vund
-Ekh -- od ani yoy -- de -- o
-Der blu -- tik royt fun a gesh -- pal -- te  -- ne flo -- ym
-A -- ni maam -- i - no
-Der ba -- gin vos ef -- nt klo -- re oy -- gn
-Oy ikh ken zen
-Di eyn -- sts -- el -- ne re  -ges vos sha  -- fn a le -- bn
-A -- ni maam -- i - no
+  _ _ _ _ _
+  A shors -- tik strup af a vey -- khe vund
+  Ekh -- od ani yoy -- de -- o
+  Der blu -- tik royt fun a gesh -- pal -- te  -- ne flo -- ym
+  A -- ni maam -- i - no
+  Der ba -- gin vos ef -- nt klo -- re oy -- gn
+  Oy ikh ken zen
+  Di eyn -- sts -- el -- ne re  -ges vos sha  -- fn a le -- bn
+  A -- ni maam -- i - no
 
 }
 
 %################################# Chords #######################
 harmonies = \chordmode {
+  d4*7:m
+  c4
+  f4 g4:m a2
+  d2:m g2:m
+  d1:m
+  %
+  \break
+  g1:m
+  d4*3:m c4
+  f4 g4:m a2
 
 }
 
 \score {
   % transpose score below
-  %\transpose c d
+  %\transpose e d
   <<
     \new ChordNames {
       \set chordChanges = ##f
@@ -132,7 +145,7 @@ harmonies = \chordmode {
     \new Staff   \melody
   >>
   \header{
-    title= "Echod Me Yodea"
+    title= "Echod Mi Yodea"
     subtitle=""
     composer= "Sarah Gordon"
 

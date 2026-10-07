@@ -14,7 +14,7 @@
 
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\markup{ \italic{ " Updated " \date  }  }
+\markup{ \italic{ " Updated " \date  }  }
 
 %\markup{  }
 
@@ -25,9 +25,9 @@ melody = \relative c'' {
   \key c \minor
   \time 2/4
 
-  \partial 16*2 g16 g
+  \partial 16*3 g16 c d
 
-  ef'8 ef ef d16 c
+  ef8 ef ef d16 c
   g'8 d r16 g,16 c d |
   ef8 ef ef d16 c
   g'8 d r16 g,16 c d |
@@ -39,7 +39,7 @@ melody = \relative c'' {
 
   ef8 ef ef d16 c
   g'8 d r16 g,16 c d
-  ef8 ef ef d16(c)
+  ef8 ef ef d16 c
 
   g'8 d r16 g,16 c d
   ef16 ef ef ef ef ef d ^\markup{//}  c
@@ -94,7 +94,7 @@ melody = \relative c'' {
     ef2 r4 d
     %last line
     d4 b2 g4
-    d'2 ef4 d
+    d'4 d ef4 d
 
   }
 
@@ -107,43 +107,54 @@ melody = \relative c'' {
 %################################# Lyrics #####################
 
 \addlyrics{
-  \skip2 \skip2
-  Ven di zolst zain shvarz vi a tu -- ter
-  ven di host oi- gen vi bai a ku -- ter
-  un ven di hinkst tsu -- bis- lach host
-  hil -- tser -- ne fis -- lach zug ich dos art
-  mich - \skip2 nit
 
-  %{un ven di host a na -- ri- shin shme -- chl
-un ven di host Vai- zo- sos- se- chil
-ven di bist vild vi In- di- a - ner
-bist a- fi- li ga-litz- ya- ner
+  Of all the boys I've known, and I've known some
+  Un -- til I first met you, I was lone -- some
+  And when you came in sight, dear, my heart grew light
+  And this old world seemed new to _ _ me
 
-zog ick dos art mich nit
-Zog mir vi er- klers- tsu dos
-chvel dir zo- gn bald far vis bai
-mir bis -tu shen, Bai mir hos -- tu chen
-Bai mir bis -- tu git
+  You're real -- ly swell, I have to ad -- mit you
+  De -- serve ex -- pres -- sions that real -- ly fit you
+  And so I've racked my brain, _ _ _  hop -- ing to ex -- plain
+  _  _ All the things  you do to me
 
-bist e - ne bai mir oif der velt
-Bai mir hos - tu it
-  %}
+  \repeat unfold 14{\skip2}
+
+  Bay mir bist du shane, please let me ex -- plain
+  Bei mir bist du shane means you're grand
+  Bei mir bist du shane, a -- gain I'll ex -- plain
+  It means you're the fairest in the land
+
+  I could say Bel -- la, bel -- la, ev -- en say wün -- der -- bar
+  Each lan -- guage on -- ly helps me tell you how grand you are
+
+  I've tried to ex -- plain, bei mir bist du shane
+  So kiss me and say you un -- der -- stand
+
 }
 
-
+\addlyrics {
+  \repeat unfold 98{\skip2}
+  Bay mir bis -- tu sheyn,
+  Bay mir hos -- tu kheyn,
+  Bay mir bis -- tu eyner oyf der velt.
+  Bay mir bis -- tu git,
+  Bay mir hos -- tu it
+  Bay mir bis -- tu tayer -- er fun gelt.
+}
 
 %################################# Chords #######################
 harmonies = \chordmode {
-  s8
+  s16*3
   c2:m g2 c2:m g2 c2:m f2:m g4 d4:7
   g2 c2:m g2 c2:m g2 c2:m f2:m c4:m g4:7
   c2:m f2:m g2 f2:m g2:7
   %part B 4/4
   c1:m s1*3
   g1 s1 c1:m s1*5
-  g1:7 s1 c1:m r1
+  g1:7 s1 c1:m s1
   f1:m s1 c1:m s1 f1:m s1 g1 s1
-  c1:m s1*3 f1:7 s1 c1:m
+  c1:m s1*3 g1:7 s1 c1*2:m c1*2:m
 
 
 }
@@ -159,54 +170,23 @@ harmonies = \chordmode {
   >>
   \header{
     title= "Bai Mir Bistu Shane"
-instrument= "Violin"
-instrument= "Violin"
+    instrument= ""
     arranger=""
 
-  }%{
-% more verses:
-\markup{}
-\markup {
-  \fill-line {
-    \hspace #0.1 % distance from left margin
-    \column {
-      \line { "1."
-	\column {
-	  ""
-	}
-      }
-      \hspace #0.2 % vertical distance between verses
-      \line { "2."
-	\column {
-	 ""
-	}
-      }
-    }
-    \hspace #0.1  % horiz. distance between columns
-    \column {
-      \line { "3."
-	\column {
-	  ""
-	}
-      }
-      \hspace #0.2 % distance between verses
-      \line { "4."
-	\column {
-	 ""
-	}
-      }
-    }
-    \hspace #0.1 % distance to right margin
   }
+
+
 }
 
-  %}
-  \midi{\tempo 4 = 120}
-  \layout{indent = 1.0\cm}
-}
 
 %{
 % more verses:
+Bay mir bistu sheyn,
+Bay mir hostu kheyn,
+Bay mir bistu eyner oyf der velt.
+Bay mir bistu git,
+Bay mir hostu "it",
+Bay mir bistu tayerer fun gelt.
 \markup{}
 \markup {
   \fill-line {
@@ -242,4 +222,33 @@ instrument= "Violin"
   }
 }
 
+%}
+% \midi{\tempo 4 = 120}
+% \layout{indent = 1.0\cm}
+%{ Ven di zolst zain shvarz vi a tu -- ter
+  ven di host oi- gen vi bai a ku -- ter
+  un ven di hinkst tsu -- bis- lach host
+  hil -- tser -- ne fis -- lach zug ich dos art
+  mich - \skip2 nit
+}%
+
+
+  %{un ven di host a na -- ri- shin shme -- chl
+un ven di host Vai- zo- sos- se- chil
+ven di bist vild vi In- di- a - ner
+bist a- fi- li ga-litz- ya- ner
+
+zog ick dos art mich nit
+Zog mir vi er- klers- tsu dos
+chvel dir zo- gn bald far vis bai
+mir bis -tu shen, Bai mir hos -- tu chen
+Bai mir bis -- tu git
+
+bist e - ne bai mir oif der velt
+Bai mir hos - tu it
+%}
+
+%{
+convert-ly (GNU LilyPond) 2.26.0  convert-ly: Processing `'...
+Applying conversion:     The document has not been changed.
 %}

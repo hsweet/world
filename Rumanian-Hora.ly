@@ -7,10 +7,8 @@
   #(set-paper-size "letter")
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
+\markup{ \italic{ \date }  }
 
-%\markup{ \italic{ " Updated " \date  }  }
-
-%\markup{ Got something to say? }
 
 %#################################### Melody ########################
 melody =  \relative c'{
@@ -22,7 +20,7 @@ melody =  \relative c'{
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     d8. ef16 d ef|
     fs8. g16 fs g|
     \grace {a16} a8 a8 a8|
@@ -54,7 +52,7 @@ melody =  \relative c'{
   }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     d'8. c16 bf a
     d8. c16 bf a|
     a16 c bf8 [bf]
@@ -71,8 +69,8 @@ melody =  \relative c'{
   }
 
   \repeat volta 2{
-  \mark \default
-    fs8 a16 [g]
+    \mark \default
+    fs8(g) a16 [g]
     fs8. ef16 d c
     c8 c c
     c'4.
@@ -98,22 +96,26 @@ melody =  \relative c'{
 %################################# Chords #######################
 harmonies = \chordmode {
   d8*6
-  %r2*8
   c8:m
   s8*5
-  % r8*3
   d8*18
   %b
-  %r8*14
   g8*6:m
-  %r4 r8*3 = 5/8
-  c8*8:m
-  %r8*4 r8*3 = 7/8
-  d8*13
-  %r4 r8*10 =12/8
+  c8*6
+  d8*6
+  d8*6
+  %
+  d8*3
   c8*9:m
-  %r4 r8*6 =8/8
-  d8
+  d8*9
+  d8*3
+  d8*3
+  %
+  d8*6
+  c8*9
+  d8*3
+  d8*6
+  d8*3
 }
 
 \score {

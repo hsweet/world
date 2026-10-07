@@ -26,24 +26,24 @@ melody = \relative c'' {
 
   \repeat volta 2{
     \mark \default
-   c4. bf8 bf a
-   a4. g8 g f
-   f4 f a
-   c2.
+    c4. bf8 bf a
+    a4. g8 g f
+    f4 f a
+    c2.
 
-   c4. bf8 bf a
-   a4. g8 g f
-   f4 f a
-   c,2.
+    c4. bf8 bf a
+    a4. g8 g f
+    f4 f a
+    c,2.
 
-   c'4. bf8 bf a
-   a4. g8 g f
-   f4 f a
-   d2.
+    c'4. bf8 bf a
+    a4. g8 g f
+    f4 f a
+    d2.
 
-   d4. c8 c b
-   b4. \trill af8 g f
-   g4 g g
+    d4. c8 c b
+    b4. \trill af8 g f
+    g4 g g
 
   }
   \alternative {
@@ -74,7 +74,7 @@ harmonies = \chordmode {
   c2.
   f2.*2 f2.:7
   bf2.
-  g2.
+  g2.  % reversed???
   f2.:m
   g2.*3
 

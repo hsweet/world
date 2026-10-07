@@ -8,7 +8,7 @@
 }
 \header{
   title= "Kolemeike"
-instrument= "Violin"
+  instrument= "Violin"
   composer= "Beregovski"
   arranger = ""
 
@@ -70,7 +70,7 @@ harmonies = \chordmode {
     d2*6:m
     %r2*5
     a2:7
-    d2
+    d2:m
   }{
     c2 g2
     d2*4:m

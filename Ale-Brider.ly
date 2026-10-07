@@ -25,25 +25,25 @@ melody = \relative c' {
   %\partial 4 g4    %lead in notes
 
 
-    d8 g g a
-    bf bf a g
-    bf4 c
-    bf8 bf a g
+  d8 g g a
+  bf bf a g
+  bf4 c
+  bf8 bf a g
+  \break
+  d8 g g a
+  bf8 bf a g
+  bf4 a
+  g2
 
-    d8 g g a
-    bf8 bf a g
-    bf4 a
-    g2
+  f8 bf bf c
+  d8 d c bf
+  d4 ef
+  d8 d c bf
 
-    f8 bf bf c
-    d8 d c bf
-    d4 ef
-    d8 d c bf
-
-    c8 bf bf c
-    d8 d c bf
-    bf4 a
-    g8 d' bf d
+  c8 bf bf c
+  d8 d c bf
+  bf4 a
+  g8 d' bf d
 
 
 
@@ -58,33 +58,44 @@ melody = \relative c' {
   }
 
   \alternative {
-    { d8 c bf c
+    {
+      d8 c bf c
       d2~
-      d8 d bf d}
-    {d8 c bf a
-     g2~
-     g2}
+      d8 d bf d
+    }
+    {
+      d8 c bf a
+      g2~
+      g2
+    }
   }
 
 }
 %################################# Lyrics #####################
-\addlyrics{ \set stanza = #"1. "
-            Un mir zay -- nen a -- le bri -- der
-            Oy, oy, a -- le bri -- der!
-            Un mir zin -- gen frey -- lekhe li -- der
-            Oy, oy, oy!
+\addlyrics{
+  \set stanza = #"1. "
+  Un mir zay -- nen a -- le bri -- der
+  Oy, oy, a -- le bri -- der!
+  Un mir zin -- gen frey -- lekhe li -- der
+  Oy, oy, oy!
 
-            Un mir hal -- tn zikh in ey -- nem,
-            Oy, oy, zikh in ey -- nem!
-            Aze -- lk -- hes iz nito bay key -- nem,
-            Oy, oy, oy!
+  Un mir hal -- tn zikh in ey -- nem,
+  Oy, oy, zikh in ey -- nem!
+  Aze -- lk -- hes iz nito bay key -- nem,
+  Oy, oy, oy!
 
-            Oy yoi yoi yoi ya yoi
-            Oy yoi yoi yoi ya yoi
-             Oy yoi yoi yoi ya
-             yoi you yoi ya yoi
+  Oy yoi yoi yoi ya yoi
+  Oy yoi yoi yoi ya yoi
+  Oy yoi yoi yoi ya
+  yoi you yoi ya yoi
 
-
+}
+\addlyrics{
+  \set stanza = #"2. "
+  Un mir zay -- nen a -- le ey -- nik,
+  Oy, oy, a -- le ey -- nik!
+  Tsi mir zay -- nen fil tsi vey -- nik,
+  Oy, oy, oy!
 }
 %################################# Chords #######################
 harmonies = \chordmode {
@@ -136,40 +147,44 @@ harmonies = \chordmode {
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {
-      \line { "1."
+      \line {
+        "1."
 
-              \column {
-                 "Un mir zaynen ale eynik,"
-              "Oy, oy, ale eynik!"
-              "Tsi mir zaynen fil tsi veynik,"
-              "Oy, oy, oy!"
-              }
+        \column {
+          "Un mir zaynen ale eynik,"
+          "Oy, oy, ale eynik!"
+          "Tsi mir zaynen fil tsi veynik,"
+          "Oy, oy, oy!"
+        }
       }
       \hspace #0.2 % vertical distance between verses
-      \line { "2."
+      \line {
+        "2."
 
-              \column {
-                  "Un mir libn zikh dokh ale,"
-              "Oy, oy, zikh dokh ale!"
-              "Vi a khosn mit a kale, Oy, oy, oy!"
-              }
+        \column {
+          "Un mir libn zikh dokh ale,"
+          "Oy, oy, zikh dokh ale!"
+          "Vi a khosn mit a kale, Oy, oy, oy!"
+        }
       }
     }
     \hspace #0.1  % horiz. distance between columns
     \column {
-      \line { "3."
-              \column {
-                "Un mir zaynen freylekh, munter,"
-"Oy, oy freylekh, munter!"
-"Zingen lider, tantsn unter,"
-"Oy, oy, oy!"
-              }
+      \line {
+        "3."
+        \column {
+          "Un mir zaynen freylekh, munter,"
+          "Oy, oy freylekh, munter!"
+          "Zingen lider, tantsn unter,"
+          "Oy, oy, oy!"
+        }
       }
       \hspace #0.2 % distance between verses
-      \line { "4."
-              \column {
-                ""
-              }
+      \line {
+        "4."
+        \column {
+          ""
+        }
       }
     }
     \hspace #0.1 % distance to right margin

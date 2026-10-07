@@ -11,7 +11,7 @@
 }
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\markup{ \italic{ " Updated " \date  }  }
+\markup{ \italic{ " Updated " \date  }  }
 melody =  \relative c' {
 
   \clef "treble" \key d \minor \time 3/8 \partial 8 d8 | % 1
@@ -101,12 +101,27 @@ harmonies =  \chordmode {
   a8*3:7
   d8*3:m
 
-  %{
-  a8.:m | % 14
-  s16*9 d8.:m | % 16
-  s16*57 a8.:m | % 26
-  s8. d8.:m | % 27
-  %}
+
+}
+
+\score {
+  %\transpose f c'
+  <<
+    \new ChordNames {
+      \set chordChanges = ##f
+      \harmonies
+    }
+    \new Staff   \melody
+  >>
+  \header{
+    title= "Di Sapozhkelekh"
+    subtitle=""
+    composer= ""
+    instrument = "Violin"
+    arranger= ""
+  }
+  \midi{\tempo 4 = 120}
+  \layout{indent = 1.0\cm}
 }
 
 %{
@@ -135,22 +150,3 @@ harmonies =  \chordmode {
 
 }
 %}
-
-\score {\transpose f c'
-  <<
-    \new ChordNames {
-      \set chordChanges = ##f
-       \harmonies
-    }
-    \new Staff   \melody
-  >>
-  \header{
-    title= "Di Sapozhkelekh"
-    subtitle=""
-    composer= ""
-    instrument = "Violin"
-    arranger= ""
-  }
-  \midi{\tempo 4 = 120}
-  \layout{indent = 1.0\cm}
-}

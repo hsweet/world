@@ -38,34 +38,34 @@ melody = \relative c'' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-   \mark \default
-   d8 e fs g
-   g8 a \tuplet 3/2{a g fs}
-   fs8 a \tuplet 3/2{a g fs}
-   fs8 a \tuplet 3/2{a g fs}
-   g2 ~
-   g2~
-   g2~
-   g2
-   \repeat unfold 3 {\tuplet 3/2 {a8 (gs a)}fs 4 |}
+    \mark \default
+    d8 e fs g
+    g8 a \tuplet 3/2{a g fs}
+    fs8 a \tuplet 3/2{a g fs}
+    fs8 a \tuplet 3/2{a g fs}
+    g2 ~
+    g2~
+    g2~
+    g2
+    \repeat unfold 3 {\tuplet 3/2 {a8 (gs a)}fs 4 |}
 
-   d8 cs b a
+    d8 cs b a
 
-   d8 e fs g
-   g8 a \tuplet 3/2{a g fs}
-   b2
-   a4. fs8
-   g4 e~
-   e2~
-   e2~
-   e2 |
-   %e2
-   %b4 \glissando g~
-   %g2~
-   %g2
+    d8 e fs g
+    g8 a \tuplet 3/2{a g fs}
+    b2
+    a4. fs8
+    g4 e~
+    e2~
+    e2~
+    e2 |
+    %e2
+    %b4 \glissando g~
+    %g2~
+    %g2
 
-   \cadence
-   %d2
+    \cadence
+    %d2
 
   }
 
@@ -75,27 +75,27 @@ melody = \relative c'' {
     {d4 d'4 cs4-3 c-3 }
   }
 
-\break
+  \break
   \repeat volta 2{
-   \mark \default
-  % cs8-3 c-3 b4~
-   b2~
-   b2~
-   b2~
-   b2   % am I an extra measuere?
-   \repeat unfold 2{
-   \tuplet 3/2{b8-2 bf-1 b} d4
-   \tuplet 3/2{b8 bf b} g4-4
-   }
+    \mark \default
+    % cs8-3 c-3 b4~
+    b2~
+    b2~
+    b2~
+    b2   % am I an extra measuere?
+    \repeat unfold 2{
+      \tuplet 3/2{b8-2 bf-1 b} d4
+      \tuplet 3/2{b8 bf b} g4-4
+    }
 
-   fs8 g a as
-   cs8 as cs d
+    fs8 g a as
+    cs8 as cs d
 
-   e4. d8
-   cs4. as8
-    bf16 (c bf a) a4~
-   %fix
-   %{
+    e4. d8
+    cs4. as8
+    as16 (c bf a) a4~
+    %fix
+    %{
    d8-1 e fs g
    a8 (bf) \tuplet 3/2 {bf (a g-3)}
    e'4.-4  d8-4
@@ -103,42 +103,42 @@ melody = \relative c'' {
    bf16 (c bf a) a4~
    %end fix
    %%}
-   %bf8 a a4~
-   a2~
-   a2~
-   a2
-   % end phrase
+    %bf8 a a4~
+    a2~
+    a2~
+    a2
+    % end phrase
 
-   d,8 e fs g
-   g8 a \tuplet 3/2{a g fs}
-   b4. a8
-   g4. fs8
-   fs4 e~
-   e2~
-   e2~
-   e2~
-   %e2 % am I an extra measure?
+    d,8 e fs g
+    g8 a \tuplet 3/2{a g fs}
+    b4. a8
+    g4. fs8
+    fs4 e~
+    e2~
+    e2~
+    e2~
+    %e2 % am I an extra measure?
 
-   \cadence
+    \cadence
 
 
   }
-   % needs pickup note for last section
-   \alternative {
-     {d4 d' cs-3 c-3 }
-     {d,4. g8 }
-   }
-   \break
- \repeat volta 2{
-   \mark \default
-   fs8\prall ef fs\prall ef
-   d16 ef fs g a8-> g
-   %d8 fs a g   % maybe d fs
-  fs8\prall ef fs\prall ef
-   ef16 d c d  d4
+  % needs pickup note for last section
+  \alternative {
+    {d4 d' cs-3 c-3 }
+    {d,4. g8 }
+  }
+  \break
+  \repeat volta 2{
+    \mark \default
+    fs8\prall ef fs\prall ef
+    d16 ef fs g a8-> g
+    %d8 fs a g   % maybe d fs
+    fs8\prall ef fs\prall ef
+    ef16 d c d  d4
 
 
- }
+  }
 }
 %################################# Lyrics #####################
 %\addlyrics{ \set stanza = #"1. " }

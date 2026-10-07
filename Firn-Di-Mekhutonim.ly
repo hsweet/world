@@ -44,20 +44,20 @@ melody = \relative c' {
     d8 bf' a
     g8. g16 fs [a]
 
-   g4 \times 2/3 {ef16 d c}
-   c4.
-   c8 a' g
-   fs4 \end
-   d8 r \times 2/3{d16 d d}
+    g4 \times 2/3 {ef16 d c}
+    c4.~
+    c8 a' g
+    fs4 \end
+    d8 r \times 2/3{d16 d d}
   }
- \break
+  \break
 
   \repeat volta 2{
     \mark \default
     d8 bf' a
     g8. d16 g[d]
     g4.~
-    g4.
+    g4.~
 
     g8 ef' d
     c8. g16 c[g]
@@ -71,10 +71,10 @@ melody = \relative c' {
 
     fs16 a a g g fs
     fs16 a a g g fs
-    fs4.
+    fs4.~
     fs8. [ef16] \end
     d8 r d16 d
-   \break
+    \break
   }
   \mark \default
   d'4.~

@@ -24,7 +24,7 @@ melody = \relative c' {
   \partial 8 a'8
 
   \repeat volta 2{
-    d8\upbow d  ef16 (d) ef (c) %slurs
+    d8 d  ef16 (d) ef (c) %slurs
     d8 d  ef16 (d)ef (c)
     b8 c d ef
     fs8.\prall  ef16 fs16 ef d c
@@ -71,9 +71,9 @@ harmonies = \chordmode {
 
 
   %B section
-  d2*8:
+  d2*7:
   %r2*6
-  g2:m
+  g2*2:m
   d4 c4:m d4 c4:m d2 d2
 
 }

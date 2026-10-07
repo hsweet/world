@@ -68,7 +68,7 @@ melody = \relative c'' {
   No work in the fac -- to -- ries,
   no more man -- u -- fac -- tur -- ing
   All the tools are bro -- ken, rust -- ed
-  Ev -- ery tool and win -- dow, bust -- ed
+  Ev -- ery door and win -- dow, bust -- ed
   %Out in -- to the street we go
   To the ci -- ty streets we go
   Id -- le as a C -- E -- O
@@ -88,7 +88,7 @@ melody = \relative c'' {
 }
 
 \addlyrics {
-One, two, three, four
+  One, two, three, four
   Join the march -- ing job -- less corp
   Worked and payed our un -- ion dues
   What did years of that pro -- duce?
@@ -96,7 +96,7 @@ One, two, three, four
   For the rich -- es ben -- e -- fit _
   What did work -- ers get for pay?
   Hung -- ry broke and thrown a -- way
-   Hung -- ry broke and thrown a -- way
+  Hung -- ry broke and thrown a -- way
 }
 
 \addlyrics {
@@ -113,9 +113,9 @@ One, two, three, four
 
 %################################# Chords #######################
 harmonies = \chordmode {
-  g2:m  |
-  g:m   |
-  d:7      |
+  g1:m  |
+
+  d2:7      |
   g:m      |
   f:7      |
   bf       |
@@ -131,17 +131,19 @@ harmonies = \chordmode {
   g:m      |
   d:7      |
   bf4 d4:7  |
-  g2:m      |
-  g:m
+  g2*2:m      |
+
 }
 
 \score {
+
   <<
     \new ChordNames {
+
       \set chordChanges = ##f
-     \transpose g f \harmonies
+      \transpose g d \harmonies
     }
-   \transpose g f \new Staff   \melody
+    \transpose g d \new Staff   \melody
   >>
   \header{
     title= "Arbetlose March"
@@ -229,4 +231,9 @@ harmonies = \chordmode {
   אַרבעטלאָז איז קײן שום האַנט,
   אין דעם נײַעם פֿרײַען לאַנד.
 
+%}
+
+%{
+convert-ly (GNU LilyPond) 2.26.0  convert-ly: Processing `'...
+Applying conversion:     The document has not been changed.
 %}

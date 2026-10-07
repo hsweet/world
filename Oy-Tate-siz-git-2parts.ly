@@ -26,7 +26,7 @@ melody = \relative c'' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     e8 ds16 e fs e d c
     c8 b16 c d c b a
     gs16 a b c d c b a
@@ -48,8 +48,8 @@ melody = \relative c'' {
     {e2 ~ e4 r8 e }
     {e2 ~ e4 r8  d }
   }
-\repeat volta 2{
-  \mark \default
+  \repeat volta 2{
+    \mark \default
     \tuplet 3/2 { d8 fs d }  \tuplet 3/2 { d a' d, }
     \tuplet 3/2 { d fs d} a'4
     gs16 a b a gs8. f16
@@ -69,7 +69,7 @@ melody = \relative c'' {
 
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     ds'8  e(e4 e2) \barNumberCheck #30
     e8 e e e
     e8 e e e
@@ -106,7 +106,7 @@ melody = \relative c'' {
   }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     gs16  a b c b c b a
     d c b a b c b a
     gs a b a gs a gs f
@@ -131,7 +131,7 @@ harmony = \relative c'' {
 
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     a8.  a16 e8 a~
     a16 a a a e8 a
     a,8 a'e a
@@ -163,7 +163,7 @@ harmony = \relative c'' {
 
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     e8.   e16 fs8 a
     d8 a fs d
     d8 fs a, fs'
@@ -180,7 +180,7 @@ harmony = \relative c'' {
   }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     a8. a16 d,8 a' ~
     a16 a a a e8 gs
     a8 a16 a c8 e
@@ -221,7 +221,7 @@ harmony = \relative c'' {
   }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     e8   gs b, gs'
     e8 gs b, gs'
     e8 gs b, gs'
@@ -268,7 +268,7 @@ harmonies = \chordmode {
   %r2*11
   e2
   e4 f4
-   e2*2
+  e2*2
   %r2
   %d part
   e2*6

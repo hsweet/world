@@ -1,6 +1,8 @@
-\version "2.16.0"
+\version "2.24.0"
 \include "english.ly"
+%\pointAndClickOff
 \paper{
+  tagline = #ff
   print-all-headers = ##t
   #(set-paper-size "letter")
 }
@@ -12,111 +14,99 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
 global = {
   \clef treble
-  \key d \minor
+  \key g \minor
   \time 4/4
-  \set Score.markFormatter = #format-mark-box-alphabet
+  \set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
 }
 
 %#################################### Melody ########################
-%melody =  \transpose c d \relative c' {  %transpose for clarinet
-melody = \relative c'' {
+melody = \relative c' {
   \global
-  %\partial 16*3 a16 d f   %lead in notes
+  \partial 8*3 d8 g bf    %lead in notes
 
-  \repeat volta 2{
-   d8 a4 g8 a4 g|
-   f8 g4 f8 g4 f|
-   d8 d4 c8 f4(e)|
-   d2. r4|
-  }
-   %B
-   a'4. bf8 c4 d|
-   a8 a4 g8 a(g)f4|
-   a4. bf8 c4 d|
-   a8 a4 g8 a8(g) f4
-   
-   f8 g4 f8 g4 f
-   d2 d
-   c8 d4 c8 f4 e
-   d2 d
-  
-  
+  d2 bf4. a8|
+  a8 g2  g8 bf d |
+  g2 ef4. d8|
+  d8 c2 c8 d ef
+  d4. c8 d4. c8|
+  c8 bf2 a8 bf c
+  d4 4 4 4
+  d8 c bf a g2
 
 }
 %################################# Lyrics #####################
-%\addlyrics{  }
+%{
+\addlyrics{
+  \set stanza = #"1. "
+}
+%}
+
 %################################# Chords #######################
 harmonies = \chordmode {
- d1:m
- g1:m
- d2:m
- a2:7
- d1:m
- %b
- f1
- d1:m
- f1
- d1:m
- g1:m
- d1:m
- a2:m a2:7
- d1:m
+  s4.
+  g1*3:m
+  c1*2:m
 }
+
+
 
 \score {
+  % transpose score below
+  %\transpose d a
   <<
     \new ChordNames {
-      \set chordChanges = ##t
+      \set chordChanges = ##f
       \harmonies
     }
-    \new Staff \
-       \melody
+    \new Staff   \melody
   >>
   \header{
-    title= "Artsa Alinu"
+    title= "Heveinu Shalom Aleichem "
     subtitle=""
     composer= ""
-    instrument =""
+    instrument = "Violin"
     arranger= ""
   }
-  \layout{ }
-  \midi {
-    \tempo 4 = 120
-
-    % \midi { }
-  }
+  \midi{\tempo 4 = 120}
+  \layout{indent = 1.0\cm}
 }
+
 %{
+\markup{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ }
+\markup{}
+\markup{}
+
 % more verses:
 \markup{}
 \markup {
+  \font-size #2
   \fill-line {
     \hspace #0.1 % distance from left margin
     \column {
       \line { "1."
-	\column {
-	  ""
-	}
+\column {
+ ""
+}
       }
       \hspace #0.2 % vertical distance between verses
       \line { "2."
-	\column {
-	 ""
-	}
+\column {
+""
+}
       }
     }
     \hspace #0.1  % horiz. distance between columns
     \column {
       \line { "3."
-	\column {
-	  ""
-	}
+\column {
+ ""
+}
       }
       \hspace #0.2 % distance between verses
       \line { "4."
-	\column {
-	 ""
-	}
+\column {
+""
+}
       }
     }
     \hspace #0.1 % distance to right margin

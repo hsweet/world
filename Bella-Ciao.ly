@@ -26,14 +26,14 @@ melody = \relative c' {
 
   \repeat volta 2{
     %\mark \default
-  c8 a4.(a8) e a b
-  c8 a4.(a8) e a b
-  c4 b8 a c4 b8 a
-  e'4 e e8 e d e
+    c8 a4.(a8) e a b
+    c8 a4.(a8) e a b
+    c4 b8 a c4 b8 a
+    e'4 e e8 e d e
 
-  f8 f4.(f8) f e d
-  f8 e4. (e8) e d c
-  b4 e c b
+    f8 f4.(f8) f e d
+    f8 e4. (e8) e d c
+    b4 e c b
 
   }
   \alternative {
@@ -44,7 +44,8 @@ melody = \relative c' {
 
 }
 %################################# Lyrics #####################
-\addlyrics{ \set stanza = #"1. "
+\addlyrics{
+  \set stanza = #"1. "
   U -- na mat -- ti -- na mi so -- no al -- za -- to
   O bel -- la ciao, bel -- la ciao, bel -- la ciao, ciao, ciao
   U -- na mat -- ti -- na mi so -- no al -- za -- to
@@ -66,7 +67,7 @@ harmonies = \chordmode {
 %\melody
 \score {
   % transpose score below
-  %\transpose c d
+  \transpose c f
   <<
     \new ChordNames {
       \set chordChanges = ##f

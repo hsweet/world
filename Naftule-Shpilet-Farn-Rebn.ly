@@ -27,7 +27,7 @@ melody =  \relative c' {
   %\partial 16*3 a16 d f   %lead in notes
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     %A B D and E flat!
     c2  af'
     f2 g|
@@ -52,7 +52,7 @@ melody =  \relative c' {
   %\alternative { { }{ } }
 
   \repeat volta 2{
-  \mark \default
+    \mark \default
     c2 c'
     c2 c
     bf4. c8 df c bf4|
@@ -75,7 +75,7 @@ melody =  \relative c' {
   }
   % \alternative { { }{ } }
   \repeat volta 2{
-  \mark \default
+    \mark \default
     f4. g8 a2|
     a2 a
     g4. a8 bf8 a g4|
@@ -172,8 +172,8 @@ harmonies = \chordmode {
   f4*7:m
   %r4*3
   c4:7
-  f1:m
-  c1*2:m
+  f1*3:m
+  %c1*2:m
   %r1
   bf2:m
   c2:7
@@ -195,7 +195,7 @@ harmonies = \chordmode {
       \transpose c d \harmonies
     }
     \new Staff
-   \transpose c d \melody
+    \transpose c d \melody
   >>
   \header{
     title= "Naftule Shpielt Far'n Reb'n"
